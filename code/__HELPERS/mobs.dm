@@ -115,7 +115,7 @@
 	return ..()
 
 
-/proc/do_after(mob/user, delay, needhand = TRUE, atom/target, user_display, target_display, prog_bar = PROGRESS_GENERIC, datum/callback/extra_checks, ignore_turf_checks = FALSE)
+/proc/do_after(mob/user, delay, needhand = TRUE, atom/target, user_display, target_display, prog_bar = PROGRESS_GENERIC, datum/callback/extra_checks, ignore_turf_checks = FALSE, ignore_incapacitated_check = FALSE, ignore_coefficient = FALSE)
 	if(!user)
 		return FALSE
 
@@ -126,7 +126,8 @@
 	var/atom/Uloc = user.loc
 
 	var/holding = user.get_active_held_item()
-	delay *= user.do_after_coefficent()
+	if(!ignore_coefficient)
+		delay *= user.do_after_coefficent()
 
 	var/atom/progtarget = target
 	if(!target || Tloc == user)
@@ -141,7 +142,7 @@
 		stoplag(1)
 		P?.update(world.time - starttime)
 
-		if(QDELETED(user) || user.incapacitated(TRUE) || (!ignore_turf_checks && user.loc != Uloc) || (extra_checks && !extra_checks.Invoke()))
+		if(QDELETED(user) || ((!ignore_incapacitated_check) && user.incapacitated(TRUE)) || (!ignore_turf_checks && user.loc != Uloc) || (extra_checks && !extra_checks.Invoke()))
 			. = FALSE
 			break
 

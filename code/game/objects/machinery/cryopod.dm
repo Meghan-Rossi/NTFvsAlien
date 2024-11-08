@@ -462,8 +462,12 @@
 	user.forceMove(src)
 	occupant = user
 	update_icon()
-	if(!do_after(user, 1 MINUTES, FALSE, user))
+	if(do_after(user, 1 MINUTES, FALSE, user, ignore_incapacitated_check = TRUE, ignore_coefficient = TRUE))
+		visible_message(span_notice("[src] whirrs as it moves [user] into long-term storage."))
+		if(occupant == user)
+			occupant = null
 		user.despawn()
+		update_icon()
 	return TRUE
 
 /obj/machinery/cryopod/proc/go_out()
