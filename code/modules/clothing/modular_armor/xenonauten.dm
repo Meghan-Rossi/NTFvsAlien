@@ -255,7 +255,7 @@
 	desc = "A NTC-B vest, a set... of extra-light bikini armor? with modular attachments made to work in many enviroments. This one seems to be a bikini variant. Alt-Click to remove attached items. Use it to toggle the built-in flashlight."
 	greyscale_config = /datum/greyscale_config/xenonaut/bikini
 	slowdown = 0
-	soft_armor = list(MELEE = 35, BULLET = 50, LASER = 50, ENERGY = 50, BOMB = 40, BIO = 40, FIRE = 50, ACID = 40)
+	soft_armor = list(MELEE = 35, BULLET = 50, LASER = 35, ENERGY = 50, BOMB = 30, BIO = 5, FIRE = 45, ACID = 30)
 
 /obj/item/clothing/suit/modular/xenonauten/light/bikini/cdoll
 	starting_attachments = list(
