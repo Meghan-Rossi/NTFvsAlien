@@ -313,7 +313,11 @@
 		if("Open")
 			usr << run(file(path))
 		if("Download")
-			usr << ftp(file(path))
+			var/list/fname = splittext(path,"/")
+			if(fname.len > 2)
+				fname.Cut(0,(fname.len - 1))
+			fname = fname.Join("_")
+			usr << ftp(file(path), fname)
 		else
 			return
 
