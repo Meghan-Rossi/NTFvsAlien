@@ -931,11 +931,11 @@ GLOBAL_LIST_INIT(human_body_parts, list(BODY_ZONE_HEAD,
 #define IGNORE_HAND (1<<2)
 #define IGNORE_HELD_ITEM (1<<3)
 
-#define TIER_ONE_THRESHOLD 420
+#define TIER_ONE_THRESHOLD 300
 
-#define TIER_TWO_THRESHOLD 840
+#define TIER_TWO_THRESHOLD 600
 
-#define TIER_THREE_THRESHOLD 1750
+#define TIER_THREE_THRESHOLD 900
 
 
 // Pheromones and buff orders

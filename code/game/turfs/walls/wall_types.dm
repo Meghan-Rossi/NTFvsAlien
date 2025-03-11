@@ -285,7 +285,6 @@
 	icon_state = current_title //sets the title to the current_title here
 	addtimer(CALLBACK(src, PROC_REF(next_splashscreen)), 1 MINUTES)
 
-
 /turf/closed/wall/indestructible/other
 	icon_state = "r_wall"
 
