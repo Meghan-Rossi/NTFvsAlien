@@ -4,7 +4,7 @@
 
 	id = /obj/item/card/id/silver
 	belt = /obj/item/storage/belt/marine
-	ears = /obj/item/radio/headset/distress/pmc
+	ears = /obj/item/radio/headset/mainship/marine/pmc
 	w_uniform = /obj/item/clothing/under/marine/veteran/pmc/holster
 	shoes = /obj/item/clothing/shoes/marine/pmc/full
 	wear_suit = /obj/item/clothing/suit/storage/marine/veteran/pmc
@@ -57,7 +57,7 @@
 
 	id = /obj/item/card/id/silver
 	belt = /obj/item/belt_harness/marine
-	ears = /obj/item/radio/headset/distress/pmc
+	ears = /obj/item/radio/headset/mainship/marine/pmc
 	w_uniform = /obj/item/clothing/under/marine/veteran/pmc/holster
 	shoes = /obj/item/clothing/shoes/marine/pmc/full
 	wear_suit = /obj/item/clothing/suit/storage/marine/veteran/pmc/gunner
@@ -106,7 +106,7 @@
 
 	id = /obj/item/card/id/silver
 	belt = /obj/item/storage/holster/belt/pistol/m4a3/vp70_pmc
-	ears = /obj/item/radio/headset/distress/pmc
+	ears = /obj/item/radio/headset/mainship/marine/pmc
 	w_uniform = /obj/item/clothing/under/marine/veteran/pmc/webbing
 	shoes = /obj/item/clothing/shoes/marine/pmc/full
 	wear_suit = /obj/item/clothing/suit/storage/marine/veteran/pmc/sniper
@@ -148,7 +148,7 @@
 
 	id = /obj/item/card/id/silver
 	belt = /obj/item/storage/belt/marine
-	ears = /obj/item/radio/headset/distress/pmc
+	ears = /obj/item/radio/headset/mainship/marine/pmc
 	w_uniform = /obj/item/clothing/under/marine/veteran/pmc/leader/holster
 	shoes = /obj/item/clothing/shoes/marine/pmc/full
 	wear_suit = /obj/item/clothing/suit/storage/marine/veteran/pmc/leader

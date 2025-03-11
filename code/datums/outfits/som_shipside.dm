@@ -3,7 +3,12 @@
 	jobtype = /datum/job/som/command/commander
 
 	id = /obj/item/card/id/gold
-
+	ears = /obj/item/radio/headset/mainship/mcom/som
+	belt = /obj/item/storage/holster/belt/mateba/officer/full
+	w_uniform = /obj/item/clothing/under/som/officer/senior
+	shoes = /obj/item/clothing/shoes/marine/som/knife
+	gloves = /obj/item/clothing/gloves/marine/techofficer/captain
+	r_pocket = /obj/item/storage/pouch/general/large/command
 	r_hand = /obj/item/binoculars/fire_support/campaign/som
 
 
@@ -12,12 +17,42 @@
 	jobtype = /datum/job/som/command/fieldcommander
 
 	id = /obj/item/card/id/dogtag/fc
+	ears = /obj/item/radio/headset/mainship/mcom/som
+	head = /obj/item/clothing/head/modular/som/leader
+	mask = /obj/item/clothing/mask/gas
+	w_uniform = /obj/item/clothing/under/som/officer/senior
+	wear_suit = /obj/item/clothing/suit/modular/som/heavy/leader/officer
+	shoes = /obj/item/clothing/shoes/marine/som/knife
+	r_store = /obj/item/storage/pouch/general/large/command
+	gloves = /obj/item/clothing/gloves/marine/officer
+	belt = /obj/item/storage/holster/belt/pistol/m4a3/fieldcommander
+	glasses = /obj/item/clothing/glasses/hud/health
+	l_store = /obj/item/storage/pouch/grenade/som/combat_patrol
+	back = /obj/item/storage/backpack/satchel/som
+
+	head_contents = list(
+		/obj/item/reagent_containers/hypospray/autoinjector/russian_red = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/combat_advanced = 1,
+	)
+	
+	suit_contents = list(
+		/obj/item/stack/medical/heal_pack/gauze = 1,
+		/obj/item/stack/medical/heal_pack/ointment = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/isotonic = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/quickclot = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/dylovene = 1,
+	)
 
 /datum/outfit/job/som/command/staffofficer
 	name = SOM_STAFF_OFFICER
 	jobtype = /datum/job/som/command/staffofficer
 
 	id = /obj/item/card/id/silver
+	ears = /obj/item/radio/headset/mainship/mcom/som
+	w_uniform = /obj/item/clothing/under/som/officer
+	shoes = /obj/item/clothing/shoes/marine/som/knife
+	r_store = /obj/item/storage/pouch/general/large
+	l_store = /obj/item/binoculars/tactical
 
 /datum/outfit/job/som/command/pilot
 	name = SOM_PILOT_OFFICER
@@ -25,7 +60,7 @@
 
 	id = /obj/item/card/id/silver
 	belt = /obj/item/storage/holster/belt/pistol/m4a3/vp70
-	ears = /obj/item/radio/headset/mainship/mcom
+	ears = /obj/item/radio/headset/mainship/mcom/som
 	w_uniform = /obj/item/clothing/under/marine/officer/pilot
 	wear_suit = /obj/item/clothing/suit/storage/marine/pilot
 	shoes = /obj/item/clothing/shoes/marine/full
@@ -42,11 +77,11 @@
 	id = /obj/item/card/id/dogtag
 	belt = /obj/item/storage/belt/utility/full
 	glasses = /obj/item/clothing/glasses/welding
-	ears = /obj/item/radio/headset/mainship/mcom
+	ears = /obj/item/radio/headset/mainship/mcom/som
 	w_uniform = /obj/item/clothing/under/marine/officer/mech
 	wear_suit = /obj/item/clothing/suit/storage/marine/mech_pilot
 	head = /obj/item/clothing/head/helmet/marine/mech_pilot
-	shoes = /obj/item/clothing/shoes/marine/full
+	shoes = /obj/item/clothing/shoes/marine/som/knife
 	gloves = /obj/item/clothing/gloves/marine
 
 /datum/outfit/job/som/engineering/chief
@@ -55,10 +90,10 @@
 
 	id = /obj/item/card/id/silver
 	belt = /obj/item/storage/belt/utility/full
-	ears = /obj/item/radio/headset/mainship/mcom
+	ears = /obj/item/radio/headset/mainship/mcom/som
 	w_uniform = /obj/item/clothing/under/marine/officer/ce
 	wear_suit = /obj/item/clothing/suit/storage/marine/officer/req
-	shoes = /obj/item/clothing/shoes/marine/full
+	shoes = /obj/item/clothing/shoes/marine/som/knife
 	glasses = /obj/item/clothing/glasses/welding/superior
 	gloves = /obj/item/clothing/gloves/insulated
 	head = /obj/item/clothing/head/beret/marine/techofficer
@@ -81,7 +116,7 @@
 	ears = /obj/item/radio/headset/mainship/st
 	w_uniform = /obj/item/clothing/under/marine/officer/engi
 	wear_suit = /obj/item/clothing/suit/storage/marine/ship_tech
-	shoes = /obj/item/clothing/shoes/marine/full
+	shoes = /obj/item/clothing/shoes/marine/som/knife
 	gloves = /obj/item/clothing/gloves/insulated
 	glasses = /obj/item/clothing/glasses/welding/flipped
 	head = /obj/item/clothing/head/tgmccap/req
@@ -94,11 +129,11 @@
 
 	id = /obj/item/card/id/silver
 	belt = /obj/item/storage/holster/belt/m44/full
-	ears = /obj/item/radio/headset/mainship/mcom
+	ears = /obj/item/radio/headset/mainship/mcom/som
 	w_uniform = /obj/item/clothing/under/marine/officer/ro_suit
 	wear_suit = /obj/item/clothing/suit/storage/marine/officer/req
 	suit_store = /obj/item/weapon/gun/energy/taser
-	shoes = /obj/item/clothing/shoes/marine/full
+	shoes = /obj/item/clothing/shoes/marine/som/knife
 	gloves = /obj/item/clothing/gloves/insulated
 	head = /obj/item/clothing/head/tgmccap/req
 	r_pocket = /obj/item/storage/pouch/general/large
@@ -121,13 +156,22 @@
 	jobtype = /datum/job/som/medical/professor
 
 	id = /obj/item/card/id
-	ears = /obj/item/radio/headset/mainship/mcom
+	belt = /obj/item/storage/belt/rig/medical
+	ears = /obj/item/radio/headset/mainship/mcom/som
 	w_uniform = /obj/item/clothing/under/rank/medical/blue
 	wear_suit = /obj/item/clothing/suit/storage/labcoat/cmo
+	shoes = /obj/item/clothing/shoes/white
+	gloves = /obj/item/clothing/gloves/latex
+	glasses = /obj/item/clothing/glasses/hud/health
+	mask = /obj/item/clothing/mask/surgical
 	head = /obj/item/clothing/head/cmo
 	r_pocket = /obj/item/storage/pouch/medkit/doctor
 	l_pocket = /obj/item/storage/pouch/surgery
 
+	backpack_contents = list(
+		/obj/item/tweezers_advanced = 1,
+		/obj/item/reagent_containers/glass/bottle/lemoline/doctor = 1,
+	)
 
 /datum/outfit/job/som/medical/medicalofficer
 	name = SOM_MEDICAL_DOCTOR
@@ -159,3 +203,16 @@
 		/obj/item/tweezers_advanced = 1,
 		/obj/item/reagent_containers/glass/bottle/lemoline/doctor = 1,
 	)
+
+/datum/outfit/job/civilian/synthetic/som
+	name = SYNTHETIC
+	jobtype = /datum/job/som/silicon/synthetic
+
+	id = /obj/item/card/id/gold
+	belt = /obj/item/storage/belt/utility/full
+	ears = /obj/item/radio/headset/mainship/mcom/som
+	w_uniform = /obj/item/clothing/under/rank/synthetic
+	shoes = /obj/item/clothing/shoes/white
+	gloves = /obj/item/clothing/gloves/insulated
+	r_store = /obj/item/storage/pouch/general/medium
+	l_store = /obj/item/storage/pouch/general/medium

@@ -107,7 +107,6 @@
 		/obj/item/ammo_magazine/rifle/vsd_rifle = 2,
 	)
 
-
 //outfits
 /datum/outfit/job/vsd/engineer
 	name = "VSD Engineer"
@@ -148,7 +147,6 @@
 		/obj/item/stack/medical/heal_pack/ointment = 1,
 		/obj/item/explosive/grenade/vsd = 2,
 	)
-
 
 /datum/outfit/job/vsd/engineer/l26
 	suit_store = /obj/item/weapon/gun/rifle/vsd_lmg/engineer

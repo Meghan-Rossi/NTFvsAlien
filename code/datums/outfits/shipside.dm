@@ -3,7 +3,7 @@
 	jobtype = /datum/job/terragov/command/captain
 
 	id = /obj/item/card/id/gold
-	belt = /obj/item/storage/holster/belt/pistol/smart_pistol/full
+	belt = /obj/item/storage/holster/belt/mateba/officer/full
 	ears = /obj/item/radio/headset/mainship/mcom
 	w_uniform = /obj/item/clothing/under/marine/officer/command
 	shoes = /obj/item/clothing/shoes/marinechief/captain
@@ -17,7 +17,6 @@
 	species = SPECIES_COMBAT_ROBOT
 
 	w_uniform = /obj/item/clothing/under/marine/robotic
-	shoes = null
 	gloves = null
 	head = /obj/item/clothing/head/modular/robot
 	r_pocket = /obj/item/storage/pouch/general/large/command
@@ -38,7 +37,7 @@
 	ears = /obj/item/radio/headset/mainship/mcom
 	w_uniform = /obj/item/clothing/under/marine/officer/exec
 	wear_suit = /obj/item/clothing/suit/modular/xenonauten
-	shoes = /obj/item/clothing/shoes/marine/full
+	shoes = /obj/item/clothing/shoes/marine/sneakingboots
 	gloves = /obj/item/clothing/gloves/marine/officer
 	head = /obj/item/clothing/head/tgmcberet/fc
 	r_pocket = /obj/item/storage/pouch/general/large/command
@@ -50,7 +49,6 @@
 
 	w_uniform = /obj/item/clothing/under/marine/robotic
 	wear_suit = /obj/item/clothing/suit/modular/robot
-	shoes = null
 	gloves = null
 	head = /obj/item/clothing/head/modular/robot
 	r_pocket = /obj/item/storage/pouch/general/large/command
@@ -68,7 +66,7 @@
 	jobtype = /datum/job/terragov/command/staffofficer
 
 	id = /obj/item/card/id/silver
-	belt = /obj/item/storage/holster/belt/pistol/m4a3/officer
+	belt = /obj/item/storage/holster/belt/pistol/smart_pistol/full
 	ears = /obj/item/radio/headset/mainship/mcom
 	w_uniform = /obj/item/clothing/under/marine/officer/bridge
 	shoes = /obj/item/clothing/shoes/marine/full
@@ -81,7 +79,6 @@
 	species = SPECIES_COMBAT_ROBOT
 
 	w_uniform = /obj/item/clothing/under/marine/robotic
-	shoes = null
 	gloves = null
 	head = /obj/item/clothing/head/modular/robot
 	r_pocket = /obj/item/storage/pouch/general/large
@@ -262,7 +259,6 @@
 	species = SPECIES_COMBAT_ROBOT
 
 	w_uniform = /obj/item/clothing/under/marine/robotic
-	shoes = null
 	gloves = null
 
 
@@ -291,7 +287,6 @@
 	jobtype = /datum/job/terragov/medical/medicalofficer
 
 	w_uniform = /obj/item/clothing/under/marine/robotic
-	shoes = null
 	gloves = null
 
 /datum/outfit/job/medical/researcher
@@ -317,7 +312,6 @@
 	species = SPECIES_COMBAT_ROBOT
 
 	w_uniform = /obj/item/clothing/under/marine/robotic
-	shoes = null
 	gloves = null
 
 

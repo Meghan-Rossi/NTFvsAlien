@@ -1,3 +1,7 @@
+/datum/outfit/job/survivor
+	id = /obj/item/card/id/captains_spare/survival
+	ears = /obj/item/radio/headset/survivor
+
 /datum/outfit/job/survivor/assistant
 	name = "Assistant Survivor"
 	jobtype = /datum/job/survivor/assistant
@@ -6,7 +10,6 @@
 	shoes = /obj/item/clothing/shoes/black
 	back = /obj/item/storage/backpack/satchel/norm
 	wear_suit = /obj/item/clothing/suit/armor/vest
-	ears = /obj/item/radio/survivor
 	mask = /obj/item/clothing/mask/gas/tactical/coif
 	head = /obj/item/clothing/head/welding/flipped
 	belt = /obj/item/storage/belt/utility/full
@@ -41,9 +44,8 @@
 		/obj/item/reagent_containers/food/drinks/cans/waterbottle = 1,
 	)
 
-
 /datum/outfit/job/survivor/doctor
-	name = "Doctor's Assistant Survivor"
+	name = "Doctor Survivor"
 	jobtype = /datum/job/survivor/doctor
 
 	w_uniform = /obj/item/clothing/under/rank/medical/blue
@@ -55,7 +57,6 @@
 	r_pocket = /obj/item/storage/pouch/surgery
 	belt = /obj/item/storage/belt/rig
 	mask = /obj/item/clothing/mask/surgical
-	ears = /obj/item/radio/survivor
 
 	backpack_contents = list(
 		/obj/item/flashlight = 1,
@@ -90,10 +91,13 @@
 	w_uniform = /obj/item/clothing/under/liaison_suit
 	shoes = /obj/item/clothing/shoes/black
 	back = /obj/item/storage/backpack/satchel/norm
-	ears = /obj/item/radio/survivor
 	belt = /obj/item/storage/holster/belt/pistol/m4a3/vp78
 	l_hand = /obj/item/flashlight/combat
 	l_pocket = /obj/item/tool/crowbar
+	
+	backpack_contents = list(
+		/obj/item/reagent_containers/food/drinks/cans/waterbottle = 1,
+	)
 
 /datum/outfit/job/survivor/security
 	name = "Security Guard Survivor"
@@ -106,8 +110,7 @@
 	back = /obj/item/storage/backpack/security
 	belt = /obj/item/storage/belt/security
 	gloves = /obj/item/clothing/gloves/black
-	suit_store = /obj/item/weapon/gun/pistol/g22
-	ears = /obj/item/radio/survivor
+	suit_store = /obj/item/storage/holster/belt/pistol/g22
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/autoinjector/tricordrazine = 1,
@@ -128,9 +131,9 @@
 	jobtype = /datum/job/survivor/civilian
 
 	w_uniform = /obj/item/clothing/under/colonist
+	belt = /obj/item/storage/holster/belt/pistol/m4a3
 	shoes = /obj/item/clothing/shoes/black
 	back = /obj/item/storage/backpack/satchel/norm
-	ears = /obj/item/radio/survivor
 
 	backpack_contents = list(
 		/obj/item/tool/crowbar = 1,
@@ -138,7 +141,6 @@
 		/obj/item/weapon/combat_knife/upp = 1,
 		/obj/item/reagent_containers/food/drinks/cans/waterbottle = 1,
 	)
-
 
 /datum/outfit/job/survivor/chef
 	name = "Chef Survivor"
@@ -149,7 +151,6 @@
 	head = /obj/item/clothing/head/chefhat
 	shoes = /obj/item/clothing/shoes/black
 	back = /obj/item/storage/backpack
-	ears = /obj/item/radio/survivor
 
 	backpack_contents = list(
 		/obj/item/flashlight = 1,
@@ -161,11 +162,11 @@
 		/obj/item/reagent_containers/food/snacks/chocolateegg = 1,
 		/obj/item/reagent_containers/food/snacks/meat/xeno = 1,
 		/obj/item/reagent_containers/food/snacks/pastries/xemeatpie = 1,
+		/obj/item/reagent_containers/food/snacks/pastries/birthdaycakeslice = 1,
 		/obj/item/reagent_containers/food/snacks/donut/meat = 1,
 		/obj/item/tool/crowbar = 1,
 		/obj/item/reagent_containers/food/drinks/cans/waterbottle = 1,
 	)
-
 
 /datum/outfit/job/survivor/botanist
 	name = "Botanist Survivor"
@@ -175,7 +176,6 @@
 	wear_suit = /obj/item/clothing/suit/storage/apron/overalls
 	shoes = /obj/item/clothing/shoes/black
 	back = /obj/item/storage/backpack/hydroponics
-	ears = /obj/item/radio/survivor
 	suit_store = /obj/item/weapon/combat_knife
 	l_pocket = /obj/item/flashlight
 	r_pocket = /obj/item/tool/crowbar
@@ -185,6 +185,7 @@
 		/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris = 2,
 		/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus = 2,
 		/obj/item/reagent_containers/food/drinks/cans/waterbottle = 1,
+		/obj/item/tool/hatchet = 1,
 	)
 
 /datum/outfit/job/survivor/atmos
@@ -201,7 +202,6 @@
 	glasses = /obj/item/clothing/glasses/welding
 	r_pocket = /obj/item/storage/pouch/electronics/full
 	l_pocket = /obj/item/storage/pouch/construction
-	ears = /obj/item/radio/survivor
 
 	backpack_contents = list(
 		/obj/item/lightreplacer = 1,
@@ -225,7 +225,6 @@
 		/obj/item/stack/sheet/plasteel/small_stack = 1,
 	)
 
-
 /datum/outfit/job/survivor/chaplain
 	name = "Chaplain Survivor"
 	jobtype = /datum/job/survivor/chaplain
@@ -234,7 +233,7 @@
 	wear_suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/black
 	back = /obj/item/storage/backpack/satchel/norm
-	ears = /obj/item/radio/survivor
+	belt = /obj/item/storage/holster/belt/m44/full
 
 	l_hand = /obj/item/weapon/gun/shotgun/double
 	r_hand = /obj/item/ammo_magazine/handful/buckshot
@@ -259,7 +258,6 @@
 	l_hand = /obj/item/weapon/twohanded/sledgehammer
 	r_pocket = /obj/item/reagent_containers/cup/glass/flask
 	r_hand = /obj/item/clothing/suit/space/rig/mining
-	ears = /obj/item/radio/survivor
 
 	backpack_contents = list(
 		/obj/item/storage/fancy/cigarettes = 1,
@@ -269,7 +267,6 @@
 		/obj/item/reagent_containers/food/drinks/cans/waterbottle = 1,
 	)
 
-
 /datum/outfit/job/survivor/salesman
 	name = "Salesman Survivor"
 	jobtype = /datum/job/survivor/salesman
@@ -277,10 +274,10 @@
 	w_uniform = /obj/item/clothing/under/lawyer/purpsuit
 	wear_suit = /obj/item/clothing/suit/storage/lawyer/purpjacket
 	shoes = /obj/item/clothing/shoes/black
+	belt = /obj/item/storage/holster/belt/pistol/g22
 	back = /obj/item/storage/backpack/satchel
 	mask = /obj/item/clothing/mask/cigarette/pipe/bonepipe
 	glasses = /obj/item/clothing/glasses/sunglasses/aviator
-	ears = /obj/item/radio/survivor
 
 	backpack_contents = list(
 		/obj/item/weapon/gun/pistol/holdout = 1,
@@ -289,7 +286,6 @@
 		/obj/item/tool/crowbar = 1,
 		/obj/item/reagent_containers/food/drinks/cans/waterbottle = 1,
 	)
-
 
 /datum/outfit/job/survivor/marshal
 	name = "Colonial Marshal Survivor"
@@ -303,7 +299,6 @@
 	belt = /obj/item/storage/belt/sparepouch
 	gloves = /obj/item/clothing/gloves/ruggedgloves
 	l_pocket = /obj/item/flashlight/combat
-	ears = /obj/item/radio/survivor
 	head = /obj/item/clothing/head/slouch
 
 	belt_contents = list(
@@ -323,7 +318,6 @@
 	belt = /obj/item/ammo_magazine/shotgun/buckshot
 	shoes = /obj/item/clothing/shoes/laceup
 	head = /obj/item/clothing/head/collectable/tophat
-	ears = /obj/item/radio/survivor
 	glasses = /obj/item/clothing/glasses/sunglasses
 	l_pocket = /obj/item/flashlight
 	r_pocket = /obj/item/tool/crowbar
@@ -336,10 +330,6 @@
 		/obj/item/reagent_containers/food/drinks/cans/waterbottle = 1,
 	)
 
-
-
-
-
 /datum/outfit/job/survivor/chemist
 	name = "Pharmacy Technician Survivor"
 	jobtype = /datum/job/survivor/chemist
@@ -350,7 +340,6 @@
 	belt = /obj/item/storage/belt/hypospraybelt
 	gloves = /obj/item/clothing/gloves/latex
 	shoes = /obj/item/clothing/shoes/white
-	ears = /obj/item/radio/survivor
 	glasses = /obj/item/clothing/glasses/science
 	l_pocket = /obj/item/flashlight
 	r_pocket = /obj/item/tool/crowbar
@@ -386,7 +375,6 @@
 		/obj/item/storage/syringe_case/empty = 2,
 	)
 
-
 /datum/outfit/job/survivor/roboticist
 	name = "Roboticist Survivor"
 	jobtype = /datum/job/survivor/roboticist
@@ -396,7 +384,6 @@
 	belt = /obj/item/storage/belt/utility/full
 	shoes = /obj/item/clothing/shoes/black
 	back = /obj/item/storage/backpack/satchel/tox
-	ears = /obj/item/radio/survivor
 	glasses = /obj/item/clothing/glasses/welding/flipped
 	l_pocket = /obj/item/storage/pouch/electronics/full
 	r_pocket = /obj/item/flashlight/combat
@@ -404,10 +391,69 @@
 	backpack_contents = list(
 		/obj/item/stack/sheet/metal/medium_stack = 1,
 		/obj/item/stack/sheet/plasteel/small_stack = 1,
+		/obj/item/deployable_vehicle/tiny = 1,
 		/obj/item/attachable/buildasentry = 1,
 		/obj/item/cell/high = 1,
 		/obj/item/stack/cable_coil = 2,
 		/obj/item/reagent_containers/food/drinks/cans/waterbottle = 1,
+	)
+	
+/datum/outfit/job/survivor/non_deployed_operative
+	name = "Non-Deployed Operative Survivor"
+	jobtype = /datum/job/survivor/non_deployed_operative
+
+	w_uniform = /obj/item/clothing/under/marine/service
+	gloves = /obj/item/clothing/gloves/white
+	shoes = /obj/item/clothing/shoes/marine/full
+	head = /obj/item/clothing/head/servicecap
+	back = /obj/item/storage/backpack/marine/satchel
+	
+	backpack_contents = list(
+		/obj/item/reagent_containers/food/drinks/cans/waterbottle = 1,
+		/obj/item/tool/pen = 1,
+		/obj/item/paper = 1,
+		/obj/item/folder/white = 1,
+	)
+
+/datum/outfit/job/survivor/prisoner
+	name = "Prisoner Survivor"
+	jobtype = /datum/job/survivor/prisoner
+
+	w_uniform = /obj/item/clothing/under/rank/prisoner
+	shoes = /obj/item/clothing/shoes/orange
+	back = /obj/item/storage/backpack/security
+	mask = /obj/item/clothing/mask/gas/modular/skimask
+	
+	backpack_contents = list(
+		/obj/item/restraints/handcuffs = 1,
+		/obj/item/reagent_containers/food/drinks/cans/waterbottle = 1,
+	)
+
+/datum/outfit/job/survivor/stripper
+	name = "Stripper Survivor"
+	jobtype = /datum/job/survivor/stripper
+
+	w_uniform = /obj/item/clothing/under/lewd/stripper
+	shoes = /obj/item/clothing/shoes/high_heels/red
+	back =  /obj/item/storage/backpack/satchel
+	head = /obj/item/clothing/head/bunny_ears
+
+	backpack_contents = list(
+		/obj/item/reagent_containers/food/drinks/cans/waterbottle = 1,
+	)
+
+/datum/outfit/job/survivor/maid
+	name = "Maid Survivor"
+	jobtype = /datum/job/survivor/maid
+
+	w_uniform = /obj/item/clothing/under/dress/maid
+	gloves = /obj/item/clothing/gloves/latex
+	shoes = /obj/item/clothing/shoes/high_heels
+	back =  /obj/item/storage/backpack/satchel/norm
+	backpack_contents = list(
+		/obj/item/reagent_containers/food/drinks/cans/waterbottle = 1,
+		/obj/item/tool/soap/deluxe = 1,
+		/obj/item/reagent_containers/glass/bucket = 1,
 	)
 
 /datum/outfit/job/survivor/rambo
@@ -424,4 +470,3 @@
 	r_pocket = /obj/item/flashlight/combat
 	glasses = /obj/item/clothing/glasses/m42_goggles
 	head = /obj/item/clothing/head/headband
-	ears = /obj/item/radio/survivor
