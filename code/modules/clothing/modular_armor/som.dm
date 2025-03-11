@@ -59,6 +59,12 @@
 		/obj/item/armor_module/storage/general/som,
 	)
 
+/obj/item/clothing/suit/modular/som/medstorage
+	starting_attachments = list(
+		/obj/item/armor_module/module/better_shoulder_lamp,
+		/obj/item/armor_module/storage/medical/som,
+	)
+
 /obj/item/clothing/suit/modular/som/shield
 	starting_attachments = list(
 		/obj/item/armor_module/module/eshield/som,
@@ -140,6 +146,12 @@
 	starting_attachments = list(
 		/obj/item/armor_module/module/fire_proof/som,
 		/obj/item/armor_module/storage/medical/som,
+	)
+
+/obj/item/clothing/suit/modular/som/heavy/pyro/genstorage
+	starting_attachments = list(
+		/obj/item/armor_module/module/fire_proof/som,
+		/obj/item/armor_module/storage/general/som,
 	)
 
 /obj/item/clothing/suit/modular/som/heavy/lorica

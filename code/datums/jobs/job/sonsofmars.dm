@@ -4,11 +4,6 @@
 	minimal_access = ACCESS_SOM_DEFAULT
 	faction = FACTION_SOM
 
-
-/datum/outfit/job/som/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	. = ..()
-	H.regenerate_icons()
-
 //Base job for normal gameplay SOM, not ERT.
 /datum/job/som/squad
 	access = ACCESS_SOM_DEFAULT
@@ -96,12 +91,6 @@ Make your way to the cafeteria for some post-cryosleep chow, and then get equipp
 	. = ..()
 	to_chat(M, {"\nYou are a rank-and-file soldier of the Sons of Mars, and that is your strength.
 What you lack alone, you gain standing shoulder to shoulder with the men and women of the SOM. For Mars!"})
-
-/datum/outfit/job/som/squad/standard
-	name = "SOM Standard"
-	jobtype = /datum/job/som/squad/standard
-
-	id = /obj/item/card/id/dogtag/som
 
 
 /datum/job/som/squad/slut
@@ -211,11 +200,6 @@ What you lack alone, you gain standing shoulder to shoulder with the men and wom
 	to_chat(M, {"\nYou have the equipment and skill to build fortifications, reroute power lines, and bunker down.
 Your squaddies will look to you when it comes to construction in the field of battle."})
 
-/datum/outfit/job/som/squad/engineer
-	name = "SOM Engineer"
-	jobtype = /datum/job/som/squad/engineer
-
-	id = /obj/item/card/id/dogtag/som
 
 
 /datum/job/som/squad/medic
@@ -268,12 +252,6 @@ Your squaddies will look to you when it comes to construction in the field of ba
 	to_chat(M, {"\nYou must tend the wounds of your squad mates and make sure they are healthy and active.
 You may not be a fully-fledged doctor, but you stand between life and death when it matters."})
 
-/datum/outfit/job/som/squad/medic
-	name = "SOM Medic"
-	jobtype = /datum/job/som/squad/medic
-
-	id = /obj/item/card/id/dogtag/som
-
 
 /datum/job/som/squad/veteran
 	title = SOM_SQUAD_VETERAN
@@ -321,10 +299,6 @@ You may not be a fully-fledged doctor, but you stand between life and death when
 	. = ..()
 	to_chat(M, {"\nYou are the a Veteran among the SOM. With your long experience (and better training and equipment), your job is to provide special weapons support to bolster the line."})
 
-/datum/outfit/job/som/squad/veteran
-	name = "SOM Veteran"
-	jobtype = /datum/job/som/squad/veteran
-	id = /obj/item/card/id/dogtag/som
 
 /datum/job/som/squad/leader
 	title = SOM_SQUAD_LEADER
@@ -386,8 +360,3 @@ You may not be a fully-fledged doctor, but you stand between life and death when
 	to_chat(M, {"\nYou are responsible for the men and women of your squad. Make sure they are on task, working together, and communicating.
 You are also in charge of communicating with command and letting them know about the situation first hand. Keep out of harm's way."})
 
-/datum/outfit/job/som/squad/leader
-	name = "SOM Leader"
-	jobtype = /datum/job/som/squad/leader
-
-	id = /obj/item/card/id/dogtag/som
