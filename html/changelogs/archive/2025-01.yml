@@ -113,6 +113,9 @@
   - bugfix: fixed an exploit with jetpacks
   Meghan-Rossi:
   - rscdel: Removed most roundstart corpses.
+  Neocloudy:
+  - rscdel: Wraith can no longer be picked. Forcefully devolved Warlocks will devolve
+      to Warriors instead.
   Notamaniac:
   - balance: The APC can now use the OMR MK.III Secondary Flamer, Microrocket Pod
       and TOW III launcher as secondaries.
@@ -132,3 +135,4 @@
 2025-01-28:
   DrCrawler:
   - rscadd: PIXEL SHIFTING!!!!
+
