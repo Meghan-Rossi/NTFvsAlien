@@ -179,8 +179,8 @@ Make the NTC proud!"})
 	w_uniform = /obj/item/clothing/under/spec_operative/armoredsuit
 	shoes = /obj/item/clothing/shoes/marine/sneakingboots
 	gloves = /obj/item/clothing/gloves/marine/officer
-	r_store = /obj/item/storage/pouch/general/large/command
-	l_store = /obj/item/hud_tablet/leadership
+	r_pocket = /obj/item/storage/pouch/general/large/command
+	l_pocket = /obj/item/hud_tablet/leadership
 	back = /obj/item/storage/backpack/satchel
 
 //Corpsec Commander
@@ -255,8 +255,8 @@ Make the NTC proud!"})
 	shoes = /obj/item/clothing/shoes/swat
 	gloves = /obj/item/clothing/gloves/marine/officer
 	head = /obj/item/clothing/head/beret/sec/hos
-	r_store = /obj/item/storage/pouch/general/large/command
-	l_store = /obj/item/hud_tablet/fieldcommand
+	r_pocket = /obj/item/storage/pouch/general/large/command
+	l_pocket = /obj/item/hud_tablet/fieldcommand
 	back = /obj/item/storage/backpack/security
 	suit_store = /obj/item/storage/holster/belt/pistol/m4a3/fieldcommander
 
@@ -268,8 +268,8 @@ Make the NTC proud!"})
 	shoes = null
 	gloves = null
 	head = /obj/item/clothing/head/modular/robot
-	r_store = /obj/item/storage/pouch/general/large/command
-	l_store = /obj/item/hud_tablet/fieldcommand
+	r_pocket = /obj/item/storage/pouch/general/large/command
+	l_pocket = /obj/item/hud_tablet/fieldcommand
 	suit_store = /obj/item/storage/holster/belt/pistol/m4a3/fieldcommander
 
 //Staff Officer
@@ -448,7 +448,7 @@ You are to ensure the Tadpole's survival and to transport marines around, acting
 	ears = /obj/item/radio/headset/mainship/mcom
 	w_uniform = /obj/item/clothing/under/marine/officer
 	shoes = /obj/item/clothing/shoes/marine/sneakingboots
-	r_store = /obj/item/storage/pouch/general/large
+	r_pocket = /obj/item/storage/pouch/general/large
 
 
 /datum/outfit/job/command/vanguard/robot
@@ -458,7 +458,7 @@ You are to ensure the Tadpole's survival and to transport marines around, acting
 	shoes = null
 	gloves = null
 	head = /obj/item/clothing/head/modular/robot
-	r_store = /obj/item/storage/pouch/general/large
+	r_pocket = /obj/item/storage/pouch/general/large
 
 //Pilot Officer
 /datum/job/terragov/command/pilot

@@ -95,7 +95,7 @@
 	id = /obj/item/card/id
 	w_uniform = /obj/item/clothing/under/colonist
 	shoes = /obj/item/clothing/shoes/marine
-	l_store = /obj/item/storage/pouch/survival/full
+	l_pocket = /obj/item/storage/pouch/survival/full
 	ears = /obj/item/radio/headset/mainship
 
 /datum/job/worker/radio_help_message(mob/M)
@@ -124,7 +124,7 @@
 	id = /obj/item/card/id
 	w_uniform = /obj/item/clothing/under/swimsuit/purple
 	shoes = /obj/item/clothing/shoes/black
-	l_store = /obj/item/storage/pouch/general/large
+	l_pocket = /obj/item/storage/pouch/general/large
 	ears = /obj/item/radio/headset/mainship
 
 /datum/job/worker/moraleofficer/radio_help_message(mob/M)

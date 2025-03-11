@@ -391,14 +391,14 @@
 	w_uniform = /obj/item/clothing/under/swimsuit/purple
 	shoes = /obj/item/clothing/shoes/sandal
 	belt = /obj/item/storage/holster/t19/full
-	r_store = /obj/item/flashlight
+	r_pocket = /obj/item/flashlight
 	back = /obj/item/storage/backpack/lightpack
 
 	backpack_contents = list(
 		/obj/item/storage/pill_bottle/tramadol = 1, 
 		/obj/item/storage/pill_bottle/kelotane = 1,
 		/obj/item/storage/pill_bottle/dylovene = 1,
-		/obj/item/storage/pill_bottle/spaceacilli = 1,
+		/obj/item/storage/pill_bottle/spaceacillin = 1,
 		/obj/item/stack/medical/heal_pack/gauze = 1,
 		/obj/item/stack/medical/heal_pack/ointment = 1,
 		/obj/item/reagent_containers/hypospray/autoinjector/peridaxon_plus = 1,
@@ -422,5 +422,5 @@
 	w_uniform = /obj/item/clothing/under/rank/synthetic
 	shoes = /obj/item/clothing/shoes/white
 	gloves = /obj/item/clothing/gloves/insulated
-	r_store = /obj/item/storage/pouch/general/medium
-	l_store = /obj/item/storage/pouch/general/medium
+	r_pocket = /obj/item/storage/pouch/general/medium
+	l_pocket = /obj/item/storage/pouch/general/medium

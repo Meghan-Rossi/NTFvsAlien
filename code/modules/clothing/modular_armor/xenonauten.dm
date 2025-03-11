@@ -457,6 +457,9 @@
 /obj/item/clothing/head/modular/m10x/tyr
 	starting_attachments = list(/obj/item/armor_module/storage/helmet, /obj/item/armor_module/module/tyr_head)
 
+/obj/item/clothing/head/modular/m10x/hod
+	starting_attachments = list(/obj/item/armor_module/storage/helmet, /obj/item/armor_module/module/hod_head)
+
 /obj/item/clothing/head/modular/m10x/surt
 	starting_attachments = list(/obj/item/armor_module/storage/helmet, /obj/item/armor_module/module/fire_proof_helmet)
 
