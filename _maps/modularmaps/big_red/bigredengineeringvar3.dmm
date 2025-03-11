@@ -771,6 +771,10 @@
 /obj/effect/ai_node,
 /turf/open/floor,
 /area/bigredv2/outside/engineering/east)
+"Gt" = (
+/obj/machinery/computer/intel_computer,
+/turf/open/floor,
+/area/bigredv2/outside/engineering/east)
 "GE" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -1679,7 +1683,7 @@ HK
 KP
 ho
 UM
-nV
+Gt
 Yk
 nV
 nV
