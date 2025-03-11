@@ -1179,6 +1179,8 @@
 			/obj/item/armor_module/module/eshield = -1,
 			/obj/item/armor_module/module/eshield/old = -1,
 			/obj/item/armor_module/module/eshield/old_jaeger = -1,
+			/obj/item/armor_module/module/mirage = -1,
+			/obj/item/armor_module/module/armorlock = -1,
 		),
 		"Style Line" = list(
 			/obj/item/clothing/suit/modular/style/leather_jacket = -1,
