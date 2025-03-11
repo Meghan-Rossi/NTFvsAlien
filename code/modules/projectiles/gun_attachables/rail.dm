@@ -98,7 +98,7 @@
 
 /obj/item/attachable/magnetic_harness
 	name = "magnetic harness"
-	desc = "A magnetically attached harness kit that attaches to the rail mount of a weapon. When dropped, the weapon will sling to a TGMC armor."
+	desc = "A magnetically attached harness kit that attaches to the rail mount of a weapon. When dropped, the weapon will sling to NTF chest armor."
 	icon_state = "magnetic"
 	icon = 'icons/obj/items/guns/attachments/rail.dmi'
 	slot = ATTACHMENT_SLOT_RAIL

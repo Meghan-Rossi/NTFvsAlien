@@ -363,7 +363,7 @@
 
 /obj/structure/prop/mainship/ship_memorial
 	name = "slab of victory"
-	desc = "A ship memorial dedicated to the triumphs of the NTC and the fallen operatives of this ship. On the left there are grand tales of victory etched into the slab. On the right there is a list of famous marines who have fallen in combat serving the TGMC."
+	desc = "A ship memorial dedicated to the triumphs of the NTC and the fallen operatives of this ship. On the left there are grand tales of victory etched into the slab. On the right there is a list of famous marines who have fallen in combat serving the NTC."
 	icon = 'icons/obj/structures/prop//mainship_64.dmi'
 	icon_state = "ship_memorial"
 	bound_width = 64

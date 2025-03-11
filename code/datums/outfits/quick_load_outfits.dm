@@ -4,7 +4,7 @@
 	///How much of this loadout there is. infinite by default
 	var/quantity = -1
 	///What job this loadout is associated with. Used for tabs and access.
-	var/jobtype = "Squad Marine"
+	var/jobtype = "Squad Operative"
 	///Restricts loadouts to a specific job. Set to false to allow any job to take the loadout.
 	var/require_job = TRUE
 	///Secondary weapon
@@ -42,17 +42,17 @@
 
 	return ..()
 
-////TGMC/////
+////NTF/////
 
-//Base TGMC outfit
+//Base NTF outfit
 /datum/outfit/quick/tgmc
-	name = "TGMC base"
-	desc = "This is the base typepath for all TGMC quick vendor outfits. You shouldn't see this."
+	name = "NTF base"
+	desc = "This is the base typepath for all NTF quick vendor outfits. You shouldn't see this."
 
-//Base TGMC marine outfit
+//Base NTF marine outfit
 /datum/outfit/quick/tgmc/marine
-	name = "TGMC Squad Marine"
-	jobtype = "Squad Marine"
+	name = "NTF Squad Operative"
+	jobtype = "Squad Operative"
 
 	ears = /obj/item/radio/headset/mainship/marine
 	w_uniform = /obj/item/clothing/under/marine/black_vest
@@ -234,7 +234,7 @@
 
 /datum/outfit/quick/tgmc/marine/standard_machinegunner
 	name = "MG-60 Machinegunner"
-	desc = "The old reliable workhorse of the TGMC. Equipped with an MG-60 machinegun with bipod, heavy armor and some basic construction supplies. Good for holding ground and providing firesupport, and the cost of some mobility."
+	desc = "The old reliable workhorse of the NTF. Equipped with an MG-60 machinegun with bipod, heavy armor and some basic construction supplies. Good for holding ground and providing firesupport, and the cost of some mobility."
 
 	belt = /obj/item/storage/belt/sparepouch
 	suit_store = /obj/item/weapon/gun/rifle/standard_gpmg/machinegunner
@@ -467,9 +467,9 @@
 	)
 
 
-//Base TGMC engineer outfit
+//Base NTF engineer outfit
 /datum/outfit/quick/tgmc/engineer
-	name = "TGMC Squad Engineer"
+	name = "NTF Squad Engineer"
 	jobtype = "Squad Engineer"
 
 	ears = /obj/item/radio/headset/mainship/marine
@@ -563,9 +563,9 @@
 	)
 
 
-//Base TGMC corpsman outfit
+//Base NTF corpsman outfit
 /datum/outfit/quick/tgmc/corpsman
-	name = "TGMC Squad Corpsman"
+	name = "NTF Squad Corpsman"
 	jobtype = "Squad Corpsman"
 
 	belt = /obj/item/storage/belt/lifesaver/quick
@@ -721,9 +721,9 @@
 	)
 
 
-//Base TGMC smartgunner outfit
+//Base NTF smartgunner outfit
 /datum/outfit/quick/tgmc/smartgunner
-	name = "TGMC Squad Smartgunner"
+	name = "NTF Squad Smartgunner"
 	jobtype = "Squad Smartgunner"
 
 	belt = /obj/item/belt_harness/marine
@@ -808,9 +808,9 @@
 	)
 
 
-//Base TGMC leader outfit
+//Base NTF leader outfit
 /datum/outfit/quick/tgmc/leader
-	name = "TGMC Squad Leader"
+	name = "NTF Squad Leader"
 	jobtype = "Squad Leader"
 
 	ears = /obj/item/radio/headset/mainship/marine

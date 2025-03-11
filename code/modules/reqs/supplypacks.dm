@@ -2037,12 +2037,6 @@ Imports
 	contains = list(/obj/item/clothing/head/strawhat)
 	cost = 10
 
-/datum/supply_packs/imports/loot_pack
-	name = "TGMC loot pack"
-	notes = "Contains a random, but curated set of items, these packs are valued around 150 to 200 points. Some items can only be acquired from these. Spend responsibly."
-	contains = list(/obj/item/loot_box/tgmclootbox)
-	cost = 1000
-
 /datum/supply_packs/imports/loot_box
 	name = "Loot box"
 	contains = list(/obj/item/loot_box/marine)

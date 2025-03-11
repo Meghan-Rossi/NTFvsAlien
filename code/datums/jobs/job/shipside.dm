@@ -131,7 +131,7 @@ Make the NTC proud!"})
 		if(18001 to 60000) // 300 hrs
 			new_human.wear_id.paygrade = "MO6"
 		if(60001 to INFINITY) // 1000 hrs
-			new_human.wear_id.paygrade = "M10" //If you play way too much TGMC. 1000 hours.
+			new_human.wear_id.paygrade = "M10" //If you play way too much NTF. 1000 hours.
 	new_human.wear_id.update_label()
 
 //Campaign version with specific loadout
@@ -573,7 +573,7 @@ You can serve your Division in a variety of roles, so choose carefully."})
 		if(18001 to 60000) // 300 hrs
 			new_human.wear_id.paygrade = "E6"
 		if(60001 to INFINITY) // 1000 hrs
-			new_human.wear_id.paygrade = "E9A" //If you play way too much TGMC. 1000 hours.
+			new_human.wear_id.paygrade = "E9A" //If you play way too much NTF. 1000 hours.
 	new_human.wear_id.update_label()
 
 
@@ -616,7 +616,7 @@ You can serve your Division in a variety of roles, so choose carefully."})
 
 /datum/job/terragov/command/assault_crewman/radio_help_message(mob/M)
 	. = ..()
-	to_chat(M, {"You are an Assault Crewman. You operate the TGMC's armored assault vehicles along with your partner, and in some cases a \"willing\" loader. Make sure that you work as a team to advance the front!"})
+	to_chat(M, {"You are an Assault Crewman. You operate the NTF's armored assault vehicles along with your partner, and in some cases a \"willing\" loader. Make sure that you work as a team to advance the front!"})
 
 /datum/job/terragov/command/assault_crewman/after_spawn(mob/living/carbon/new_mob, mob/user, latejoin = FALSE)
 	. = ..()
@@ -636,7 +636,7 @@ You can serve your Division in a variety of roles, so choose carefully."})
 		if(18001 to 60000) // 300 hrs
 			new_human.wear_id.paygrade = "E6"
 		if(60001 to INFINITY) // 1000 hrs
-			new_human.wear_id.paygrade = "E9A" //If you play way too much TGMC. 1000 hours.
+			new_human.wear_id.paygrade = "E9A" //If you play way too much NTF. 1000 hours.
 	new_human.wear_id.update_label()
 
 
@@ -670,7 +670,7 @@ You can serve your Division in a variety of roles, so choose carefully."})
 
 /datum/job/terragov/command/transport_crewman/radio_help_message(mob/M)
 	. = ..()
-	to_chat(M, {"You are a Transport Crewman. You operate the TGMC's transport vehciles to ensure that marines and equipment gets to the front in a timely and safe manner."})
+	to_chat(M, {"You are a Transport Crewman. You operate the NTF's transport vehciles to ensure that marines and equipment gets to the front in a timely and safe manner."})
 
 /datum/job/terragov/command/transport_crewman/after_spawn(mob/living/carbon/new_mob, mob/user, latejoin = FALSE)
 	. = ..()
@@ -690,7 +690,7 @@ You can serve your Division in a variety of roles, so choose carefully."})
 		if(18001 to 60000) // 300 hrs
 			new_human.wear_id.paygrade = "E6"
 		if(60001 to INFINITY) // 1000 hrs
-			new_human.wear_id.paygrade = "E9A" //If you play way too much TGMC. 1000 hours.
+			new_human.wear_id.paygrade = "E9A" //If you play way too much NTF. 1000 hours.
 	new_human.wear_id.update_label()
 
 

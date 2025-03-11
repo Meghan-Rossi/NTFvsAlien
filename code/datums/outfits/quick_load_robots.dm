@@ -34,9 +34,9 @@
 	belt = null
 	suit_store = null
 
-//---- Squad Marine loadouts
+//---- Squad Operative loadouts
 /datum/outfit/quick/beginner_robot/marine
-	jobtype = "Squad Marine"
+	jobtype = "Squad Operative"
 
 /datum/outfit/quick/beginner_robot/marine/rifleman
 	name = "Rifleman"

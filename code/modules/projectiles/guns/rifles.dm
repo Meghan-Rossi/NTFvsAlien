@@ -959,7 +959,7 @@
 
 /obj/item/weapon/gun/rifle/standard_gpmg
 	name = "\improper MG-60 Raummetall general purpose machine gun"
-	desc = "The Raummetall MG-60 general purpose machinegun is the TGMC's current standard GPMG. Though usually seen mounted on vehicles, it is sometimes used by infantry to hold chokepoints or suppress enemies, or in rare cases for marching fire. It uses 10x26mm boxes."
+	desc = "The Raummetall MG-60 general purpose machinegun is the NTF's current standard GPMG. Though usually seen mounted on vehicles, it is sometimes used by infantry to hold chokepoints or suppress enemies, or in rare cases for marching fire. It uses 10x26mm boxes."
 	icon = 'icons/obj/items/guns/machineguns64.dmi'
 	icon_state = "t60"
 	worn_icon_state = "t60"
@@ -1480,7 +1480,7 @@
 
 /obj/item/weapon/gun/rifle/chambered
 	name = "\improper SR-127 Bauer bolt action rifle"
-	desc = "The Bauer SR-127 is the standard issue bolt action rifle used by the TGMC. Known for its long range accuracy and use by marksmen despite its age and lack of IFF, though careful aim allows fire support from behind. It has an irremoveable scope. Uses 8.6×70mm box magazines."
+	desc = "The Bauer SR-127 is the standard issue bolt action rifle used by the NTF. Known for its long range accuracy and use by marksmen despite its age and lack of IFF, though careful aim allows fire support from behind. It has an irremoveable scope. Uses 8.6×70mm box magazines."
 	icon = 'icons/obj/items/guns/marksman64.dmi'
 	icon_state = "tl127"
 	worn_icon_state = "tl127"

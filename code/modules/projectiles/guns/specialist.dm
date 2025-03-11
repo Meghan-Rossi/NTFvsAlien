@@ -501,7 +501,7 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 
 /obj/item/weapon/gun/rifle/pepperball
 	name = "\improper PB-12 pepperball gun"
-	desc = "The PB-12 is ostensibly riot control device used by the TGMC in spiffy colors, working through a SAN ball that sends a short acting neutralizing chemical to knock out it's target, or weaken them. Guranteed to work on just about everything. Uses SAN Ball Holders as magazines."
+	desc = "The PB-12 is ostensibly riot control device used by the NTF in spiffy colors, working through a SAN ball that sends a short acting neutralizing chemical to knock out it's target, or weaken them. Guranteed to work on just about everything. Uses SAN Ball Holders as magazines."
 	icon = 'ntf_modular/icons/obj/items/guns/special64.dmi'
 	icon_state = "pepperball"
 	worn_icon_state = "pepperball"
@@ -686,7 +686,7 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 
 /obj/item/weapon/gun/launcher/rocket/sadar
 	name = "\improper RL-152 SADAR rocket launcher"
-	desc = "The RL-152 is the primary anti-armor weapon of the TGMC. Used to take out light-tanks and enemy structures, the RL-152 rocket launcher is a dangerous weapon with a variety of combat uses. Uses a variety of 84mm rockets."
+	desc = "The RL-152 is the primary anti-armor weapon of the NTF. Used to take out light-tanks and enemy structures, the RL-152 rocket launcher is a dangerous weapon with a variety of combat uses. Uses a variety of 84mm rockets."
 	icon = 'icons/obj/items/guns/special64.dmi'
 	icon_state = "sadar"
 	worn_icon_state = "sadar"
@@ -810,7 +810,7 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 
 /obj/item/weapon/gun/launcher/rocket/recoillessrifle
 	name = "\improper RL-160 recoilless rifle"
-	desc = "The RL-160 recoilless rifle is a long range explosive ordanance device used by the TGMC used to fire explosive shells at far distances. Uses a variety of 67mm shells designed for various purposes."
+	desc = "The RL-160 recoilless rifle is a long range explosive ordanance device used by the NTF used to fire explosive shells at far distances. Uses a variety of 67mm shells designed for various purposes."
 	icon = 'icons/obj/items/guns/special64.dmi'
 	icon_state = "t160"
 	worn_icon_state = "t160"
