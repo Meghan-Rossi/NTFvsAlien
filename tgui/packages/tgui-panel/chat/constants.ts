@@ -96,7 +96,7 @@ export const MESSAGE_TYPES = [
     name: 'LOOC',
     description:
       'Out-of-character messages from in-view players. Useful for roleplay.',
-    selector: '.looc, .looc_heard_staff,',
+    selector: '.looc, .looc_heard_staff',
   },
   {
     type: MESSAGE_TYPE_ADMINPM,
