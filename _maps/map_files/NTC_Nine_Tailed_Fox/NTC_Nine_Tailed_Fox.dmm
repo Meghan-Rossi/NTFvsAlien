@@ -10179,7 +10179,7 @@
 /area/mainship/squads/req)
 "jmW" = (
 /obj/structure/table/mainship,
-/obj/machinery/computer/camera_advanced/overwatch/charlie,
+/obj/machinery/computer/camera_advanced/overwatch/military/charlie,
 /turf/open/floor/mainship/emerald{
 	dir = 4
 	},
@@ -12765,7 +12765,7 @@
 /area/mainship/living/cryo_cells)
 "lvd" = (
 /obj/structure/table/mainship,
-/obj/machinery/computer/camera_advanced/overwatch/delta,
+/obj/machinery/computer/camera_advanced/overwatch/military/delta,
 /turf/open/floor/mainship/blue{
 	dir = 8
 	},
@@ -17425,7 +17425,7 @@
 	},
 /area/mainship/squads/req)
 "pUN" = (
-/obj/machinery/computer/camera_advanced/overwatch/bravo,
+/obj/machinery/computer/camera_advanced/overwatch/military/bravo,
 /turf/open/floor/mainship/orange{
 	dir = 8
 	},
@@ -21792,7 +21792,7 @@
 /obj/structure/window/reinforced/toughened{
 	dir = 8
 	},
-/obj/machinery/computer/camera_advanced/overwatch/main,
+/obj/machinery/computer/camera_advanced/overwatch/military/main,
 /turf/open/floor/plating/mainship,
 /area/mainship/command/cic)
 "tWN" = (
@@ -23932,7 +23932,7 @@
 /turf/open/floor/mainship/mono,
 /area/mainship/groundhq/ntf/shipboard/brig_cells)
 "wei" = (
-/obj/machinery/computer/camera_advanced/overwatch/alpha,
+/obj/machinery/computer/camera_advanced/overwatch/military/alpha,
 /turf/open/floor/mainship/red{
 	dir = 4
 	},
