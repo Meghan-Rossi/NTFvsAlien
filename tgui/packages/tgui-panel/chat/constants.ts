@@ -89,14 +89,14 @@ export const MESSAGE_TYPES = [
     name: 'OOC',
     description: 'OOC messages, admin announcements and round announcements',
     selector:
-      '.ooc, .colorooc, .adminooc, .hostooc, .projleadooc, .headcoderooc, .headminooc, .headmentorooc, .trialminooc, .candiminooc, .mentorooc, .maintainerooc, .contributorooc, .otherooc, .ooc_alert_ooc, .ooc_alert_game',
+      '.ooc, .colorooc, .looc, .looc_heard_staff, .adminooc, .hostooc, .projleadooc, .headcoderooc, .headminooc, .headmentorooc, .trialminooc, .candiminooc, .mentorooc, .maintainerooc, .contributorooc, .otherooc, .ooc_alert_ooc, .ooc_alert_game',
   },
   {
     type: MESSAGE_TYPE_LOOC,
     name: 'LOOC',
     description:
       'Out-of-character messages from in-view players. Useful for roleplay.',
-    selector: '.looc',
+    selector: '.looc, .looc_heard_staff,',
   },
   {
     type: MESSAGE_TYPE_ADMINPM,
