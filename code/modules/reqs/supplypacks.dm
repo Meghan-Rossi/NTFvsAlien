@@ -1273,7 +1273,7 @@ CLOTHING
 	cost = 100
 
 /datum/supply_packs/clothing/marine_outfits
-	name = "mMarine outfits"
+	name = "Marine outfits"
 	contains = list(
 		/obj/item/clothing/under/marine,
 		/obj/item/storage/belt/marine,
@@ -1616,6 +1616,11 @@ ENGINEERING
 	name = "Teleporter pads"
 	contains = list(/obj/effect/teleporter_linker)
 	cost = 500
+
+/datum/supply_packs/engineering/tesla_turret
+	name = "Tesla turret"
+	contains = list(/obj/item/tesla_turret)
+	cost = 600
 
 /*******************************************************************************
 SUPPLIES

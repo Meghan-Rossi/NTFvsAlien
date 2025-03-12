@@ -30,8 +30,6 @@
 	span_danger("We charge towards \the [A]!") )
 	xeno_owner.emote("roar")
 	xeno_owner.xeno_flags |= XENO_LEAPING //This has to come before throw_at, which checks impact. So we don't do end-charge specials when thrown
-	succeed_activate()
-
 	var/multiplier = 1
 	if(HAS_TRAIT(owner, TRAIT_BLOODTHIRSTER))
 		if(xeno_owner.plasma_stored >= STAGE_TWO_BLOODTHIRST)
@@ -42,6 +40,7 @@
 	xeno_owner.throw_at(A, charge_range*multiplier, RAV_CHARGESPEED*multiplier, xeno_owner)
 
 	add_cooldown()
+	succeed_activate()
 
 
 /datum/action/ability/activable/xeno/charge/on_cooldown_finish()
