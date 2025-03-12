@@ -36,7 +36,7 @@
 	html_description = {"
 		<b>Difficulty</b>: Hard<br /><br />
 		<b>You answer to</b> NTC High Command<br /><br />
-		<b>Unlock Requirement</b>: Starting Role<br /><br />
+		<b>Unlock Requirement</b>: 10 hours playtime (any role)<br /><br />
 		<b>Gamemode Availability</b>: Nuclear War<br /><br /><br />
 		<b>Duty</b>: Lead the NTF platoon and complete your mission. Support the marines and communicate with your command staff, execute orders.
 	"}
@@ -99,7 +99,7 @@ And remember, you are not above the law."})
 	html_description = {"
 		<b>Difficulty</b>:Very Hard<br /><br />
 		<b>You answer to the</b> Captain<br /><br />
-		<b>Unlock Requirement</b>: Starting Role<br /><br />
+		<b>Unlock Requirement</b>: 10 hours playtime (any role)<br /><br />
 		<b>Gamemode Availability</b>: Crash, Nuclear War<br /><br /><br />
 		<b>Duty</b>: Lead your platoon on the field. Take advantage of the military staff and assets you will need for the mission, keep good relations between command and the marines. Assist the captain if available.
 	"}
@@ -302,7 +302,7 @@ Make the NTC proud!"})
 	html_description = {"
 		<b>Difficulty</b>: Medium<br /><br />
 		<b>You answer to the</b> Captain<br /><br />
-		<b>Unlock Requirement</b>: Starting Role<br /><br />
+		<b>Unlock Requirement</b>: 3 hours playtime (any role)<br /><br />
 		<b>Gamemode Availability</b>: Nuclear War<br /><br /><br />
 		<b>Duty</b>: Take charge of one of the four squads, be their eyes and ears providing intel and additional shipside support via Orbital Bombardments.
 	"}
@@ -362,7 +362,7 @@ You are in charge of logistics and the overwatch system. You are also in line to
 	html_description = {"
 		<b>Difficulty</b>: Hard<br /><br />
 		<b>You answer to the</b> acting Command Staff<br /><br />
-		<b>Unlock Requirement</b>: 100 hours<br /><br />
+		<b>Unlock Requirement</b>: 15 hours playtime (any role)<br /><br />
 		<b>Gamemode Availability</b>: Nuclear War<br /><br /><br />
 		<b>Duty</b>: Pilot the Tadpole, a versatile dropship capable of fulfilling roles ranging from ambulance to mobile bunker.
 	"}
@@ -487,7 +487,7 @@ You are to ensure the Tadpole's survival and to transport marines around, acting
 	html_description = {"
 		<b>Difficulty</b>: Medium<br /><br />
 		<b>You answer to the</b> acting Command Staff<br /><br />
-		<b>Unlock Requirement</b>: Starting Role<br /><br />
+		<b>Unlock Requirement</b>: 15 hours playtime (any role)<br /><br />
 		<b>Gamemode Availability</b>: Nuclear War<br /><br /><br />
 		<b>Duty</b>: Pilot the Condor, a modular attack aircraft that provides close air support with a variety of weapons ranging from the inbuilt gatling to wing mounted rockets.
 	"}
@@ -544,7 +544,7 @@ Though you are an officer, your authority is limited to the dropship and the Con
 	html_description = {"
 		<b>Difficulty</b>:Very Hard<br /><br />
 		<b>You answer to the</b> acting Command Staff<br /><br />
-		<b>Unlock Requirement</b>: Starting Role<br /><br />
+		<b>Unlock Requirement</b>: 15 hours playtime (any role)<br /><br />
 		<b>Gamemode Availability</b>: Nuclear War<br /><br /><br />
 		<b>Duty</b>: Act as the spearhead of the operation
 	"}
@@ -602,7 +602,7 @@ You can serve your Division in a variety of roles, so choose carefully."})
 	html_description = {"
 		<b>Difficulty</b>:Very Hard<br /><br />
 		<b>You answer to the</b> acting Command Staff<br /><br />
-		<b>Unlock Requirement</b>: Starting Role<br /><br />
+		<b>Unlock Requirement</b>: 15 hours playtime (any role)<br /><br />
 		<b>Gamemode Availability</b>: Nuclear War<br /><br /><br />
 		<b>Duty</b>: Provide heavy fire support
 	"}
@@ -662,7 +662,7 @@ You can serve your Division in a variety of roles, so choose carefully."})
 	html_description = {"
 		<b>Difficulty</b>:Very Hard<br /><br />
 		<b>You answer to the</b> acting Command Staff<br /><br />
-		<b>Unlock Requirement</b>: Starting Role<br /><br />
+		<b>Unlock Requirement</b>: 15 hours playtime (any role)<br /><br />
 		<b>Gamemode Availability</b>: Nuclear War<br /><br /><br />
 		<b>Duty</b>: Transport and support the frontline troops
 	"}
@@ -726,7 +726,7 @@ You can serve your Division in a variety of roles, so choose carefully."})
 	html_description = {"
 		<b>Difficulty</b>: Hard<br /><br />
 		<b>You answer to the</b> acting Command Staff<br /><br />
-		<b>Unlock Requirement</b>: Starting Role<br /><br />
+		<b>Unlock Requirement</b>: 10 hours playtime (any role)<br /><br />
 		<b>Gamemode Availability</b>: Nuclear War<br /><br /><br />
 		<b>Duty</b>: Supervise the engineers and technicians on duty. Overview the ship’s engine. Teach what’s right and what’s wrong about engineering, cut corners and find places in any FOB that can easily be destroyed.
 	"}
@@ -847,7 +847,7 @@ requisitions line and later on to be ready to send supplies for marines who are 
 	html_description = {"
 		<b>Difficulty</b>: Medium<br /><br />
 		<b>You answer to the</b> acting Command Staff<br /><br />
-		<b>Unlock Requirement</b>: Starting Role<br /><br />
+		<b>Unlock Requirement</b>: 1 hour playtime (any role)<br /><br />
 		<b>Gamemode Availability</b>: Nuclear War<br /><br /><br />
 		Requisition supplies to the battlefield. Ensure that the marines are reparing miners for more points. Supply the marines with deluxe equipment to ensure success.
 	"}
@@ -919,7 +919,7 @@ A happy ship is a well-functioning ship."})
 	html_description = {"
 		<b>Difficulty</b>: Hard<br /><br />
 		<b>You answer to the</b> acting Command Staff<br /><br />
-		<b>Unlock Requirement</b>: Starting Role<br /><br />
+		<b>Unlock Requirement</b>: 10 hours playtime (any role)<br /><br />
 		<b>Gamemode Availability</b>: Crash, Nuclear War<br /><br /><br />
 		<b>Duty</b>: Communicate and lead your fellow medical staff (if available), supervise the medical department. Coordinate and teach fellow medical staff and corpsmen what they’re doing for treating an injury. Be the sole doctor in the Canterbury.
 	"}
@@ -1171,7 +1171,7 @@ Use your office fax machine to communicate with corporate headquarters or to acq
 	html_description = {"
 		<b>Difficulty</b>: Soul Crushing<br /><br />
 		<b>You answer to the</b> acting Command Staff and the human crew<br /><br />
-		<b>Unlock Requirement</b>: Starting Role<br /><br />
+		<b>Unlock Requirement</b>: 10 hours playtime (any role)<br /><br />
 		<b>Gamemode Availability</b>: Crash, Nuclear War<br /><br /><br />
 		<b>Duty</b>: Support and assist in every department of the Nine Tailed Fox, use your incredibly developed skills to help the marines during their missions. You can talk to other synthetics or the AI on the :n channel. Serve your purpose.
 	"}
@@ -1240,7 +1240,7 @@ In addition, being a Synthetic gives you knowledge in every field and specializa
 	html_description = {"
 		<b>Difficulty</b>: Easy<br /><br />
 		<b>You answer to the</b> acting Command Staff and the human crew<br /><br />
-		<b>Unlock Requirement</b>: Starting Role<br /><br />
+		<b>Unlock Requirement</b>: 3 hours playtime (any role)<br /><br />
 		<b>Gamemode Availability</b>: Nuclear War<br /><br /><br />
 		<b>Duty</b>: Assist the crew whenever you’re needed, be the doorknob of the ship. Recon the areas for threats via cameras, report your findings to the crew at various communication channels. Follow your laws.
 	"}
