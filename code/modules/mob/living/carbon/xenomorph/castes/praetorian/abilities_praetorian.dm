@@ -342,7 +342,7 @@ GLOBAL_LIST_INIT(acid_spray_hit, typecacheof(list(/obj/structure/barricade, /obj
 /datum/action/ability/activable/xeno/impale
 	name = "Impale"
 	action_icon_state = "impale"
-	action_icon = 'icons/Xeno/actions/praetorian.dmi'
+	action_icon = 'ntf_modular/icons/xeno/actions/praetorian.dmi'
 	desc = "Skewer an object next to you with your tail. The more debuffs on a living target, the greater the damage done. Penetrates the armor of marked targets."
 	ability_cost = 150
 	cooldown_duration = 15 SECONDS
@@ -495,7 +495,7 @@ GLOBAL_LIST_INIT(acid_spray_hit, typecacheof(list(/obj/structure/barricade, /obj
 /datum/action/ability/activable/xeno/tail_hook
 	name = "Tail Hook"
 	action_icon_state = "tail_hook"
-	action_icon = 'icons/Xeno/actions/praetorian.dmi'
+	action_icon = 'ntf_modular/icons/xeno/actions/praetorian.dmi'
 	desc = "Swing your tail high, sending the hooked edge gouging into any targets within 2 tiles. Hooked marines have their movement slowed and are dragged, spinning, towards you. Marked marines are slowed for longer and briefly knocked over."
 	cooldown_duration = 12 SECONDS
 	keybind_flags = ABILITY_KEYBIND_USE_ABILITY
@@ -558,7 +558,7 @@ GLOBAL_LIST_INIT(acid_spray_hit, typecacheof(list(/obj/structure/barricade, /obj
 /datum/action/ability/activable/xeno/baton_pass
 	name = "Baton Pass"
 	action_icon_state = "baton_pass"
-	action_icon = 'icons/Xeno/actions/praetorian.dmi'
+	action_icon = 'ntf_modular/icons/xeno/actions/praetorian.dmi'
 	desc = "Inject another xenomorph with your built-up adrenaline, increasing their movement speed considerably for 6 seconds. Adds a short cooldown to dodge when used. Less effect on quick xenos."
 	cooldown_duration = 30 SECONDS
 	ability_cost = 150
