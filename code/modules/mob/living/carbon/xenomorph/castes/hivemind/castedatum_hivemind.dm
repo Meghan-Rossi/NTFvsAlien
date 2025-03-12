@@ -62,6 +62,7 @@
 		/datum/action/ability/activable/xeno/secrete_resin/hivemind,
 		/datum/action/ability/activable/psionic_interact,
 		/datum/action/ability/activable/xeno/secrete_special_resin/hivemind,
+		/datum/action/ability/activable/xeno/shoot_xeno_artillery,
 	)
 
 /datum/xeno_caste/hivemind/on_caste_applied(mob/xenomorph)

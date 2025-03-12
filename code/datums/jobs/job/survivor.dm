@@ -113,7 +113,7 @@ Good luck, but do not expect to survive."})
 
 //Atmospherics Technician
 /datum/job/survivor/atmos
-	title = "Technician Survivor"
+	title = "Atmos Technician Survivor"
 	skills_type = /datum/skills/civilian/survivor/atmos
 	outfit = /datum/outfit/job/survivor/atmos
 
