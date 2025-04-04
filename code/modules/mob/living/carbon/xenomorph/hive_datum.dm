@@ -30,8 +30,11 @@
 	var/list/client/candidates
 	/// Amount of special resin points used to build special resin walls by each hive.
 	var/special_build_points = 50
-	/// These factions cannot sell this hive's corpses.
+	/// These factions cannot sell this hive's resin jelly or corpses
 	var/list/allied_factions = list(FACTION_CLF, FACTION_XENO)
+	/// Supply and dropship points given when a non-allied faction sells one resin jelly from this faction.
+	var/jelly_export_value = list(2,0)
+
 
 	///Reference to upgrades available and purchased by this hive.
 	var/datum/hive_purchases/purchases = new
@@ -1223,6 +1226,7 @@ to_chat will check for valid clients itself already so no need to double check f
 	prefix = "Corrupted "
 	color = "#00ff80"
 	allied_factions = list(FACTION_TERRAGOV)
+	jelly_export_value = list(1,0)
 
 // Make sure they can understand english
 /datum/hive_status/corrupted/post_add(mob/living/carbon/xenomorph/X)
@@ -1696,3 +1700,4 @@ to_chat will check for valid clients itself already so no need to double check f
 	
 /obj/item/resin_jelly/get_xeno_hivenumber()
 	return hivenumber
+
