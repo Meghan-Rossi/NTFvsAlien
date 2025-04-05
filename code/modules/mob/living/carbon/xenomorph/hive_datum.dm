@@ -30,7 +30,7 @@
 	var/list/client/candidates
 	/// Amount of special resin points used to build special resin walls by each hive.
 	var/special_build_points = 50
-	/// These factions cannot sell this hive's resin jelly or corpses
+	/// These factions will not be attacked by turrets of this hive but cannot sell their resin jelly or corpses.
 	var/list/allied_factions = list(FACTION_CLF, FACTION_XENO)
 	/// Supply and dropship points given when a non-allied faction sells one resin jelly from this faction.
 	var/jelly_export_value = list(2,0)
@@ -1669,7 +1669,10 @@ to_chat will check for valid clients itself already so no need to double check f
 /obj/item/clothing/mask/facehugger/get_xeno_hivenumber()
 	return hivenumber
 
-/mob/living/carbon/xenomorph/get_xeno_hivenumber()
+/mob/living
+	var/hivenumber = FALSE
+
+/mob/living/get_xeno_hivenumber()
 	return hivenumber
 
 /mob/illusion/xeno/get_xeno_hivenumber()
@@ -1681,16 +1684,8 @@ to_chat will check for valid clients itself already so no need to double check f
 		return hivenumber
 	return ..()
 
-/mob/living/carbon/human/get_xeno_hivenumber()
-	if(faction == FACTION_ZOMBIE)
-		return FACTION_ZOMBIE
-	if(faction == FACTION_CLF)
-		return XENO_HIVE_NORMAL
-	return FALSE
-
 /obj/machinery/deployable/mounted/sentry/get_xeno_hivenumber()
-	if(iff_signal == CLF_IFF)
-		return XENO_HIVE_NORMAL
+	return hivenumber
 
 /obj/structure/mineral_door/resin/get_xeno_hivenumber()
 	return hivenumber
