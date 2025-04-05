@@ -51,7 +51,10 @@
 	if(xeno_attacker.status_flags & INCORPOREAL)
 		return FALSE
 
-	if((xeno_attacker.a_intent == INTENT_HARM && isxenohivelord(xeno_attacker)) || xeno_attacker.hivenumber != hivenumber)
+	if(!issamexenohive(xeno_attacker))
+		return ..()
+
+	if(xeno_attacker.a_intent == INTENT_HARM)
 		balloon_alert(xeno_attacker, "Destroying...")
 		if(do_after(xeno_attacker, HIVELORD_TUNNEL_DISMANTLE_TIME, IGNORE_HELD_ITEM, src, BUSY_ICON_BUILD))
 			deconstruct(FALSE)

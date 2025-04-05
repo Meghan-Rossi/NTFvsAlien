@@ -76,8 +76,11 @@
 	if(!T.is_weedable())
 		to_chat(owner, span_warning("Bad place for a garden!"))
 		return fail_activate()
-
-	if(locate(weed_type) in T)
+	var/obj/alien/weeds/existing_weed = locate() in T
+	if(existing_weed && (!existing_weed.issamexenohive(xeno_owner)))
+		to_chat(owner, span_warning("You cannot build on another hive's weeds!"))
+		return fail_activate()
+	if(existing_weed && existing_weed.type == weed_type)
 		to_chat(owner, span_warning("There's a pod here already!"))
 		return fail_activate()
 
@@ -338,12 +341,15 @@
 		return
 
 	var/mob/living/carbon/xenomorph/X = owner
-	switch(is_valid_for_resin_structure(T, X.selected_resin == /obj/structure/mineral_door/resin, X.selected_resin))
+	switch(is_valid_for_resin_structure(T, X.selected_resin == /obj/structure/mineral_door/resin, X.selected_resin, X.hivenumber))
 		if(ERROR_CANT_WEED)
 			owner.balloon_alert(owner, span_notice("This spot cannot support a garden!"))
 			return
 		if(ERROR_NO_WEED)
 			owner.balloon_alert(owner, span_notice("This spot has no weeds to serve as support!"))
+			return
+		if(ERROR_ENEMY_WEED)
+			owner.balloon_alert(owner, span_notice("You cannot build on another hive's weeds!"))
 			return
 		if(ERROR_NO_SUPPORT)
 			owner.balloon_alert(owner, span_notice("This spot has no adjaecent support for the structure!"))
@@ -381,12 +387,15 @@
 
 /datum/action/ability/activable/xeno/secrete_resin/proc/build_resin(turf/T)
 	var/mob/living/carbon/xenomorph/X = owner
-	switch(is_valid_for_resin_structure(T, X.selected_resin == /obj/structure/mineral_door/resin, X.selected_resin))
+	switch(is_valid_for_resin_structure(T, X.selected_resin == /obj/structure/mineral_door/resin, X.selected_resin, X.hivenumber))
 		if(ERROR_CANT_WEED)
 			owner.balloon_alert(owner, span_notice("This spot cannot support a garden!"))
 			return
 		if(ERROR_NO_WEED)
 			owner.balloon_alert(owner, span_notice("This spot has no weeds to serve as support!"))
+			return
+		if(ERROR_ENEMY_WEED)
+			owner.balloon_alert(owner, span_notice("You cannot build on another hive's weeds!"))
 			return
 		if(ERROR_NO_SUPPORT)
 			owner.balloon_alert(owner, span_notice("This spot has no adjaecent support for the structure!"))
@@ -410,12 +419,15 @@
 		return fail_activate()
 	if(!do_after(X, get_wait(), NONE, T, BUSY_ICON_BUILD))
 		return fail_activate()
-	switch(is_valid_for_resin_structure(T, X.selected_resin == /obj/structure/mineral_door/resin, X.selected_resin))
+	switch(is_valid_for_resin_structure(T, X.selected_resin == /obj/structure/mineral_door/resin, X.selected_resin, X.hivenumber))
 		if(ERROR_CANT_WEED)
 			owner.balloon_alert(owner, span_notice("This spot cannot support a garden!"))
 			return
 		if(ERROR_NO_WEED)
 			owner.balloon_alert(owner, span_notice("This spot has no weeds to serve as support!"))
+			return
+		if(ERROR_ENEMY_WEED)
+			owner.balloon_alert(owner, span_notice("You cannot build on another hive's weeds!"))
 			return
 		if(ERROR_NO_SUPPORT)
 			owner.balloon_alert(owner, span_notice("This spot has no adjaecent support for the structure!"))
@@ -546,12 +558,15 @@
 	if(GLOB.hive_datums[owner.get_xeno_hivenumber()].special_build_points <= 0)
 		owner.balloon_alert(owner, span_notice("There is not enough special build points to build this structure!"))
 		return
-	switch(is_valid_for_resin_structure(T, X.selected_special_resin == /obj/structure/mineral_door/resin, X.selected_special_resin))
+	switch(is_valid_for_resin_structure(T, X.selected_special_resin == /obj/structure/mineral_door/resin, X.selected_special_resin, X.hivenumber))
 		if(ERROR_CANT_WEED)
 			owner.balloon_alert(owner, span_notice("This spot cannot support a garden!"))
 			return
 		if(ERROR_NO_WEED)
 			owner.balloon_alert(owner, span_notice("This spot has no weeds to serve as support!"))
+			return
+		if(ERROR_ENEMY_WEED)
+			owner.balloon_alert(owner, span_notice("You cannot build on another hive's weeds!"))
 			return
 		if(ERROR_NO_SUPPORT)
 			owner.balloon_alert(owner, span_notice("This spot has no adjaecent support for the structure!"))
@@ -577,12 +592,15 @@
 	if(GLOB.hive_datums[owner.get_xeno_hivenumber()].special_build_points <= 0)
 		owner.balloon_alert(owner, span_notice("There is not enough special build points to build this structure!"))
 		return
-	switch(is_valid_for_resin_structure(T, X.selected_special_resin == /obj/structure/mineral_door/resin, X.selected_special_resin))
+	switch(is_valid_for_resin_structure(T, X.selected_special_resin == /obj/structure/mineral_door/resin, X.selected_special_resin, X.hivenumber))
 		if(ERROR_CANT_WEED)
 			owner.balloon_alert(owner, span_notice("This spot cannot support a garden!"))
 			return
 		if(ERROR_NO_WEED)
 			owner.balloon_alert(owner, span_notice("This spot has no weeds to serve as support!"))
+			return		
+		if(ERROR_ENEMY_WEED)
+			owner.balloon_alert(owner, span_notice("You cannot build on another hive's weeds!"))
 			return
 		if(ERROR_NO_SUPPORT)
 			owner.balloon_alert(owner, span_notice("This spot has no adjaecent support for the structure!"))

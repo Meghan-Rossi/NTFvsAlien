@@ -154,18 +154,20 @@
 		vehicle.last_move_time += WEED_SLOWDOWN
 		return
 
-	if(isxeno(crosser))
+	if(issamexenohive(crosser))
+		if(!isxeno(crosser))
+			return
 		var/mob/living/carbon/xenomorph/X = crosser
 		X.next_move_slowdown += X.xeno_caste.weeds_speed_mod
 		return
 
-	if(!ishuman(crosser))
+	if(!isliving(crosser))
 		return
 
 	if(CHECK_MULTIPLE_BITFIELDS(crosser.pass_flags, HOVERING))
 		return
 
-	var/mob/living/carbon/human/victim = crosser
+	var/mob/living/victim = crosser
 
 	if(victim.lying_angle)
 		return
@@ -329,13 +331,16 @@
 		vehicle.last_move_time += WEED_SLOWDOWN
 		return
 
-	if(!ishuman(crosser))
+	if(!isliving(crosser))
+		return
+
+	if(!issamexenohive(crosser))
 		return
 
 	if(CHECK_MULTIPLE_BITFIELDS(crosser.pass_flags, HOVERING))
 		return
 
-	var/mob/living/carbon/human/victim = crosser
+	var/mob/living/victim = crosser
 
 	if(victim.lying_angle)
 		return
