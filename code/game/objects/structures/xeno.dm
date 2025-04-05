@@ -14,11 +14,24 @@
 	var/on_fire = FALSE
 	///Set this to true if this object isn't destroyed when the weeds under it is.
 	var/ignore_weed_destruction = FALSE
+	///Which hive it belongs to
+	var/hivenumber = XENO_HIVE_NORMAL
 
-/obj/alien/Initialize(mapload)
+/obj/alien/Initialize(mapload,_hivenumber)
 	. = ..()
+	if(_hivenumber) ///because admins can spawn them
+		hivenumber = _hivenumber
+	var/datum/hive_status/hive = GLOB.hive_datums[hivenumber]
+	name = "[hive.prefix][name]"
+	color = hive.color
 	if(!ignore_weed_destruction)
 		RegisterSignal(loc, COMSIG_TURF_WEED_REMOVED, PROC_REF(weed_removed))
+
+/obj/alien/update_icon_state()
+	.=..()
+	var/datum/hive_status/hive = GLOB.hive_datums[hivenumber]
+	if(istype(hive))
+		color = hive.color
 
 /// Destroy the alien effect when the weed it was on is destroyed
 /obj/alien/proc/weed_removed()
@@ -170,20 +183,26 @@
 	var/close_delay = 10 SECONDS
 	///The timer that tracks the delay above
 	var/closetimer
+	var/hivenumber = XENO_HIVE_NORMAL
 
 /obj/structure/mineral_door/resin/smooth_icon()
 	. = ..()
 	update_icon()
 
-/obj/structure/mineral_door/resin/Initialize(mapload)
+/obj/structure/mineral_door/resin/Initialize(mapload, _hivenumber)
 	. = ..()
+	if(_hivenumber) ///because admins can spawn them
+		hivenumber = _hivenumber
+	var/datum/hive_status/hive = GLOB.hive_datums[hivenumber]
+	name = "[hive.prefix][name]"
+	color = hive.color
 	if(!locate(/obj/alien/weeds) in loc)
 		new /obj/alien/weeds(loc)
 
 
 /obj/structure/mineral_door/resin/Cross(atom/movable/mover, turf/target)
 	. = ..()
-	if(!. && isxeno(mover) && !open)
+	if(!. && issamexenohive(mover) && !open)
 		toggle_state()
 		return TRUE
 	if(ishuman(mover))
@@ -204,6 +223,9 @@
 	var/turf/cur_loc = xeno_attacker.loc
 	if(!istype(cur_loc))
 		return FALSE //Some basic logic here
+	if(!issamexenohive(xeno_attacker))
+		return ..()
+
 	if(xeno_attacker.a_intent != INTENT_HARM)
 		try_toggle_state(xeno_attacker)
 		return TRUE
@@ -233,7 +255,7 @@
 			take_damage(30, BRUTE, BOMB)
 
 /obj/structure/mineral_door/resin/try_toggle_state(atom/user)
-	if(isxeno(user))
+	if(issamexenohive(user))
 		return ..()
 
 /obj/structure/mineral_door/resin/toggle_state()
@@ -293,6 +315,16 @@
 	///Holder to ensure only one user per resin jelly.
 	var/current_user
 
+	var/hivenumber = XENO_HIVE_NORMAL
+	
+/obj/item/resin_jelly/Initialize(mapload, _hivenumber)
+	. = ..()
+	if(_hivenumber) ///because admins can spawn them
+		hivenumber = _hivenumber
+	var/datum/hive_status/hive = GLOB.hive_datums[hivenumber]
+	name = "[hive.prefix][name]"
+	color = hive.color
+	
 /obj/item/resin_jelly/attack_alien(mob/living/carbon/xenomorph/xeno_attacker, damage_amount = xeno_attacker.xeno_caste.melee_damage, damage_type = BRUTE, armor_type = MELEE, effects = TRUE, armor_penetration = xeno_attacker.xeno_caste.melee_ap, isrightclick = FALSE)
 	if(xeno_attacker.status_flags & INCORPOREAL)
 		return FALSE

@@ -1656,7 +1656,7 @@ to_chat will check for valid clients itself already so no need to double check f
 /atom/proc/get_xeno_hivenumber()
 	return FALSE
 
-/obj/alien/egg/get_xeno_hivenumber()
+/obj/alien/get_xeno_hivenumber()
 	return hivenumber
 
 /obj/item/alien_embryo/get_xeno_hivenumber()
@@ -1677,11 +1677,6 @@ to_chat will check for valid clients itself already so no need to double check f
 		return hivenumber
 	return ..()
 
-/obj/structure/xeno/trap/get_xeno_hivenumber()
-	if(hugger)
-		return hugger.hivenumber
-	return ..()
-
 /mob/living/carbon/human/get_xeno_hivenumber()
 	if(faction == FACTION_ZOMBIE)
 		return FACTION_ZOMBIE
@@ -1692,3 +1687,12 @@ to_chat will check for valid clients itself already so no need to double check f
 /obj/machinery/deployable/mounted/sentry/get_xeno_hivenumber()
 	if(iff_signal == CLF_IFF)
 		return XENO_HIVE_NORMAL
+
+/obj/structure/mineral_door/resin/get_xeno_hivenumber()
+	return hivenumber
+	
+/turf/closed/wall/resin/get_xeno_hivenumber()
+	return hivenumber
+	
+/obj/item/resin_jelly/get_xeno_hivenumber()
+	return hivenumber

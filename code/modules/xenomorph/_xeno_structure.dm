@@ -24,6 +24,9 @@
 		LAZYADDASSOC(GLOB.xeno_critical_structures_by_hive, hivenumber, src)
 	if((xeno_structure_flags & XENO_STRUCT_WARNING_RADIUS))
 		set_proximity_warning()
+	var/datum/hive_status/hive = GLOB.hive_datums[hivenumber]
+	name = "[hive.prefix][name]"
+	color = hive.color
 
 /obj/structure/xeno/Destroy()
 	//prox_warning_turfs = null

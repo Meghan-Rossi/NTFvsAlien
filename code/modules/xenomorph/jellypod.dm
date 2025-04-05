@@ -62,7 +62,7 @@
 		to_chat(xeno_attacker, span_xenonotice("We reach into \the [src], but only find dregs of resin. We should wait some more.") )
 		return
 	balloon_alert(xeno_attacker, "Retrieved jelly")
-	new /obj/item/resin_jelly(loc)
+	new /obj/item/resin_jelly(loc, hivenumber)
 	chargesleft--
 	if(!(datum_flags & DF_ISPROCESSING) && (chargesleft < maxcharges))
 		START_PROCESSING(SSslowprocess, src)

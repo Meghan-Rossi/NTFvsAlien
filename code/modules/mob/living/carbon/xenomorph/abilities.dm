@@ -83,7 +83,7 @@
 
 	owner.visible_message(span_xenonotice("\The [owner] regurgitates a pulsating node and plants it on the ground!"), \
 		span_xenonotice("We regurgitate a pulsating node and plant it on the ground!"), null, 5)
-	new weed_type(T)
+	new weed_type(T, xeno_owner.hivenumber)
 	last_weeded_turf = T
 	playsound(T, SFX_ALIEN_RESIN_BUILD, 25)
 	GLOB.round_statistics.weeds_planted++
@@ -369,7 +369,7 @@
 		T.ChangeTurf(X.selected_resin, baseturfs)
 		new_resin = T
 	else
-		new_resin = new X.selected_resin(T)
+		new_resin = new X.selected_resin(T, xeno_owner.hivenumber)
 	if(new_resin)
 		SSresinshaping.quickbuild_points_by_hive[owner.get_xeno_hivenumber()]--
 
@@ -445,7 +445,7 @@
 		T.ChangeTurf(X.selected_resin, baseturfs)
 		new_resin = T
 	else
-		new_resin = new X.selected_resin(T)
+		new_resin = new X.selected_resin(T, xeno_owner.hivenumber)
 	switch(X.selected_resin)
 		if(/obj/alien/resin/sticky)
 			ability_cost = initial(ability_cost) / 3
@@ -611,7 +611,7 @@
 		T.ChangeTurf(X.selected_special_resin, baseturfs)
 		new_resin = T
 	else
-		new_resin = new X.selected_special_resin(T)
+		new_resin = new X.selected_special_resin(T, xeno_owner.hivenumber)
 	if(new_resin)
 		add_cooldown(SSmonitor.gamestate == SHUTTERS_CLOSED ? get_cooldown()/2 : get_cooldown())
 		succeed_activate(SSmonitor.gamestate == SHUTTERS_CLOSED ? ability_cost/2 : ability_cost)
