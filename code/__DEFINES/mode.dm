@@ -76,6 +76,8 @@
 #define MODE_SURVIVAL (1<<20)
 #define MODE_NO_GHOSTS (1<<21)
 #define MODE_SINGLE_USE_NUKE_DISK_GENERATOR (1<<22)
+/// Without this humans will be too clonelossed to birth additional larva.
+#define MODE_FREE_LARVABURST (1<<23)
 
 #define MODE_INFESTATION_X_MAJOR "Xenomorph Major Victory"
 #define MODE_INFESTATION_M_MAJOR "Ninetails Major Victory"

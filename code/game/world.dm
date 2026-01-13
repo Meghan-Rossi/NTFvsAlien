@@ -207,7 +207,9 @@ GLOBAL_VAR(restart_counter)
 #endif
 
 /world/Topic(T, addr, master, key)
+	#ifdef USE_TGS
 	TGS_TOPIC	//redirect to server tools if necessary
+	#endif
 
 	var/static/list/topic_handlers = TopicHandlers()
 

@@ -84,6 +84,12 @@
 /obj/machinery/computer/shuttle/marine_dropship/two{
 	possible_destinations = "lz1;lz2;hqlz1;hqlz2;normandy;alamo"
 	},
+/obj/structure/transmitter/desk{
+	pixel_x = 13;
+	pixel_y = -10;
+	phone_category = "Dropships";
+	phone_id = "Normandy"
+	},
 /turf/open/shuttle/dropship/floor,
 /area/shuttle/dropship/normandy{
 	ceiling = 2

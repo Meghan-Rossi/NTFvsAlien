@@ -76,7 +76,7 @@
 	var/stamina_loss_adjustment = staminaloss + amount
 	var/health_limit = maxHealth * 2
 	if(stamina_loss_adjustment > health_limit) //If we exceed maxHealth * 2 stamina damage, get hardstunned for 15 seconds, instead of taking oxygen damage.
-		apply_effect(15 SECONDS, EFFECT_PARALYZE)
+		ParalyzeNoChain(15 SECONDS)
 
 	staminaloss = clamp(stamina_loss_adjustment, -max_stamina, health_limit)
 
@@ -97,11 +97,13 @@
 	if(staminaloss < max(health * 1.5,0) || !(COOLDOWN_FINISHED(src, last_stamina_exhaustion))) //If we're on cooldown for stamina exhaustion, don't bother
 		return
 
+	/*
 	if(feedback)
 		visible_message(span_warning("\The [src] slumps to the ground, too weak to continue fighting."),
 			span_warning("You slump to the ground, you're too exhausted to keep going..."))
 
 	ParalyzeNoChain(1 SECONDS) //Short stun
+	*/
 	adjust_stagger(STAMINA_EXHAUSTION_STAGGER_DURATION)
 	add_slowdown(STAMINA_EXHAUSTION_DEBUFF_STACKS)
 	adjust_blurriness(STAMINA_EXHAUSTION_DEBUFF_STACKS)

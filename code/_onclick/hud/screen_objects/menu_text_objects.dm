@@ -52,7 +52,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/text/lobby)
 		return
 	add_atom_colour(COLOR_HOVER_MOUSE, TEMPORARY_COLOR_PRIORITY)
 	var/mob/new_player/player = usr
-	player.playsound_local(player, 'ntf_modular/sound/effects/select.ogg', 50)
+	player.playsound_local(player, 'ntf_modular/sound/effects/select.ogg', 25)
 
 /atom/movable/screen/text/lobby/clickable/MouseExited(location, control, params)
 	. = ..()
@@ -62,9 +62,9 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/text/lobby)
 	var/mob/new_player/player = usr
 	if(!(atom_flags & INITIALIZED)) //yes this can happen, fuck me
 		to_chat(usr, span_warning("The game is still setting up, please try again later."))
-		player.playsound_local(player, 'ntf_modular/sound/effects/glitch2.ogg', 50)
+		player.playsound_local(player, 'ntf_modular/sound/effects/glitch2.ogg', 25)
 		return
-	player.playsound_local(player, 'ntf_modular/sound/effects/done.ogg', 50)
+	player.playsound_local(player, 'ntf_modular/sound/effects/done.ogg', 25)
 
 /atom/movable/screen/text/lobby/clickable/setup_character
 	maptext = "<span class='lobbytext'>CHARACTER LOADING</span>"

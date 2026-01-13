@@ -288,7 +288,6 @@
 /area/shuttle/minidropship)
 "U" = (
 /obj/structure/dropship_piece/glassone/tadpole,
-/obj/machinery/telecomms/relay/preset/telecomms/onboard,
 /turf/open/space/basic,
 /area/shuttle/minidropship)
 "V" = (

@@ -21,6 +21,7 @@
 		/obj/item/armor_module/storage/boot/pmc_knife
 	)
 	starting_attachments = list(/obj/item/armor_module/storage/boot)
+	soft_armor = list(MELEE = 30, BULLET = 20, LASER = 20, ENERGY = 20, BOMB = 30, BIO = 20, FIRE = 20, ACID = 15)
 
 /obj/item/clothing/shoes/marine/Initialize(mapload)
 	. = ..()

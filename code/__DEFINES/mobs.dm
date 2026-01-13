@@ -581,7 +581,7 @@ GLOBAL_LIST_INIT(layers_to_offset, list(
 #define XENO_LARVAL_AMOUNT_RECURRING 5
 #define XENO_LARVAL_CHANNEL_TIME 0.5 SECONDS
 
-#define XENO_NEURO_AMOUNT_RECURRING 5
+#define XENO_NEURO_AMOUNT_RECURRING 6
 #define XENO_NEURO_CHANNEL_TIME 0.25 SECONDS
 
 #define XENO_HEALTH_ALERT_TRIGGER_PERCENT 0.25 //If a xeno is damaged while its current hit points are less than this percent of its maximum, we send out an alert to the hive

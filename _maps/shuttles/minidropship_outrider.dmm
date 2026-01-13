@@ -210,10 +210,6 @@
 	},
 /turf/open/floor/mainship/mono,
 /area/shuttle/minidropship)
-"L" = (
-/obj/machinery/telecomms/relay/preset/telecomms/onboard,
-/turf/closed/wall/mainship/outer/canterbury,
-/area/shuttle/minidropship)
 "O" = (
 /obj/effect/turf_decal/warning_stripes/thick/corner{
 	dir = 8
@@ -308,7 +304,7 @@ D
 S
 I
 a
-L
+a
 "}
 (5,1,1) = {"
 n

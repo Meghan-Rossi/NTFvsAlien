@@ -2,7 +2,7 @@
 	name = "Secret of Life - Main"
 	config_tag = "Secret of Life - Main"
 	silo_scaling = 1
-	round_type_flags = MODE_INFESTATION|MODE_PSY_POINTS|MODE_PSY_POINTS_ADVANCED|MODE_HIJACK_POSSIBLE|MODE_SILO_RESPAWN|MODE_ALLOW_XENO_QUICKBUILD|MODE_MUTATIONS_OBTAINABLE|MODE_BIOMASS_POINTS|MODE_XENO_GRAB_DEAD_ALLOWED|MODE_SINGLE_USE_NUKE_DISK_GENERATOR
+	round_type_flags = MODE_INFESTATION|MODE_PSY_POINTS|MODE_PSY_POINTS_ADVANCED|MODE_HIJACK_POSSIBLE|MODE_SILO_RESPAWN|MODE_ALLOW_XENO_QUICKBUILD|MODE_MUTATIONS_OBTAINABLE|MODE_BIOMASS_POINTS|MODE_XENO_GRAB_DEAD_ALLOWED|MODE_SINGLE_USE_NUKE_DISK_GENERATOR|MODE_FREE_LARVABURST
 	shutters_drop_time = 15 MINUTES
 	xeno_abilities_flags = ABILITY_ALL_GAMEMODE
 	factions = list(FACTION_TERRAGOV, FACTION_SOM, FACTION_XENO, FACTION_CLF, FACTION_ICC, FACTION_VSD, FACTION_NANOTRASEN)
@@ -156,6 +156,7 @@
 		xenorespawn_time = 5 MINUTES
 		bioscan_interval = 15 MINUTES
 		round_type_flags &= ~MODE_XENO_GRAB_DEAD_ALLOWED
+		round_type_flags |= MODE_FREE_LARVABURST
 		GLOB.time_before_dnr = STANDARD_DNR_TIME
 	else
 		evo_requirements = list(
@@ -170,6 +171,7 @@
 		xenorespawn_time = initial(xenorespawn_time)
 		bioscan_interval = initial(bioscan_interval)
 		round_type_flags |= MODE_XENO_GRAB_DEAD_ALLOWED
+		round_type_flags &= ~MODE_FREE_LARVABURST
 
 	for(var/datum/xeno_caste/caste AS in evo_requirements)
 		GLOB.xeno_caste_datums[caste][XENO_UPGRADE_BASETYPE].evolve_min_xenos = evo_requirements[caste]

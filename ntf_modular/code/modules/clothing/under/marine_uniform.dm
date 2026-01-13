@@ -73,6 +73,9 @@
 		slot_r_hand_str = 'icons/mob/inhands/clothing/uniforms_right.dmi',
 	)
 
+/obj/item/clothing/under/tdf/medic
+	name = "\improper NTF Medic uniform"
+
 /obj/item/clothing/under/marine_skirt
 	name = "\improper ArcherCorp-brand combat jumpskirt"
 	desc = "A standard-issue, kevlar-weaved, hazmat-tested, EMF-augmented marine uniform- Wait, a fucking combat skirt?"

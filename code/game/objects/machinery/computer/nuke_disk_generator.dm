@@ -120,7 +120,7 @@
 	var/obj/machinery/computer/intel_computer/intcomp = new /obj/machinery/computer/intel_computer(loc) //its an intel computer now
 	intcomp.set_disabled()
 	message_admins("[ADMIN_COORDJMP(src)] [src] self-destructed!")
-	Destroy(TRUE)
+	qdel(src,TRUE)
 
 /obj/machinery/computer/code_generator/nuke/set_disabled()
 	. = ..()

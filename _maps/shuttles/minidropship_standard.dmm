@@ -192,7 +192,6 @@
 /obj/structure/dropship_piece/tadpole/rearright{
 	dir = 1
 	},
-/obj/machinery/telecomms/relay/preset/telecomms/onboard,
 /obj/item/weapon/gun/sentry/ads_system/premade,
 /turf/template_noop,
 /area/shuttle/minidropship)

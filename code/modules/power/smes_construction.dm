@@ -223,7 +223,7 @@
 			return
 
 		to_chat(user, span_warning("You have disassembled the SMES cell!"))
-		var/obj/machinery/constructable_frame/machine_frame/M = new(loc)
+		var/obj/machinery/constructable_frame/M = new(loc)
 		M.state = 2
 		M.icon_state = "box_1"
 		for(var/obj/O in component_parts)

@@ -93,10 +93,6 @@
 /obj/effect/turf_decal/tile/transparent/dark_blue/full,
 /turf/open/floor/mainship/floor,
 /area/shuttle/minidropship)
-"s" = (
-/obj/machinery/telecomms/relay/preset/telecomms/onboard,
-/turf/closed/wall/mainship/outer/canterbury,
-/area/shuttle/minidropship)
 "t" = (
 /obj/structure/dropship_piece/singlewindow/tadpole{
 	dir = 1
@@ -287,7 +283,7 @@ b
 k
 p
 c
-s
+F
 q
 l
 F

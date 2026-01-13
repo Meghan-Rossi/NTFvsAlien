@@ -112,7 +112,7 @@
 	///Max range the projectile can travel
 	var/proj_max_range = 30
 	///A damage multiplier applied when a mob from the same faction as the projectile firer is hit
-	var/friendly_fire_multiplier = 0.5
+	var/friendly_fire_multiplier = 1 // NTF edit - full damage friendly fire
 	///The "point blank" range of the projectile. Inside this range the projectile gets a bonus to hit
 	var/point_blank_range = 0
 	/// List of atoms already hit by that projectile. Will only matter for projectiles capable of passing through multiple atoms
@@ -798,8 +798,10 @@ So if we are on the 32th absolute pixel coordinate we are on tile 1, but if we a
 
 	///Is the shooter a living mob. Defined before the check as used later as well
 	if(proj.firer)
-		if(proj.firer.faction == faction && (CHECK_BITFIELD(status_flags, XENO_HOST)))
+	/* NTF Edit - full accuracy friendly fire
+		if(proj.firer.faction == faction)
 			hit_chance = round(hit_chance*0.85) //You (presumably) aren't trying to shoot your friends
+	*/
 		var/obj/item/shot_source = proj.shot_from
 		if((!istype(shot_source) || !shot_source.zoom) && !line_of_sight(proj.starting_turf, src, 9)) //if you can't draw LOS within 9 tiles (to accomodate wide screen), AND the source was either not zoomed or not an item(like a xeno)
 			BULLET_DEBUG("Can't see target ([round(hit_chance*0.8)]).")
@@ -952,7 +954,7 @@ So if we are on the 32th absolute pixel coordinate we are on tile 1, but if we a
 		add_slowdown(SNIPER_LASER_SLOWDOWN_STACKS)
 
 	//friendly fire reduces the damage of the projectile, so only applies the multiplier if a hit is confirmed
-	if(proj.firer && proj.firer.faction == faction && (CHECK_BITFIELD(status_flags, XENO_HOST)))
+	if(proj.firer && proj.firer.faction == faction)
 		damage *= proj.friendly_fire_multiplier
 
 	damage = check_shields(COMBAT_PROJ_ATTACK, damage, proj.ammo.armor_type, FALSE, proj.penetration)

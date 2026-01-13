@@ -4111,7 +4111,7 @@
 /turf/open/floor/wood,
 /area/mainship/groundhq/ntf/living/grunt_rnr)
 "eFK" = (
-/obj/structure/prop/mainship/sensor_computer3,
+/obj/structure/prop/mainship/sensor_computer3/black,
 /turf/open/floor/mainship/mono,
 /area/mainship/groundhq/ntf/command/cic)
 "eGL" = (
@@ -4289,8 +4289,7 @@
 /turf/open/floor/mainship/sterile/dark,
 /area/mainship/groundhq/ntf/medical/medical_science)
 "eOi" = (
-/obj/structure/table/mainship,
-/obj/machinery/cic_maptable/drawable,
+/obj/structure/prop/mainship/sensor_computer1/black,
 /turf/open/floor/mainship/mono,
 /area/mainship/groundhq/ntf/command/cic)
 "eOj" = (
@@ -7272,12 +7271,6 @@
 	},
 /turf/open/floor/mainship/mono,
 /area/mainship/groundhq/ntf/living/officer_study)
-"isP" = (
-/obj/structure/cable,
-/turf/open/floor/mainship/mono,
-/area/mainship/groundhq/ntf/hallways/hangar/droppod{
-	name = "Tad Aux LZ"
-	})
 "isU" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
@@ -8153,6 +8146,12 @@
 /obj/item/tool/stamp/qm,
 /obj/item/tool/stamp/denied,
 /obj/item/folder/black_random,
+/obj/structure/transmitter/desk{
+	pixel_x = 6;
+	pixel_y = 6;
+	phone_id = "GB Requisitions";
+	phone_category = "Base Logistics"
+	},
 /turf/open/floor/mainship/mono,
 /area/mainship/squads/req)
 "jqv" = (
@@ -8406,6 +8405,11 @@
 /obj/item/card/id,
 /obj/item/card/id,
 /obj/item/card/id,
+/obj/structure/transmitter/colony_net/desk{
+	phone_category = "Diplomacy";
+	phone_id = "NTC BASE";
+	pixel_y = 12
+	},
 /turf/open/floor/mainship/mono,
 /area/mainship/groundhq/ntf/command/cic)
 "jCX" = (
@@ -8585,6 +8589,18 @@
 "jJT" = (
 /obj/machinery/firealarm{
 	dir = 8
+	},
+/obj/structure/table/mainship,
+/obj/structure/paper_bin{
+	pixel_x = 7;
+	pixel_y = 6
+	},
+/obj/item/tool/pen,
+/obj/structure/transmitter/desk{
+	pixel_x = -10;
+	pixel_y = 6;
+	phone_category = "Base CIC";
+	phone_id = "GB Comms Decryption Desk"
 	},
 /turf/open/floor/mainship/mono,
 /area/mainship/groundhq/ntf/command/cic)
@@ -9139,7 +9155,9 @@
 /area/mainship/hallways/hangar2)
 "ktk" = (
 /obj/structure/table/mainship,
-/obj/machinery/computer/station_alert,
+/obj/machinery/computer/station_alert{
+	dir = 1
+	},
 /obj/machinery/light,
 /turf/open/floor/mainship/mono,
 /area/mainship/groundhq/ntf/command/cic)
@@ -11695,7 +11713,9 @@
 	})
 "nxh" = (
 /obj/structure/table/mainship,
-/obj/machinery/computer/secure_data,
+/obj/machinery/computer/secure_data{
+	dir = 1
+	},
 /turf/open/floor/mainship/mono,
 /area/mainship/groundhq/ntf/command/cic)
 "nxj" = (
@@ -12231,6 +12251,12 @@
 /obj/machinery/computer/security/marinemainship{
 	dir = 8;
 	pixel_x = -17
+	},
+/obj/structure/transmitter/desk{
+	pixel_x = 10;
+	pixel_y = 6;
+	phone_category = "Base CIC";
+	phone_id = "GB Delta SO"
 	},
 /turf/open/floor/mainship/blue{
 	dir = 9
@@ -13318,12 +13344,6 @@
 	dir = 5
 	},
 /area/mainship/groundhq/ntf/command/cic)
-"ppc" = (
-/obj/structure/cable,
-/turf/open/floor/plating/plating_catwalk,
-/area/mainship/groundhq/ntf/hallways/starboard_hallway{
-	name = "HQ Central Hallways"
-	})
 "ppO" = (
 /obj/machinery/computer/shuttle/shuttle_control/dropship/two{
 	possible_destinations = "lz1;lz2;hqlz1;hqlz2;alamo;normandy"
@@ -13340,15 +13360,11 @@
 	static_lighting = 1
 	})
 "pqb" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
-	dir = 4
-	},
-/obj/structure/cable,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/mainship/squads/req)
+/obj/structure/transmitter/colony_net/desk,
+/turf/open/floor/mainship/mono,
+/area/mainship/groundhq/ntf/hallways/aft_hallway{
+	name = "HQ Northwest Hallways"
+	})
 "pqM" = (
 /obj/machinery/door/airlock/mainship/medical/morgue{
 	dir = 2
@@ -14372,13 +14388,6 @@
 	base_lighting_alpha = 0;
 	static_lighting = 1
 	})
-"qyb" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
-	dir = 4
-	},
-/obj/structure/cable,
-/turf/open/floor/mainship/orange,
-/area/mainship/groundhq/ntf/engineering/upper_engineering)
 "qyd" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
@@ -14913,18 +14922,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/mainship/squads/req)
-"qZO" = (
-/obj/machinery/door/airlock/mainship/generic{
-	dir = 1
-	},
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
-	dir = 1
-	},
-/turf/open/floor/mainship/mono,
-/area/mainship/groundhq/ntf/hallways/stern_hallway{
-	name = "HQ Western hallways"
-	})
 "qZS" = (
 /obj/machinery/door/airlock/multi_tile/mainship/generic,
 /obj/structure/cable,
@@ -15042,11 +15039,6 @@
 /area/mainship/command/corporateliaison{
 	name = "Ground CEO Office"
 	})
-"rfq" = (
-/obj/structure/window/framed/mainship,
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/mainship/groundhq/ntf/engineering/engine_core)
 "rfw" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
@@ -15211,12 +15203,11 @@
 	name = "Kitchen"
 	})
 "rnl" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
-	dir = 4
+/obj/structure/bed/chair/comfy/black{
+	dir = 1
 	},
-/turf/open/floor/plating/plating_catwalk,
-/area/mainship/groundhq/ntf/living/chapel)
+/turf/open/floor/mainship/mono,
+/area/mainship/groundhq/ntf/command/cic)
 "rno" = (
 /obj/structure/table/mainship,
 /obj/item/disk/botany,
@@ -16677,6 +16668,12 @@
 "tby" = (
 /obj/structure/table/wood,
 /obj/item/toy/deck,
+/obj/structure/transmitter/desk{
+	pixel_x = 6;
+	pixel_y = 6;
+	phone_id = "GB Medbay";
+	phone_category = "Base Medical"
+	},
 /turf/open/floor/wood,
 /area/centcom/practice/medical{
 	outside = 0;
@@ -16852,6 +16849,12 @@
 /obj/machinery/computer/security/marinemainship{
 	dir = 4;
 	pixel_x = 17
+	},
+/obj/structure/transmitter/desk{
+	pixel_x = -10;
+	pixel_y = 6;
+	phone_category = "Base CIC";
+	phone_id = "GB Alpha SO"
 	},
 /turf/open/floor/mainship/red{
 	dir = 5
@@ -17322,7 +17325,8 @@
 /turf/closed/wall,
 /area/lv624/lazarus/armory)
 "tZg" = (
-/obj/machinery/computer/navigation,
+/obj/item/radio/headset/ntc_listener,
+/obj/item/radio/headset/mainship/mcom,
 /turf/open/floor/mainship/mono,
 /area/mainship/groundhq/ntf/command/cic)
 "tZk" = (
@@ -17480,6 +17484,12 @@
 	},
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/structure/transmitter/desk{
+	pixel_x = 7;
+	pixel_y = 6;
+	phone_category = "Base CIC";
+	phone_id = "GB Bravo SO"
 	},
 /turf/open/floor/mainship/orange{
 	dir = 9
@@ -20593,10 +20603,6 @@
 /obj/machinery/vending/armor_supply,
 /turf/open/floor/mainship,
 /area/mainship/squads/general)
-"xVs" = (
-/obj/structure/cable,
-/turf/open/floor/plating/plating_catwalk,
-/area/mainship/groundhq/ntf/hallways/hangar)
 "xVC" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -20769,6 +20775,12 @@
 /obj/machinery/computer/security/marinemainship{
 	dir = 4;
 	pixel_x = 17
+	},
+/obj/structure/transmitter/desk{
+	pixel_x = -7;
+	pixel_y = 6;
+	phone_category = "Base CIC";
+	phone_id = "GB Charlie SO"
 	},
 /turf/open/floor/mainship/emerald{
 	dir = 5
@@ -22629,7 +22641,7 @@ eJu
 hLV
 cdM
 vPS
-adO
+pqb
 adO
 adO
 adO
@@ -22757,7 +22769,7 @@ jVd
 vVr
 bZs
 nfL
-rfq
+uhM
 eYT
 nOG
 hlp
@@ -24042,7 +24054,7 @@ ixh
 uPF
 kTO
 kTO
-qyb
+cPt
 kTO
 dKw
 vWy
@@ -24772,7 +24784,7 @@ adO
 bDR
 eLi
 tZg
-dny
+rnl
 ktk
 eLi
 rsC
@@ -25731,7 +25743,7 @@ saW
 iHo
 gfR
 adO
-pqb
+auW
 phZ
 gYd
 ctG
@@ -26369,8 +26381,8 @@ ubn
 ubn
 rjs
 lrz
-xVs
-xVs
+xus
+xus
 xus
 ygm
 eXS
@@ -27560,7 +27572,7 @@ nHs
 nHs
 nHs
 rzo
-xVs
+xus
 aYh
 fav
 fav
@@ -27667,7 +27679,7 @@ nHs
 nHs
 nHs
 saW
-xVs
+xus
 mLh
 fav
 xRz
@@ -27875,12 +27887,12 @@ ubn
 ubn
 lrz
 lrz
-xVs
+xus
 iLG
 lrz
 lrz
-xVs
-xVs
+xus
+xus
 lrz
 mLh
 fav
@@ -28302,9 +28314,9 @@ ubn
 ubn
 ubn
 iLG
-xVs
-xVs
-xVs
+xus
+xus
+xus
 vSO
 wRn
 iLG
@@ -28414,7 +28426,7 @@ oyC
 lnu
 oyC
 oyC
-xVs
+xus
 oyC
 fTV
 qjQ
@@ -28521,7 +28533,7 @@ fav
 fav
 fav
 fav
-xVs
+xus
 oyC
 fTV
 qjQ
@@ -28735,7 +28747,7 @@ doP
 doP
 doP
 fav
-xVs
+xus
 oyC
 fTV
 qjQ
@@ -28842,7 +28854,7 @@ doP
 doP
 doP
 fav
-xVs
+xus
 oyC
 fav
 vik
@@ -28949,7 +28961,7 @@ doP
 doP
 doP
 fav
-xVs
+xus
 wRn
 uRC
 qjQ
@@ -29835,8 +29847,8 @@ qAp
 tfV
 sMT
 hAS
-ppc
-ppc
+aeo
+aeo
 rrE
 xUr
 mOp
@@ -29941,7 +29953,7 @@ tfV
 tfV
 tfV
 nEb
-ppc
+aeo
 vaB
 vvF
 dBF
@@ -30048,7 +30060,7 @@ nqm
 ted
 aUF
 aUF
-ppc
+aeo
 vvF
 pEp
 sTm
@@ -30148,14 +30160,14 @@ vNz
 kzw
 nxD
 afY
-ppc
-ppc
-hAS
-ppc
-ppc
 aeo
-ppc
-ppc
+aeo
+hAS
+aeo
+aeo
+aeo
+aeo
+aeo
 vvF
 wmO
 nTX
@@ -30262,7 +30274,7 @@ cJQ
 sMk
 vMf
 aUF
-ppc
+aeo
 vvF
 uBc
 nTX
@@ -30369,7 +30381,7 @@ gNj
 gNj
 gNj
 aUF
-ppc
+aeo
 vvF
 pEp
 nTX
@@ -30476,7 +30488,7 @@ shv
 mNK
 gNj
 aUF
-ppc
+aeo
 vvF
 bXx
 vhg
@@ -30583,7 +30595,7 @@ eRG
 pbA
 gNj
 aUF
-ppc
+aeo
 vvF
 uBc
 sTm
@@ -30689,7 +30701,7 @@ wXM
 hFT
 lRV
 bKv
-ppc
+aeo
 hAS
 vvF
 vvF
@@ -30800,7 +30812,7 @@ mIT
 mIT
 mIT
 xXE
-rnl
+isU
 aBf
 aBf
 nKp
@@ -35044,7 +35056,7 @@ acD
 swO
 koj
 eOj
-isP
+uBD
 ioN
 aWb
 jnc
@@ -35141,7 +35153,7 @@ suH
 suH
 suH
 jnc
-isP
+uBD
 mXV
 mXV
 mXV
@@ -35153,7 +35165,7 @@ mXV
 mXV
 mXV
 mXV
-isP
+uBD
 jnc
 hKj
 hKj
@@ -35248,7 +35260,7 @@ suH
 suH
 suH
 jnc
-isP
+uBD
 mXV
 apG
 apG
@@ -35355,7 +35367,7 @@ suH
 suH
 suH
 jnc
-isP
+uBD
 mXV
 apG
 apG
@@ -35367,7 +35379,7 @@ apG
 apG
 apG
 mXV
-isP
+uBD
 jnc
 hKj
 hKj
@@ -35462,7 +35474,7 @@ suH
 suH
 suH
 jnc
-isP
+uBD
 mXV
 apG
 apG
@@ -35581,7 +35593,7 @@ apG
 apG
 apG
 mXV
-isP
+uBD
 jnc
 hKj
 hKj
@@ -35676,7 +35688,7 @@ suH
 suH
 suH
 jnc
-isP
+uBD
 mXV
 apG
 apG
@@ -35688,7 +35700,7 @@ apG
 apG
 apG
 mXV
-isP
+uBD
 jnc
 hKj
 hKj
@@ -35783,7 +35795,7 @@ kUc
 gtF
 kUc
 jnc
-isP
+uBD
 mXV
 apG
 apG
@@ -35795,7 +35807,7 @@ apG
 apG
 apG
 mXV
-isP
+uBD
 jnc
 hKj
 hKj
@@ -35890,7 +35902,7 @@ eqO
 qfG
 qfG
 jnc
-isP
+uBD
 mXV
 apG
 apG
@@ -35902,7 +35914,7 @@ apG
 apG
 apG
 mXV
-isP
+uBD
 jnc
 hKj
 hKj
@@ -35997,7 +36009,7 @@ uyb
 oHV
 oHV
 oWb
-isP
+uBD
 mXV
 mXV
 mXV
@@ -36116,7 +36128,7 @@ fFk
 vDq
 fFk
 kSM
-isP
+uBD
 jnc
 usm
 hKj
@@ -36440,7 +36452,7 @@ nwG
 oHV
 fEK
 fGy
-qZO
+ciN
 rCj
 rCj
 rCj

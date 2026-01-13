@@ -5907,7 +5907,7 @@
 /area/mainship/living/mechpilotquarters)
 "fya" = (
 /obj/structure/table/black,
-/obj/structure/transmitter/colony_net/rotary{
+/obj/structure/transmitter/colony_net/desk{
 	phone_category = "Diplomacy";
 	phone_id = "NTC"
 	},
@@ -16421,6 +16421,8 @@
 /area/mainship/command/self_destruct)
 "pDV" = (
 /obj/structure/table/mainship/nometal,
+/obj/item/storage/box/crate/loot/telecomm_tower_pack/ntc,
+/obj/item/storage/backpack/marine/radiopack,
 /turf/open/floor/mainship/floor,
 /area/mainship/command/telecomms)
 "pEi" = (

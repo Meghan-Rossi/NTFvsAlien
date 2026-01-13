@@ -20644,7 +20644,7 @@
 	},
 /area/metnal/inside/experimentation)
 "nSf" = (
-/obj/machinery/constructable_frame/machine_frame,
+/obj/machinery/constructable_frame,
 /turf/open/floor/tile/dark,
 /area/metnal/inside/engineering)
 "nSh" = (

@@ -37,7 +37,7 @@
 /mob/living/carbon/human/attack_alien_disarm(mob/living/carbon/xenomorph/X, dam_bonus)
 	var/randn = rand(1, 100)
 	var/stamina_loss = getStaminaLoss()
-	var/damage = X.xeno_caste.melee_damage * X.xeno_melee_damage_modifier // same as slash here, but a bonus is applied later
+	var/damage = X.xeno_caste.melee_damage * X.xeno_melee_damage_modifier
 	var/sound = 'sound/weapons/alien_knockdown.ogg'
 	var/list/damage_mod = list()
 	var/list/armor_mod = list()
@@ -74,94 +74,83 @@
 	if(!damage)
 		X.visible_message(span_danger("\The [X]'s disarm is blocked by [src]'s shield!"),
 			span_danger("Our disarm is blocked by [src]'s shield!"), null, COMBAT_MESSAGE_RANGE)
+		X.do_attack_animation(src, ATTACK_EFFECT_GRAB)
 		return FALSE
 
-	damage *= 3 //apply the bonus for being a disarm instead of slash here so disarms aren't crazy strong against shields
+	 //Disarm attacks are stronger if human has no stamina buffer left because the xeno still got to take
+	 //it down to 200 staminaloss + 50 buffer if at full stam, but they never are because exertion of other means.
+	if(staminaloss > 0)
+		damage *= 2
+	else //if human is energetic yet they will endure.
+		damage *= 0.5
+	if(pulledby) //extra damage to people who are grabbed.
+		damage *= 1.5
+	if(lying_angle||incapacitated()||IsParalyzed()||IsKnockdown()) //extra damage to people who are downed already.
+		damage *= 1.5
 
-	if(armor_block)
-		damage = modify_by_armor(damage, armor_block, armor_pen, BODY_ZONE_CHEST)
-		armor_block = 0
-		armor_pen = 0
+	var/damage_to_deal = clamp(damage, 0, (maxHealth * 2) - stamina_loss)
+	damage_to_deal += (damage - damage_to_deal)
 
-	var/damage_to_deal = clamp(damage, 0, maxHealth - stamina_loss)
-	damage_to_deal += (damage - damage_to_deal)/12
-
-	if (ishuman(src))
+	X.do_attack_animation(src, ATTACK_EFFECT_DISARM2)
+	if(ishuman(src))
 		if(istype(X.xeno_caste, /datum/xeno_caste/spiderling))
-			X.do_attack_animation(src, ATTACK_EFFECT_GRAB)
-			visible_message(null, "<span class='danger'>The spiderling is clawing against you and holding you still!</span>")
+			visible_message(null, "<span class='danger'>The spiderling is clinging to you!</span>")
 			sound = 'sound/weapons/thudswoosh.ogg'
-			X.visible_message("<span class='danger'>The spiderling grasps [src] and holds them still!</span>",
+			X.visible_message("<span class='danger'>The spiderling clings to [src]!</span>",
 			"<span class='danger'>We grasp [src] and hold them still!</span>", null, 5)
-			Stagger(6 SECONDS)
-			src.add_slowdown(10, capped = 10)
+			add_slowdown(0.2,2)
 			playsound(loc, sound, 25, TRUE, 7)
-			var/obj/item/radio/headset/mainship/headset = wear_ear
-			if(istype(headset))
-				headset.disable_locator(40 SECONDS)
-			return
 
 		if(IsParalyzed())
-			X.do_attack_animation(src, ATTACK_EFFECT_DISARM2)
-			X.visible_message(null, "<span class='info'>We keep holding [src] down.</span>", null)
-			apply_damage(damage_to_deal, STAMINA, BODY_ZONE_CHEST, armor_block, FALSE, FALSE, TRUE, armor_pen, X)
-			sound = 'sound/weapons/thudswoosh.ogg'
-			var/obj/item/radio/headset/mainship/headset = wear_ear
-			if(istype(headset))
-				headset.disable_locator(40 SECONDS)
+			if(AmountParalyzed() < 10 SECONDS)
+				X.visible_message("<span class='danger'>[X] holds [src] down!</span>",
+				"<span class='danger'>We hold [src] down!</span>", null, 5)
+				AdjustParalyzed(2 SECONDS)
 		else
-			X.do_attack_animation(src, ATTACK_EFFECT_DISARM2)
 			if(pulling)
 				X.visible_message("<span class='danger'>[X] has broken [src]'s grip on [pulling]!</span>",
 				"<span class='danger'>We break [src]'s grip on [pulling]!</span>", null, 5)
 				sound = 'sound/weapons/thudswoosh.ogg'
 				stop_pulling()
+			/* no more gun disarm
 			else if(prob(10) && drop_held_item())
 				X.visible_message("<span class='danger'>[X] has disarmed [src]!</span>",
 				"<span class='danger'>We disarm [src]!</span>", null, 5)
 				sound = 'sound/weapons/thudswoosh.ogg'
+			*/
 			apply_damage(damage_to_deal, STAMINA, BODY_ZONE_CHEST, armor_block, FALSE, FALSE, TRUE, armor_pen, X)
 			X.visible_message("<span class='danger'>[X] wrestles [src]-!</span>",
 			"<span class='danger'>We wrestle [src]!</span>", null, 5)
-			Stagger(2 SECONDS)
-			if(stamina_loss >= maxHealth)
+			add_slowdown(0.4,2)
+			if(stamina_loss >= maxHealth * 2) //same as regular stamina exhaustion stun.
 				if(!IsParalyzed())
 					visible_message(null, "<span class='danger'>You are too weakened to keep resisting [X], you slump to the ground!</span>")
 					X.visible_message("<span class='danger'>[X] slams [src] to the ground!</span>",
 					"<span class='danger'>We slam [src] to the ground!</span>", null, 5)
-					Paralyze(10 SECONDS)
-					var/obj/item/radio/headset/mainship/headset = wear_ear
-					if(istype(headset))
-						headset.disable_locator(40 SECONDS)
+					//human living_health_procs.dm should handle the paralyze here.
 	else if(!ishuman(src))
 		if(randn <= 40)
 			if(!IsParalyzed())
-				X.do_attack_animation(src, ATTACK_EFFECT_DISARM2)
 				X.visible_message("<span class='danger'>[X] shoves and presses [src] down!</span>",
 				"<span class='danger'>We shove and press [src] down!</span>", null, 5)
 				visible_message(null, "<span class='danger'>You are too weakened to keep resisting [X], you slump to the ground!</span>")
 				X.visible_message("<span class='danger'>[X] slams [src] to the ground!</span>",
 				"<span class='danger'>We slam [src] to the ground!</span>", null, 5)
+				Paralyze(10 SECONDS)
+			else if(IsParalyzed() && AmountParalyzed() < 10 SECONDS)
+				X.visible_message("<span class='danger'>[X] holds [src] down!</span>",
+				"<span class='danger'>We hold [src] down!</span>", null, 5)
+				AdjustParalyzed(2 SECONDS)
 			if(istype(X.xeno_caste, /datum/xeno_caste/spiderling))
-				visible_message(null, "<span class='danger'>The spiderlings are clawing against you and holding you still!</span>")
+				visible_message(null, "<span class='danger'>The spiderlings are clinging to you and slowing you down!</span>")
 				X.visible_message("<span class='danger'>[X] grasps [src] and holds them still!</span>",
 					"<span class='danger'>We slam [src] to the ground!</span>", null, 5)
-				Stagger(10 SECONDS)
-				src.add_slowdown(10)
-				var/obj/item/radio/headset/mainship/headset = wear_ear
-				if(istype(headset))
-					headset.disable_locator(40 SECONDS)
-				Paralyze(8 SECONDS)
-			else if(IsParalyzed())
-				X.do_attack_animation(src, ATTACK_EFFECT_DISARM2)
-				X.visible_message(null, "<span class='info'>We could not do much to [src], they are already down.</span>", null)
-				sound = 'sound/weapons/punchmiss.ogg'
-		else if(randn > 40)
-			X.do_attack_animation(src, ATTACK_EFFECT_DISARM2)
+				add_slowdown(0.2,2)
+		else
 			sound = 'sound/weapons/punchmiss.ogg'
 			X.visible_message("<span class='danger'>[X] attempted to disarm [src] but they resist!</span>",
 			"<span class='danger'>We attempt to disarm [src] but it resisted!</span>", null, 5)
-			Stagger(2 SECONDS)
+			add_slowdown(0.4,2)
 
 
 	log_combat(X, src, "disarmed")

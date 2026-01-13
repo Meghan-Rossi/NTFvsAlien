@@ -34,9 +34,9 @@
 			to_chat(src, span_danger("Your eyes sting. You can't see!"))
 			blind_eyes(2)
 			blur_eyes(4)
-			reagents.add_reagent(/datum/reagent/toxin/xeno_neurotoxin, GAS_INHALE_REAGENT_TRANSFER_AMOUNT * S.strength)
+			reagents.add_reagent(/datum/reagent/toxin/xeno_neurotoxin, GAS_INHALE_REAGENT_TRANSFER_AMOUNT * S.strength * 1.2)
 		else
-			reagents.add_reagent(/datum/reagent/toxin/xeno_neurotoxin, GAS_INHALE_REAGENT_TRANSFER_AMOUNT * S.strength)
+			reagents.add_reagent(/datum/reagent/toxin/xeno_neurotoxin, GAS_INHALE_REAGENT_TRANSFER_AMOUNT * S.strength * 1.2)
 		if(prob(10 * S.strength)) //Likely to momentarily freeze up/fall due to arms/hands seizing up
 			to_chat(src, span_danger("You feel your body going numb and lifeless!"))
 	if(CHECK_BITFIELD(S.smoke_traits, SMOKE_XENO_TOXIC))
@@ -68,9 +68,9 @@
 	var/bio_protection = ..()
 	if(CHECK_BITFIELD(S.smoke_traits, SMOKE_XENO_NEURO) && (internal || has_smoke_protection())) //either inhaled or this.
 		if(CHECK_BITFIELD(S.smoke_traits, SMOKE_NEURO_LIGHT))
-			reagents.add_reagent(/datum/reagent/toxin/xeno_neurotoxin, round(GAS_INHALE_REAGENT_TRANSFER_AMOUNT * 0.6 * S.strength * bio_protection, 0.1))
+			reagents.add_reagent(/datum/reagent/toxin/xeno_neurotoxin, round(GAS_INHALE_REAGENT_TRANSFER_AMOUNT * 0.72 * S.strength * bio_protection, 0.1))
 		else
-			reagents.add_reagent(/datum/reagent/toxin/xeno_neurotoxin, round(GAS_INHALE_REAGENT_TRANSFER_AMOUNT * 0.6 * S.strength * bio_protection, 0.1))
+			reagents.add_reagent(/datum/reagent/toxin/xeno_neurotoxin, round(GAS_INHALE_REAGENT_TRANSFER_AMOUNT * 0.72 * S.strength * bio_protection, 0.1))
 		if(prob(10 * S.strength * bio_protection))
 			to_chat(src, span_danger("Your body goes numb where the gas touches it!"))
 	if(CHECK_BITFIELD(S.smoke_traits, SMOKE_XENO_HEMODILE) && (internal || has_smoke_protection())) //either inhaled or this.

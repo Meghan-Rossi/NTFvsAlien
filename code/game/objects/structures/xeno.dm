@@ -575,7 +575,7 @@
 
 	if(ishuman(triggerer))
 		var/mob/living/carbon/human/victim = triggerer
-		victim.reagents.add_reagent(/datum/reagent/toxin/xeno_neurotoxin, 5)
+		victim.reagents.add_reagent(/datum/reagent/toxin/xeno_neurotoxin, XENO_NEURO_AMOUNT_RECURRING)
 		to_chat(victim, span_userdanger("You are pricked by a spike on the mine!"))
 	qdel(src)
 

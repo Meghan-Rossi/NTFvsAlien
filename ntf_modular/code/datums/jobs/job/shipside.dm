@@ -1,9 +1,10 @@
+
 //CEO
 /datum/job/terragov/command/ceo
 	title = NTC_CHIEF_EXECUTIVE_OFFICER
 	req_admin_notify = TRUE
 	paygrade = "CEO"
-	comm_title = "CEO"
+	comm_title = "NTCEO"
 	supervisors = "Your conscience."
 	total_positions = 1
 	skills_type = /datum/skills/ceo

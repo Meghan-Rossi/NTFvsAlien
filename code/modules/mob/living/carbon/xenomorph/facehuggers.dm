@@ -679,7 +679,7 @@ GLOBAL_LIST_EMPTY(alive_hugger_list)
 		user.apply_damage(stamina_dmg, STAMINA) // complete winds the target
 	playsound(src, 'sound/effects/alien_plapping.ogg', 5)
 	if(targethole == 1)
-		user.Unconscious(5 SECONDS)
+		user.Unconscious(15 SECONDS)
 		if(ishuman(user))
 			var/hugsound = user.gender == FEMALE ? SFX_FEMALE_HUGGED : SFX_MALE_HUGGED
 			playsound(loc, hugsound, 25, 0)
@@ -893,6 +893,7 @@ GLOBAL_LIST_EMPTY(alive_hugger_list)
 	name = "neurotoxin hugger"
 	filtercolor = COLOR_DARK_ORANGE
 	injected_chemical_type = /datum/reagent/toxin/xeno_neurotoxin
+	amount_injected = 12
 
 /obj/item/clothing/mask/facehugger/combat/chem_injector/neuro/try_attach(mob/living/hugged, mob/user, no_evade)
 	if(!..())

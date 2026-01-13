@@ -450,7 +450,7 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 					else
 						shopping_cart -= P.type
 				if("addone")
-					if(P.faction_lock && ui.user.faction != P.faction_lock)
+					if(P.faction_lock && !(ui.user.faction in P.faction_lock))
 						to_chat(ui.user, span_warning("You cannot order this supply pack due to faction restrictions."))
 						return
 					if(shopping_cart[P.type])
@@ -465,7 +465,7 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 						cart_cost += SP.cost * shopping_cart[SP.type]
 					var/excess_points = SSpoints.supply_points[ui_user.faction] - cart_cost
 					var/number_to_buy = min(round(excess_points / P.cost), 20) //hard cap at 20
-					if(P.faction_lock && ui.user.faction != P.faction_lock)
+					if(P.faction_lock && !(ui.user.faction in P.faction_lock))
 						to_chat(ui.user, span_warning("You cannot order this supply pack due to faction restrictions."))
 						return
 					if(shopping_cart[P.type])

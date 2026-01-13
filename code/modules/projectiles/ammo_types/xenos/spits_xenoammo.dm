@@ -45,7 +45,7 @@
 	slowdown_stacks = 1.5
 	smoke_strength = 0.5
 	smoke_range = 0
-	reagent_transfer_amount = 4
+	reagent_transfer_amount = 5
 	var/smoke_type = /datum/effect_system/smoke_spread/xeno/neuro/light
 	var/reagent_type = /datum/reagent/toxin/xeno_neurotoxin
 
@@ -108,15 +108,15 @@
 
 /datum/ammo/xeno/toxin/upgrade1
 	smoke_strength = 0.6
-	reagent_transfer_amount = 5
+	reagent_transfer_amount = 6
 
 /datum/ammo/xeno/toxin/upgrade2
 	smoke_strength = 0.7
-	reagent_transfer_amount = 6
+	reagent_transfer_amount = 7.5
 
 /datum/ammo/xeno/toxin/upgrade3
 	smoke_strength = 0.75
-	reagent_transfer_amount = 6.5
+	reagent_transfer_amount = 8
 
 
 /datum/ammo/xeno/toxin/heavy //Praetorian
@@ -125,7 +125,7 @@
 	added_spit_delay = 0 SECONDS
 	damage = 10
 	smoke_strength = 1
-	reagent_transfer_amount = 10
+	reagent_transfer_amount = 12
 
 /datum/ammo/xeno/toxin/auto
 	damage = 3
@@ -133,7 +133,7 @@
 	spit_cost = 20
 	added_spit_delay = 0 SECONDS
 	smoke_strength = 0.25
-	reagent_transfer_amount = 2.5
+	reagent_transfer_amount = 3
 
 /datum/ammo/xeno/toxin/aphrotoxin
 	name = "aphrotoxin spit"

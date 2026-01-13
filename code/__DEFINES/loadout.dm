@@ -221,16 +221,16 @@ GLOBAL_LIST_INIT(smartgunner_gear_listed_products, list(
 
 //specialists are 2 classes pretty much, was gonna be 3 but people keep bitching.
 //Enforcer (unimplemented): Heavy chunky boys for direct warfare.
-//Recon: Long range specialists, usually snipers, able to find targets with thermals.
+//Recon: Long range specialists, usually snipers, able to find targets with NVG.
 //Infiltrator: Versatile Stealth spec ops able to kidnap or assassinate targets, or perform other high risk ops. They get sneaking suit and boots.
 
 //I will pretend i never saw the comment above.
 GLOBAL_LIST_INIT(specialist_gear_listed_products, list(
 
 	/obj/effect/vendor_bundle/specialist = list(CAT_ESS, "Essential Specialist Set", 0, "white"),
-	/obj/item/storage/box/crate/loot/autosniper_lethal_pack_spec = list(CAT_SPSUP, "Recon L Class (SR-81 Autosniper, Mines, Thermals, Sniper cloak)", 25, "black"),
-	/obj/item/storage/box/crate/loot/scoutrifle_pack_spec = list(CAT_SPSUP, "Recon L Class 2 (BR-8 Scout Rifle, Mines, Thermals)", 25, "black"),
-	/obj/item/storage/box/crate/loot/moonbeam_pack_spec = list(CAT_SPSUP, "Recon NL Class (Moonbeam Nonlethal sniper, Mines, Thermals, Sniper cloak)", 25, "black"),
+	/obj/item/storage/box/crate/loot/autosniper_lethal_pack_spec = list(CAT_SPSUP, "Recon L Class (SR-81 Autosniper, Mines, NVG, Sniper cloak)", 25, "black"),
+	/obj/item/storage/box/crate/loot/scoutrifle_pack_spec = list(CAT_SPSUP, "Recon L Class 2 (BR-8 Scout Rifle, Mines, NVG)", 25, "black"),
+	/obj/item/storage/box/crate/loot/moonbeam_pack_spec = list(CAT_SPSUP, "Recon NL Class (Moonbeam Nonlethal sniper, Mines, NVG, Sniper cloak)", 25, "black"),
 	/obj/item/storage/box/crate/loot/infiltration_pack_spec = list(CAT_SPSUP, "Infiltrator NL Class (Sneaking suit, G22 Tranq Pistol, Nonlethal Gear, NVG, Scout Cloak)", 25, "black"),
 	/obj/item/storage/box/crate/loot/infiltration_lethal_pack_spec = list(CAT_SPSUP, "Infiltrator L Class (Sneaking suit, M4A3 AP Pistol, Lethal Gear, NVG, Scout Cloak)", 25, "black"),
 	/obj/item/storage/box/crate/loot/gheist_pack_spec = list(CAT_SPSUP, "Hybrid Class (NVG, Light Footed skillsoft, Rifle Pamphlet, Dragoon Mk1 RER)", 25, "black"),
@@ -251,8 +251,7 @@ GLOBAL_LIST_INIT(specialist_gear_listed_products, list(
 GLOBAL_LIST_INIT(vanguard_gear_listed_products, list(
 
 	/obj/effect/vendor_bundle/vanguard = list(CAT_ESS, "Essential Vanguard Set", 0, "white"),
-	/obj/item/clothing/glasses/thermal/m64_thermal_goggles = list(CAT_CDSUP, "M64 Thermal Goggles", 25, "orange"),
-	/obj/item/clothing/glasses/night/m42_night_goggles = list(CAT_CDSUP, "M42 Night Vision Goggles", 20, "orange"),
+	/obj/item/clothing/glasses/night/m42_night_goggles = list(CAT_CDSUP, "M42 Night Vision Goggles", 25, "orange"),
 	/obj/item/storage/holster/belt/mateba/officer/full = list(CAT_CDSUP, "Mateba Revolver Belt (Full)", 15, "orange"),
 	/obj/item/armor_module/module/tyr_extra_armor = list(CAT_CDSUP, "Tyr mk 2 Armor reinforcement", 5,"orange"),
 	/obj/item/armor_module/module/hlin_explosive_armor = list(CAT_CDSUP, "Hlin Explosive Compensation Module", 5,"orange"),
