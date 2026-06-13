@@ -178,7 +178,7 @@
 	recoil = 2
 	recoil_unwielded = 4
 	aim_slowdown = 0.6
-	damage_mult = 1.2
+	damage_mult = 0.7
 
 /obj/item/weapon/gun/shotgun/double/sawn
 	name = "sawn-off shotgun"
@@ -235,6 +235,7 @@
 	scatter_unwielded = 10
 	recoil = 0.5
 	recoil_unwielded = 3
+	damage_mult = 0.9
 
 
 //-------------------------------------------------------

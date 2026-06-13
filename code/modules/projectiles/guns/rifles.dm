@@ -1343,7 +1343,7 @@
 	fire_delay = 1 SECONDS
 	accuracy_mult = 1.15
 	burst_amount = 1
-	scatter = -2
+	scatter = 0
 	movement_acc_penalty_mult = 3
 
 /obj/item/weapon/gun/rifle/standard_autoshotgun/engineer
