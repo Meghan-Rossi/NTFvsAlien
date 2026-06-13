@@ -38,7 +38,7 @@
 	. = TRUE
 	mobility_aura = new_aura
 	if(mobility_aura)
-		add_movespeed_modifier(MOVESPEED_ID_MOBILITY_AURA, TRUE, 0, NONE, TRUE, -(0.1 + 0.1 * mobility_aura))
+		add_movespeed_modifier(MOVESPEED_ID_MOBILITY_AURA, TRUE, 0, NONE, TRUE, -(0.05 + 0.05 * mobility_aura))
 		return
 	remove_movespeed_modifier(MOVESPEED_ID_MOBILITY_AURA)
 
