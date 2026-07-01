@@ -5,7 +5,7 @@
 	name = "Intel computer activation"
 	typepath = /datum/round_event/intel_computer
 	weight = 1
-	var/last_intel_drought_start = -1 DAYS
+	var/last_intel_drought_start = 0
 	var/list/obj/machinery/computer/intel_computer/active_computers = list()
 	var/list/obj/item/disk/intel_disk/active_disks = list()
 
@@ -34,8 +34,8 @@
 	if(istype(new_disk) && (world.time > last_intel_drought_start + INTEL_DROUGHT_LENGTH + INTEL_DROUGHT_COOLDOWN))
 		var/weighted_computers = length(active_computers)
 		if(weighted_computers > 0)
-			weighted_computers++
-		if(prob(100/(2+weighted_computers)))
+			weighted_computers += 5
+		if(prob(100/(5+weighted_computers)))
 			var/longest_chain = 0
 			for(var/obj/item/disk/intel_disk/disk AS in active_disks)
 				if(!istype(disk))
@@ -43,7 +43,7 @@
 					active_disks.RemoveAll(disk)
 				continue
 				longest_chain = max(longest_chain, disk.max_chain)
-			if(prob(100*(2+weighted_computers)/(2+longest_chain+weighted_computers)))
+			if(prob(100*(5+weighted_computers)/(5+(longest_chain ? longest_chain+5 : 0)+weighted_computers)))
 				minor_announce("Intel overharvesting has caused an intel drought.  Intel will be much less common for 20 minutes.", title = "Intel Drought")
 				addtimer(CALLBACK(src, PROC_REF(intel_drought_end)), INTEL_DROUGHT_LENGTH + 1)
 				weight = initial(weight)
