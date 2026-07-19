@@ -438,7 +438,7 @@ SUBSYSTEM_DEF(vote)
 			multiple_vote = FALSE
 		initiator = initiator_key
 		started_time = world.time
-		var/text = "[capitalize(mode)] vote started by [initiator ? initiator : "server"]."
+		var/text = "[capitalize(mode)] vote started by [initiator ? get_pseudokey(initiator) : "server"]."
 		if(mode == "custom")
 			text += "<br><i>[question]</i>"
 		log_vote(text)

@@ -197,7 +197,7 @@
 			. += "Administrator"
 		else
 			if(include_link)
-				. += "<a href='byond://?priv_msg=[ckey]'>"
+				. += "<a href='byond://?priv_msg=[url_encode(get_pseudokey(ckey))]'>"
 			. += key
 		if(!C)
 			. += "\[DC\]"

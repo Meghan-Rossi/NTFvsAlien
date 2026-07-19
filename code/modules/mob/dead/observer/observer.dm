@@ -384,10 +384,10 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 		for(var/i in GLOB.player_list)
 			if(isnewplayer(i))
 				var/mob/new_player/N = i
-				. += "[N.client?.holder?.fakekey ? N.client.holder.fakekey : N.key][N.ready ? " Playing" : ""]"
+				. += "[N.client?.holder?.fakekey ? N.client.holder.fakekey : get_pseudokey(N.ckey)][N.ready ? " Playing" : ""]"
 			else if(isobserver(i))
 				var/mob/dead/observer/O = i
-				. += "[O.client?.holder?.fakekey ? O.client.holder.fakekey : O.key] Observing"
+				. += "[O.client?.holder?.fakekey ? O.client.holder.fakekey : get_pseudokey(O.ckey)] Observing"
 	var/status_value = SSevacuation?.get_status_panel_eta()
 	if(status_value)
 		. += "Evacuation in: [status_value]"

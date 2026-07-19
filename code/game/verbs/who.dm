@@ -103,8 +103,10 @@
 			if(check_other_rights(C, R_ADMIN, FALSE))
 				if(!check_rights(R_ADMIN, FALSE) && C.holder.fakekey)
 					continue
-				msg += "\t <a href='byond://?_src_=holder;[HrefToken()];playerpanel=[REF(C.mob)]'>[C]</a> - [C.holder.rank]"
+				msg += "\t <a href='byond://?_src_=holder;[HrefToken()];playerpanel=[REF(C.mob)]'>[get_pseudokey(C.ckey)]</a> - [C.holder.rank]"
 
+				if(check_rights(R_ADMIN, FALSE))
+					msg += "(key:[C])"
 				if(C.holder.fakekey)
 					msg += " as ([C.holder.fakekey])"
 
@@ -124,7 +126,9 @@
 				num_admins_online++
 
 			else if(is_mentor(C))
-				mentmsg += "\t[C] - [C.holder.rank]"
+				mentmsg += "\t[get_pseudokey(C.ckey)] - [C.holder.rank]"
+				if(check_rights(R_ADMIN, FALSE))
+					msg += "(key:[C])"
 				if(isobserver(C.mob))
 					mentmsg += " - Observing"
 				else if(istype(C.mob, /mob/new_player))
@@ -143,10 +147,10 @@
 	else
 		for(var/client/C in GLOB.admins)
 			if(check_other_rights(C, R_ADMIN, FALSE) && !C.holder.fakekey)
-				msg += "\t[C] - [C.holder.rank]\n"
+				msg += "\t[get_pseudokey(C.ckey)] - [C.holder.rank]\n"
 				num_admins_online++
 			else if(is_mentor(C))
-				mentmsg += "\t[C] - [C.holder.rank]\n"
+				mentmsg += "\t[get_pseudokey(C.ckey)] - [C.holder.rank]\n"
 				num_mentors_online++
 
 	to_chat(src, "\n<b> Current Admins ([num_admins_online]):</b>\n[msg]")

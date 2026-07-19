@@ -709,11 +709,13 @@ ADMIN_VERB(private_message_panel, R_ADMIN|R_MENTOR, "Private Message", "Private 
 	var/external = FALSE
 	if(istext(whom))
 		if(whom[1] == "@")
-			whom = find_stealth_key(whom)
+			if(whom[2] == "S")
+				whom = find_stealth_key(whom)
 		if(whom == "IRCKEY")
 			external = TRUE
 		else
-			recipient = GLOB.directory[whom]
+
+			recipient = GLOB.directory[GLOB.pseudokey_to_ckey[url_decode(whom)]]
 
 	else if(istype(whom, /client))
 		recipient = whom

@@ -420,6 +420,7 @@ GLOBAL_PROTECT(new_client_amia_whitelist_callback)
 					GLOB.whitelisted_clients[src] = "none - WL disabled"
 	if(CONFIG_GET(flag/amia_whitelist_enabled) && (src in GLOB.whitelisted_clients))
 		to_chat(src, span_notice("Whitelist check passed.  Welcome."))
+	to_chat(src, "You have been assigned the codename [get_pseudokey(ckey)] for this round.")
 
 /proc/new_client_whitelist_check_callback(ckey, result)
 	var/client/client_checked = GLOB.directory[ckey]
