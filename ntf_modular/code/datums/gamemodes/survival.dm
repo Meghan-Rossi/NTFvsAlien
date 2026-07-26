@@ -30,9 +30,9 @@
 		/datum/job/xenomorph = 2,//two so they dont wipe by a mistake or maybe duo.
 	)
 	evo_requirements = list(
-		/datum/xeno_caste/queen = 8,
-		/datum/xeno_caste/king = 12,
-		/datum/xeno_caste/dragon = 12,
+		/datum/xeno_caste/queen = 10,
+		/datum/xeno_caste/king = 14,
+		/datum/xeno_caste/dragon = 14,
 		/datum/xeno_caste/gorger = 6,
 		/datum/xeno_caste/widow = 6,
 		/datum/xeno_caste/ravager = 6,
@@ -40,7 +40,7 @@
 		/datum/xeno_caste/boiler = 6,
 		/datum/xeno_caste/defiler = 6,
 		/datum/xeno_caste/crusher = 6,
-		/datum/xeno_caste/shrike = 6,
+		/datum/xeno_caste/shrike = 8,
 		/datum/xeno_caste/behemoth = 6,
 		/datum/xeno_caste/warlock = 6,
 		/datum/xeno_caste/chimera = 6,
