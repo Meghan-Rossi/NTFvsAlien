@@ -166,7 +166,13 @@ GLOBAL_LIST_EMPTY(indestructible_teleporters)
 /obj/item/teleporter_kit/premade/vehicular
 	item_flags = IS_DEPLOYABLE|DEPLOY_ON_INITIALIZE|DEPLOYED_NO_PICKUP
 	name = "\improper ASRS Vehicular Bluespace teleporter"
-	desc = "An advanced bluespace telepad for moving personnel and equipment across vast distances to another prelinked teleporter. Ctrl+Click on a tile to deploy, use a crowbar to remove the power cell. Cannot be undeployed."
+	desc = "An advanced bluespace telepad for moving personnel and equipment across vast distances to another prelinked teleporter.  Specially modified to be usuable from within a vehicle.  Ctrl+Click on a tile to deploy, use a crowbar to remove the power cell. Cannot be undeployed."
+
+/obj/item/teleporter_kit/premade/vehicular/Initialize(mapload)
+	. = ..()
+	name = "\improper ASRS Vehicular Bluespace teleporter #[self_tele_tag]"
+	if(item_flags & IS_DEPLOYED)
+		loc.name = name
 
 /obj/item/teleporter_kit/premade/vehicular/can_deploy_here(mob/user, turf/location)
 	return TRUE
