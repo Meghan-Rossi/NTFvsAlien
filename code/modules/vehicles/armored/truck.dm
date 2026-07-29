@@ -7,8 +7,8 @@
 	hitbox = /obj/hitbox/two_three
 	interior = /datum/interior/armored/mrap
 	permitted_weapons = NONE
-	permitted_mods = list(/obj/item/tank_module/ability/tesla)
-	armored_flags = ARMORED_HAS_HEADLIGHTS|ARMORED_HAS_UNDERLAY|ARMORED_WRECKABLE|ARMORED_PURCHASABLE_TRANSPORT|ARMORED_SELF_WALL_DAMAGE
+	permitted_mods = list(/obj/item/tank_module/ability/tesla, /obj/item/tank_module/interior/teletruck)
+	armored_flags = ARMORED_HAS_HEADLIGHTS|ARMORED_HAS_UNDERLAY|ARMORED_WRECKABLE|ARMORED_PURCHASABLE_TRANSPORT
 	required_entry_skill = SKILL_LARGE_VEHICLE_DEFAULT
 	minimap_icon_state = "apc"
 	turret_icon = null
@@ -31,8 +31,6 @@
 
 /obj/vehicle/sealed/armored/multitile/mrap/Initialize(mapload)
 	. = ..()
-	var/obj/item/tank_module/module = new /obj/item/tank_module/ability/tesla()
-	module.on_equip(src)
 
 /obj/vehicle/sealed/armored/multitile/mrap/setDir(newdir)
 	. = ..()

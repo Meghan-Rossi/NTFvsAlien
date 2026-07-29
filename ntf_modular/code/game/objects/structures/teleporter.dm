@@ -162,3 +162,24 @@ GLOBAL_LIST_EMPTY(indestructible_teleporters)
 /obj/machinery/deployable/teleporter/AIShiftClick()
 	. = ..()
 	attempt_teleport(usr)
+
+/obj/item/teleporter_kit/premade/vehicular
+	item_flags = IS_DEPLOYABLE|DEPLOY_ON_INITIALIZE|DEPLOYED_NO_PICKUP
+	name = "\improper ASRS Vehicular Bluespace teleporter"
+	desc = "An advanced bluespace telepad for moving personnel and equipment across vast distances to another prelinked teleporter. Ctrl+Click on a tile to deploy, use a crowbar to remove the power cell. Cannot be undeployed."
+
+/obj/item/teleporter_kit/premade/vehicular/can_deploy_here(mob/user, turf/location)
+	return TRUE
+
+/obj/effect/teleporter_linker/vehicular/Initialize(mapload, skip)
+	if(skip > 0)
+		skip--
+		return ..()
+	skip++
+	. = ..()
+	var/obj/item/teleporter_kit/premade/vehicular/teleporter_a = new(loc)
+	var/obj/item/teleporter_kit/teleporter_b = new(loc)
+	teleporter_a.set_linked_teleporter(teleporter_b)
+	teleporter_b.set_linked_teleporter(teleporter_a)
+	log_combat(src,teleporter_a,"linked",object=teleporter_b)
+	qdel(src)
