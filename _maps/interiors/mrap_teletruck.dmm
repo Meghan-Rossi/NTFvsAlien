@@ -74,6 +74,10 @@
 "V" = (
 /turf/open/interior/apc/twentynine,
 /area/interior/apc)
+"Z" = (
+/obj/machinery/light/floor,
+/turf/open/interior/apc/fifteen,
+/area/interior/apc)
 
 (1,1,1) = {"
 L
@@ -99,7 +103,7 @@ k
 (4,1,1) = {"
 F
 E
-M
+Z
 V
 k
 "}
