@@ -74,14 +74,14 @@
 		hud_used.healths.icon_state = "health21"
 
 	timeofdeath = world.time
+	var/mob/living/living_mob = src
 	if(mind)
 		mind.store_memory("Time of death: [worldtime2text()]", 0)
-		if(mind.active && is_gameplay_level(z))
+		if(mind.active && is_gameplay_level(z) && ((!isliving(src) || (!living_mob.job) || (!issurvivorjob(living_mob.job)))))
 			var/turf/T = get_turf(src)
 			deadchat_broadcast(" has died at <b>[AREACOORD(T)]</b>[TURF_LINK(null, T)].", "<b>[mind.name]</b>", follow_target = src, turf_target = T, message_type = DEADCHAT_DEATHRATTLE)
 
 	if(isliving(src))
-		var/mob/living/living_mob = src
 		var/datum/status_effect/skill_modifier/imprint/imprint_effect = living_mob.has_status_effect(/datum/status_effect/skill_modifier/imprint)
 		if(imprint_effect)
 			imprint_effect.skill_differences.Cut()
