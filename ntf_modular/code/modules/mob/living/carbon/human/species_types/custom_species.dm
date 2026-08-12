@@ -66,18 +66,32 @@
 	inherent_actions = list(/datum/action/ability/last_stand)
 
 /datum/species/resurgentis/apply_damage(damage, damagetype, def_zone, blocked, sharp, edge, updating_health, penetration, mob/living/attacker, mob/living/carbon/human/victim)
+	var/update_health_later = FALSE
+	if(updating_health)
+		update_health_later = TRUE
+		updating_health = FALSE
 	. = ..()
-	var/health = (victim.status_flags & GODMODE) ? victim.maxHealth : (victim.maxHealth - victim.getFireLoss() - victim.getBruteLoss())
-	if(health <= victim.get_death_threshold())
+	victim.updatehealth(FALSE)
+	if(victim.health <= victim.get_death_threshold())
+		if(update_health_later)
+			victim.updatehealth()
 		return
 	var/datum/action/ability/last_stand/rage_ability = victim.actions_by_path[/datum/action/ability/last_stand]
 	if(!rage_ability)
+		if(update_health_later)
+			victim.updatehealth()
 		return
-	if(health > victim.health_threshold_crit)
+	if(victim.health > victim.get_crit_threshold())
+		if(update_health_later)
+			victim.updatehealth()
 		return
 	if(!rage_ability.action_cooldown_finished() || !rage_ability.can_use_action(silent = TRUE))
+		if(update_health_later)
+			victim.updatehealth()
 		return
 	rage_ability.action_activate()
+	if(update_health_later)
+		victim.updatehealth()
 
 /datum/unarmed_attack/punch/medium
 	attack_verb = list("punches","busts","jabs")
@@ -98,7 +112,12 @@
 		return FALSE
 
 	var/mob/living/carbon/carbon_owner = owner
-	if(!carbon_owner)		return FALSE
+	if(!carbon_owner)
+		return FALSE
+	if(carbon_owner.in_healthcrit_since)
+		if(!silent)
+			carbon_owner.balloon_alert(carbon_owner, "incapacitated!")
+		return FALSE
 	if(carbon_owner.health > (carbon_owner.maxHealth * 0.5)) //can be manually triggered below half health
 		if(!silent)
 			to_chat(owner, span_danger("Your health isn't low enough to rage! You must take [carbon_owner.health - (carbon_owner.maxHealth * 0.5)] more damage!"))
@@ -200,3 +219,5 @@
 	REMOVE_TRAIT(owner, TRAIT_STUNIMMUNE, "[type]")
 	REMOVE_TRAIT(owner, TRAIT_SLOWDOWNIMMUNE, "[type]")
 	REMOVE_TRAIT(owner, TRAIT_STAGGERIMMUNE, "[type]")
+	carbon_owner.Paralyze(15 SECONDS)
+	carbon_owner.adjustStaminaLoss(1000)

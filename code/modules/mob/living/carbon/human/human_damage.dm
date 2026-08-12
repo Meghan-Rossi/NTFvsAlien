@@ -1,7 +1,8 @@
 #define MAX_BRAINLOSS 200
 
 //Updates the mob's health from limbs and mob damage variables
-/mob/living/carbon/human/updatehealth()
+/mob/living/carbon/human/updatehealth(secondary_updates = TRUE)
+	. = FALSE
 	if(status_flags & GODMODE)
 		health = maxHealth
 		set_stat(CONSCIOUS)
@@ -17,6 +18,9 @@
 	var/clone_l = getCloneLoss()
 
 	health = maxHealth - oxy_l - tox_l - clone_l - total_burn - total_brute
+	. = TRUE
+	if(!secondary_updates)
+		return
 
 	update_stat()
 	med_pain_set_perceived_health()

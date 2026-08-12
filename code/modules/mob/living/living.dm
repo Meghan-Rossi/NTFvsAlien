@@ -90,13 +90,15 @@
 		return FALSE
 
 /// Updates the `health` variable and anything associated with it.
-/mob/living/proc/updatehealth()
+/mob/living/proc/updatehealth(secondary_updates = TRUE)
 	SEND_SIGNAL(src, COMSIG_LIVING_UPDATE_HEALTH)
 	if(status_flags & GODMODE)
 		health = maxHealth
 		stat = CONSCIOUS
 		return FALSE
 	health = maxHealth - getOxyLoss() - getToxLoss() - getFireLoss() - getBruteLoss() - getCloneLoss()
+	if(!secondary_updates)
+		return TRUE
 	update_stat()
 	return TRUE
 
