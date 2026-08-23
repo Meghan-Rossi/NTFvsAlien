@@ -370,11 +370,11 @@
 		return
 	if(href_list["sex_prefs_toggle_on"])
 		ENABLE_BITFIELD(client.prefs.sex_pref_flags, text2num(href_list["sex_prefs_toggle_on"]))
-		client.prefs.save_character()
+		client.prefs.save_preferences() 
 		. = TRUE
 	if(href_list["sex_prefs_toggle_off"])
 		DISABLE_BITFIELD(client.prefs.sex_pref_flags, text2num(href_list["sex_prefs_toggle_off"]))
-		client.prefs.save_character()
+		client.prefs.save_preferences()  
 		. = TRUE
 	if(. && usr?.client)
 		sex_prefs()
