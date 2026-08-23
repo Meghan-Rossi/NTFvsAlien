@@ -152,7 +152,7 @@
 		do_eord_respawn(usr)
 
 /**
- * Grabs a mob, if it's human, check uniform, if it has one just stops there, otherwise proceeds. if it's not human, creates a human mob and transfers the mind there. Proceeds to outfit either re[...]
+ * Grabs a mob, if it's human, check uniform, if it has one just stops there, otherwise proceeds. if it's not human, creates a human mob and transfers the mind there. Proceeds to outfit either result with the loadout of various factions.
  * 7% chance to be a separate rare strong or funny faction. Tiny additional 2% chance if that procs to be a deathsquad!
  * SOM and TG loadouts are handled differently, taking subtypes from the HvH loadout sets.
  */
