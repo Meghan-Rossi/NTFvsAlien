@@ -152,7 +152,7 @@
 		do_eord_respawn(usr)
 
 /**
- * Grabs a mob, if it's human, check uniform, if it has one just stops there, otherwise proceeds. if it's not human, creates a human mob and transfers the mind there. Proceeds to outfit either result with the loadout of various factions.
+ * Grabs a mob, if it's human, check uniform, if it has one just stops there, otherwise proceeds. if it's not human, creates a human mob and transfers the mind there. Proceeds to outfit either re[...]
  * 7% chance to be a separate rare strong or funny faction. Tiny additional 2% chance if that procs to be a deathsquad!
  * SOM and TG loadouts are handled differently, taking subtypes from the HvH loadout sets.
  */
@@ -361,3 +361,20 @@
 	var/datum/browser/popup = new(usr, "sexharmprefs", "<center>Sex Preferences</center>", 400, 150)
 	popup.set_content(dat.Join())
 	popup.open()
+
+/mob/living/Topic(href, href_list)
+	. = ..()
+	if(.)
+		return
+	if(!client)
+		return
+	if(href_list["sex_prefs_toggle_on"])
+		ENABLE_BITFIELD(client.prefs.sex_pref_flags, text2num(href_list["sex_prefs_toggle_on"]))
+		client.prefs.save_character()
+		. = TRUE
+	if(href_list["sex_prefs_toggle_off"])
+		DISABLE_BITFIELD(client.prefs.sex_pref_flags, text2num(href_list["sex_prefs_toggle_off"]))
+		client.prefs.save_character()
+		. = TRUE
+	if(. && usr?.client)
+		sex_prefs()
