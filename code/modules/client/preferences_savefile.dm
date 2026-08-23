@@ -706,7 +706,6 @@
 	READ_FILE(S["genitalia_testicles_color"], genitalia_testicles_color)
 	READ_FILE(S["genitalia_testicles_color_secondary"], genitalia_testicles_color_secondary)
 	READ_FILE(S["genitalia_testicles_emissive"], genitalia_testicles_emissive)
-	READ_FILE(S["sex_pref_flags"], sex_pref_flags)
 	READ_FILE(S["xeno_edible_jelly_name"], xeno_edible_jelly_name)
 	READ_FILE(S["r_jelly"], r_jelly)
 	READ_FILE(S["g_jelly"], g_jelly)
@@ -1307,7 +1306,6 @@
 	WRITE_FILE(S["genitalia_testicles_color"], genitalia_testicles_color)
 	WRITE_FILE(S["genitalia_testicles_color_secondary"], genitalia_testicles_color_secondary)
 	WRITE_FILE(S["genitalia_testicles_emissive"], genitalia_testicles_emissive)
-	WRITE_FILE(S["harmful_sex_allowed"], sex_pref_flags)
 
 	WRITE_FILE(S["metadata"], metadata)
 	WRITE_FILE(S["metadata_likes"], metadata_likes)
