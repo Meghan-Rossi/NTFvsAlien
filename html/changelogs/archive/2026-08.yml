@@ -17,3 +17,6 @@
   - rscadd: M55 PLASFIRE Grenade box
   - rscadd: PMR-14 Plasma Marksman Rifle & M55 PLASFIRE Grenade Boxes to requisitions
   - rscadd: Bundles for attachments, top rail, bottom rail and muzzle
+2026-08-15:
+  CaputCapital:
+  - bugfix: remapped smes layouts for V8E
