@@ -243,6 +243,7 @@
 	READ_FILE(S["allow_being_shown_health_scan"], allow_being_shown_health_scan)
 	READ_FILE(S["fast_mc_refresh"], fast_mc_refresh)
 	READ_FILE(S["split_admin_tabs"], split_admin_tabs)
+	READ_FILE(S["sex_pref_flags"], sex_pref_flags)
 	READ_FILE(S["hear_ooc_anywhere_as_staff"], hear_ooc_anywhere_as_staff)
 
 	READ_FILE(S["key_bindings"], key_bindings)
@@ -471,6 +472,7 @@
 	WRITE_FILE(S["allow_being_shown_health_scan"], allow_being_shown_health_scan)
 	WRITE_FILE(S["slot_draw_order"], slot_draw_order_pref)
 	WRITE_FILE(S["status_toggle_flags"], status_toggle_flags)
+	WRITE_FILE(S["sex_pref_flags"], sex_pref_flags)
 
 	WRITE_FILE(S["toggle_bump_attacking"], toggle_bump_attacking)
 	WRITE_FILE(S["mute_self_combat_messages"], mute_self_combat_messages)
