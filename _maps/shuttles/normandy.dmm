@@ -82,7 +82,8 @@
 	})
 "jx" = (
 /obj/machinery/computer/shuttle/marine_dropship/two{
-	possible_destinations = "lz1;lz2;hqlz1;hqlz2;normandy;alamo"
+	possible_destinations = "lz1;lz2;hqlz1;hqlz2;normandy;alamo";
+	req_one_access = list(205)
 	},
 /obj/structure/transmitter/desk{
 	pixel_x = 13;
@@ -523,7 +524,9 @@
 	ceiling = 2
 	})
 "ZF" = (
-/obj/machinery/door/airlock/hatch/cockpit/two,
+/obj/machinery/door/airlock/hatch/cockpit/two{
+	req_access = list(205)
+	},
 /turf/open/shuttle/dropship/floor,
 /area/shuttle/dropship/normandy{
 	ceiling = 2

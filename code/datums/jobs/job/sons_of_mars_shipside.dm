@@ -123,9 +123,9 @@ Make the SOM proud!"}
 	title = SOM_STAFF_OFFICER
 	access = ALL_SOM_ACCESS
 	minimal_access = ALL_SOM_ACCESS
-	paygrade = "SOM_W5"
+	paygrade = "SOM_O1"
 	comm_title = "SO"
-	total_positions = 4
+	total_positions = 1
 	skills_type = /datum/skills/so
 	display_order = JOB_DISPLAY_ORDER_STAFF_OFFICER
 	outfit = /datum/outfit/job/som/command/staffofficer
@@ -158,15 +158,9 @@ You are in charge of logistics and the overwatch system. You are also in line to
 		return
 	switch(playtime_mins)
 		if(0 to 1500) // starting
-			new_human.wear_id.paygrade = "SOM_W5"
-		if(1501 to 6000) // 25 hrs
 			new_human.wear_id.paygrade = "SOM_O1"
-		if(6001 to 18000) // 100 hrs
+		if(1501 to 6000) // 25 hrs
 			new_human.wear_id.paygrade = "SOM_O2"
-		if(18001 to 30000) // 300 hrs
-			new_human.wear_id.paygrade = "SOM_O3"
-		if(30001 to INFINITY) // 500 hrs
-			new_human.wear_id.paygrade = "SOM_O4"
 
 /datum/job/som/command/chiefmp
 	title = SOM_CHIEF_MP
@@ -673,7 +667,7 @@ You are also an expert when it comes to botany and hydroponics. If you do not kn
 	title = "SOM Synthetic"
 	req_admin_notify = TRUE
 	comm_title = "Syn"
-	paygrade = "Mk.I"
+	paygrade = "SOM_W4"
 	supervisors = "the acting captain"
 	total_positions = 1
 	skills_type = /datum/skills/synthetic
@@ -725,15 +719,11 @@ You are also an expert when it comes to botany and hydroponics. If you do not kn
 		return
 	switch(playtime_mins)
 		if(0 to 600) // starting
-			new_human.wear_id.paygrade = "Mk.I"
+			new_human.wear_id.paygrade = "SOM_W4"
 		if(601 to 1500) // 10hrs
-			new_human.wear_id.paygrade = "Mk.II"
+			new_human.wear_id.paygrade = "SOM_W5"
 		if(1501 to 6000) // 25 hrs
-			new_human.wear_id.paygrade = "Mk.III"
-		if(6001 to 18000) // 100 hrs
-			new_human.wear_id.paygrade = "Mk.IV"
-		if(18001 to INFINITY) // 300 hrs
-			new_human.wear_id.paygrade = "Mk.V"
+			new_human.wear_id.paygrade = "SOM_W6"
 
 /datum/job/som/silicon/synthetic/som/get_spawn_message_information(mob/M)
 	. = ..()

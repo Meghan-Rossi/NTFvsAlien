@@ -18,7 +18,7 @@
 	accuracy_variation = 5
 	accuracy = 5
 	point_blank_range = 2
-	damage = 20
+	damage = 35
 	penetration = 10
 	sundering = 2
 
@@ -39,10 +39,10 @@
 /datum/ammo/energy/volkite/medium
 	max_range = 25
 	accurate_range = 12
-	damage = 30
+	damage = 45
 	accuracy_variation = 3
-	deflag_damage = 20
-	deflagrate_mult = 0.9
+	deflag_damage = 30
+	deflagrate_mult = 1.2
 
 /datum/ammo/energy/volkite/medium/custom
 	deflagrate_mult = 1.8
@@ -50,12 +50,14 @@
 /datum/ammo/energy/volkite/heavy
 	max_range = 35
 	accurate_range = 12
-	damage = 25
-	deflag_damage = 20
-	deflagrate_mult = 0.9
+	damage = 55
+	deflag_damage = 55 //good lord
+	penetration = 20
+	deflagrate_mult = 1.2
 
 /datum/ammo/energy/volkite/light
 	max_range = 25
+	damage = 35
 	accurate_range = 12
 	accuracy_variation = 3
 	penetration = 5

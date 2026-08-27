@@ -2122,12 +2122,6 @@
 	},
 /turf/open/floor/plating/ground/dirt,
 /area/oscar_outpost/outside/north)
-"hL" = (
-/obj/effect/landmark/corpsespawner/marine/regular,
-/obj/effect/decal/cleanable/blood,
-/obj/item/weapon/gun/smg/m25,
-/turf/open/floor/plating/ground/dirt,
-/area/oscar_outpost/outside/north)
 "hN" = (
 /obj/structure/barricade/sandbags{
 	dir = 8;
@@ -4945,6 +4939,10 @@
 	},
 /turf/open/liquid/water/river,
 /area/oscar_outpost/outside/north)
+"sr" = (
+/obj/item/weapon/gun/energy/lasgun/lasrifle/volkite/cope/predeployed,
+/turf/open/floor/plating/ground/dirtgrassborder,
+/area/oscar_outpost/outside/east)
 "ss" = (
 /obj/effect/landmark/patrol_point/som/som_21,
 /turf/open/floor/plating/ground/dirt,
@@ -5652,10 +5650,6 @@
 	},
 /turf/open/liquid/water/river,
 /area/oscar_outpost/outside/north)
-"vb" = (
-/obj/item/weapon/gun/energy/lasgun/lasrifle/volkite/cope/predeployed,
-/turf/open/floor/plating/ground/dirtgrassborder,
-/area/oscar_outpost/outside/east)
 "vc" = (
 /obj/structure/barricade/sandbags{
 	name = "trench lining";
@@ -11299,6 +11293,12 @@
 	},
 /turf/open/floor/tile/dark,
 /area/oscar_outpost/base)
+"NL" = (
+/obj/effect/landmark/corpsespawner/marine/regular,
+/obj/effect/decal/cleanable/blood,
+/obj/item/weapon/gun/smg/m25,
+/turf/open/floor/plating/ground/dirt,
+/area/oscar_outpost/outside/north)
 "NM" = (
 /obj/structure/barricade/sandbags{
 	dir = 1;
@@ -23496,7 +23496,7 @@ ZL
 ZL
 ZL
 ZW
-hL
+NL
 Tj
 fY
 bo
@@ -37961,7 +37961,7 @@ aO
 aO
 mc
 aO
-vb
+sr
 er
 er
 er
