@@ -151,7 +151,7 @@
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/outdoors/southeast/alleys)
 "ms" = (
-/obj/structure/barricade/railing{
+/obj/structure/barricade/handrail/kutjevo{
 	dir = 4
 	},
 /turf/open/floor/iron/dark/textured_large,
@@ -268,9 +268,7 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/gleichseitig16/indoors/southeast/charliescredit)
 "zh" = (
-/obj/structure/prop/mainship/railing/corner{
-	dir = 4
-	},
+/obj/structure/barricade/handrail/kutjevo,
 /turf/open/floor/iron/dark/textured_large,
 /area/gleichseitig16/indoors/southeast/charliescredit)
 "zq" = (
@@ -306,12 +304,6 @@
 	dir = 8
 	},
 /area/gleichseitig16/outdoors/southeast/alleys)
-"BA" = (
-/obj/structure/barricade/railing{
-	dir = 1
-	},
-/turf/open/floor/iron/dark/textured_large,
-/area/gleichseitig16/indoors/southeast/charliescredit)
 "Ck" = (
 /obj/effect/turf_decal/arrows/white,
 /turf/open/floor/iron/dark/textured_large,
@@ -427,7 +419,7 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/gleichseitig16/indoors/southeast/charliescredit)
 "MJ" = (
-/obj/structure/barricade/railing{
+/obj/structure/barricade/handrail/kutjevo{
 	dir = 8
 	},
 /turf/open/floor/iron/dark/textured_large,
@@ -545,12 +537,6 @@
 /obj/item/stack/sheet/mineral/silver,
 /obj/item/stack/sheet/mineral/silver,
 /obj/item/stack/sheet/mineral/silver,
-/turf/open/floor/iron/dark/textured_large,
-/area/gleichseitig16/indoors/southeast/charliescredit)
-"Yn" = (
-/obj/structure/prop/mainship/railing/corner{
-	dir = 1
-	},
 /turf/open/floor/iron/dark/textured_large,
 /area/gleichseitig16/indoors/southeast/charliescredit)
 "YC" = (
@@ -769,7 +755,7 @@ SS
 ms
 ms
 ms
-zh
+SS
 SS
 To
 SS
@@ -797,8 +783,8 @@ SS
 SS
 SS
 Tq
+zh
 SS
-BA
 SS
 SS
 SS
@@ -827,7 +813,7 @@ SS
 MJ
 MJ
 SS
-Yn
+SS
 SS
 ow
 SS
