@@ -6375,11 +6375,6 @@
 /obj/structure/cable,
 /turf/open/floor/plating/plating_catwalk,
 /area/bluemoon/caves/facility/omicron)
-"isc" = (
-/obj/item/paper/crumpled,
-/obj/effect/landmark/nuke_spawn,
-/turf/open/floor/freezer,
-/area/bluemoon/caves/facility/omicron)
 "ise" = (
 /turf/open/floor/prison/darkred,
 /area/bluemoon/caves/facility/bunker)
@@ -38318,7 +38313,7 @@ eBy
 qLd
 etE
 nDn
-isc
+nqJ
 nqJ
 qLd
 uCi
