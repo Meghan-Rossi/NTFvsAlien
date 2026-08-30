@@ -99,3 +99,5 @@
 /datum/game_mode/extended/oscar/post_setup()
 	for(var/obj/effect/landmark/corpsespawner/corpse AS in GLOB.corpse_landmarks_list)
 		corpse.create_mob()
+
+///just to be safe so the serrver doesnt crash again!
