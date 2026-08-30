@@ -286,7 +286,7 @@
 	name = "Gleichseitig-16 - East"
 	icon_state = "v8se_lz1site"
 
-/area/gleichseitig16/outdoors/east/sinitsynhospital/alleys
+/area/gleichseitig16/outdoors/east/sinitsynhospital
 	name = "Gleichseitig-16 - East - Sinitsyn Hospital Alleys"
 	icon_state = "g16f_sinitsyn_hospital_ealley"
 	minimap_color = MINIMAP_AREA_COLONY
@@ -294,7 +294,6 @@
 /area/gleichseitig16/outdoors/east/sinitsynhospital/parking
 	name = "Gleichseitig-16 - East - Sinitsyn Hospital Parking"
 	icon_state = "g16f_sinitsyn_hospital_eparking"
-	minimap_color = MINIMAP_AREA_COLONY
 
 /area/gleichseitig16/indoors/east/sinitsynhospital
 	name = "Gleichseitig-16 - East - Sinitsyn Hospital"
@@ -304,7 +303,6 @@
 /area/gleichseitig16/indoors/east/sinitsynhospital/warehouses
 	name = "Gleichseitig-16 - East - Sinitsyn Hospital Warehouses"
 	icon_state = "g16f_sinitsyn_hospital_ewareh"
-	minimap_color = MINIMAP_AREA_MEDBAY
 
 /area/gleichseitig16/indoors/east/ehrmilmaso/facilities
 	name = "Gleichseitig-16 - East - EHR-MIL M.A.S.O Facilities"

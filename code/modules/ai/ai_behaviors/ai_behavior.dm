@@ -485,7 +485,7 @@ These are parameter based so the ai behavior can choose to (un)register the sign
 		return
 	var/next_move = min(next_move_time - world.time, mob_parent.cached_multiplicative_slowdown + mob_parent.next_move_slowdown)
 	if(next_move <= 0)
-		next_move = 20
+		next_move = 1
 	next_move_timer = addtimer(CALLBACK(src, PROC_REF(scheduled_move)), next_move, TIMER_STOPPABLE, SSpathfinder)
 
 ///Returns true if the mob should not move for some reason
