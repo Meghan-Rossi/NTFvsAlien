@@ -135,6 +135,18 @@
 				var/mob/living/carbon/xenomorph/X = i
 				X.upgrade_stored = X.xeno_caste.upgrade_threshold
 
+	for(var/i in GLOB.sentry_crate_spawns)
+		new /obj/item/storage/box/crate/sentry(get_turf(i))
+
+	for(var/i in GLOB.alive_xeno_list_hive[XENO_HIVE_NORMAL])
+		if(isxenolarva(i)) // Larva
+			var/mob/living/carbon/xenomorph/larva/X = i
+			X.evolution_stored = X.xeno_caste.evolution_threshold //Immediate roundstart evo for larva.
+		else // Handles Shrike etc
+			var/mob/living/carbon/xenomorph/X = i
+			X.upgrade_stored = X.xeno_caste.upgrade_threshold
+
+
 
 /datum/game_mode/infestation/crash/announce()
 	to_chat(world, span_round_header("The current map is - [SSmapping.configs[GROUND_MAP].map_name]!"))

@@ -59,6 +59,8 @@
 			qdel(xeno_struct)
 	for(var/i in GLOB.zombie_crash_vendor_landmarks)
 		new /obj/machinery/marine_selector/zombie_crash(get_turf(i))
+	for(var/i in GLOB.sentry_crate_spawns)
+		new /obj/item/storage/box/crate/sentry/incendiary(get_turf(i))
 
 	new /obj/structure/xeno/silo(get_turf(shuttle))
 
@@ -86,6 +88,8 @@
 	SIGNAL_HANDLER
 	check_finished()
 	give_all_humans_points(ZOMBIE_CRASH_POINTS_PER_TUNNEL_MIN, ZOMBIE_CRASH_POINTS_PER_TUNNEL_MIN, ZOMBIE_CRASH_POINTS_PER_TUNNEL_MAX)
+	SSpoints.add_tactical_psy_points(XENO_HIVE_CORRUPTED, ZOMBIE_CRASH_TACTICAL_PSY_POINTS_PER_TUNNEL)
+	SSpoints.add_strategic_psy_points(XENO_HIVE_CORRUPTED, ZOMBIE_CRASH_STRATEGIC_PSY_POINTS_PER_TUNNEL)
 
 /datum/game_mode/infestation/crash/zombie/on_disk_segment_completed(datum/source, obj/machinery/computer/code_generator/nuke/generating_computer)
 	. = ..()
