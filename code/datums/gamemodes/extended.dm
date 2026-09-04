@@ -89,6 +89,11 @@
 	xenorespawn_time = 15 SECONDS
 	time_between_round_group = 0
 	time_between_round_group_name = "GROUP_Extended"
+	evo_requirements = list(
+		/datum/xeno_caste/dragon = 999999,
+		/datum/xeno_caste/king = 9999999,
+		/datum/xeno_caste/queen = 999999,
+	)
 
 ///datum/game_mode/extended/oscar/post_setup()
 	///for(var/obj/effect/landmark/corpsespawner/corpse AS in GLOB.corpse_landmarks_list)
