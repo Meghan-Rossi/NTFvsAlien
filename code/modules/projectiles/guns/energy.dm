@@ -1270,7 +1270,7 @@
 	aim_slowdown = 0.65
 	damage_falloff_mult = 0.4
 	wield_delay = 0.9 SECONDS
-	fire_delay = 0.25 SECONDS
+	fire_delay = 0.2 SECONDS
 
 /obj/item/weapon/gun/energy/lasgun/lasrifle/volkite/caliver/magharness
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness)

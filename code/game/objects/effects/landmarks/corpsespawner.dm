@@ -50,9 +50,6 @@
 
 /// Create the mob and delete the corpse spawner
 /obj/effect/landmark/corpsespawner/proc/create_mob()
-	if(death_type != REGULAR_DEATH)
-		qdel(src)
-		return
 	var/mob/living/carbon/human/victim = new(loc)
 	SSmobs.stop_processing(victim)
 	GLOB.round_statistics.total_humans_created[victim.faction]-- //corpses don't count
@@ -108,8 +105,6 @@
 	qdel(src)
 
 /obj/effect/landmark/corpsespawner/proc/equip_items_to_mob(mob/living/carbon/human/corpse)
-	if(!corpse)
-		return FALSE
 	if(corpseuniform)
 		corpse.equip_to_slot_or_del(new corpseuniform(corpse), SLOT_W_UNIFORM)
 	if(corpsesuit)
@@ -574,6 +569,7 @@
 	corpseshoes = /obj/item/clothing/shoes/marine
 	corpsepocket1 = /obj/item/tweezers
 	corpsepocket2 = /obj/item/clothing/glasses/meson
+	death_type = REGULAR_DEATH
 
 /obj/effect/landmark/corpsespawner/marine/corpsman/burst
 	death_type = CHESTBURST_DEATH
@@ -617,6 +613,7 @@
 	corpsegloves = /obj/item/clothing/gloves/marine/som
 	corpseshoes = /obj/item/clothing/shoes/marine/som/knife
 	corpsepocket1 = /obj/item/tool/lighter/zippo
+	death_type = REGULAR_DEATH
 
 /obj/effect/landmark/corpsespawner/som/burst
 	death_type = CHESTBURST_DEATH
@@ -629,6 +626,7 @@
 	corpsegloves = /obj/item/clothing/gloves/marine/som
 	corpseshoes = /obj/item/clothing/shoes/marine/som/knife
 	corpsepocket1 = /obj/item/tool/lighter/zippo
+	death_type = REGULAR_DEATH
 
 
 //ICC

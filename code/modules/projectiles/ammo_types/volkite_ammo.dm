@@ -52,6 +52,7 @@
 	accurate_range = 12
 	damage = 25
 	deflag_damage = 20
+	penetration = 20
 	deflagrate_mult = 0.9
 
 /datum/ammo/energy/volkite/light

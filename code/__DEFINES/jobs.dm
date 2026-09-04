@@ -57,7 +57,7 @@
 #define EXECUTIVE_OFFICER "Executive Officer" //Currently disabled.
 #define FIELD_COMMANDER "Field Commander"
 #define CORPSEC_COMMANDER "Corpsec Commander"
-#define STAFF_OFFICER "Staff Officer"
+#define STAFF_OFFICER "Platoon Commander"
 #define TRANSPORT_OFFICER "Transport Officer"
 #define PILOT_OFFICER "Pilot Officer"
 #define MECH_PILOT "Mech Pilot"
@@ -104,7 +104,7 @@
 //SOM
 #define SOM_COMMANDER "SOM Commander"
 #define SOM_FIELD_COMMANDER "SOM Field Commander"
-#define SOM_STAFF_OFFICER "SOM Staff Officer"
+#define SOM_STAFF_OFFICER "SOM Platoon Commander"
 #define SOM_PILOT_OFFICER "SOM Pilot Officer"
 #define SOM_MECH_PILOT "SOM Mech Pilot"
 #define SOM_ASSAULT_CREWMAN "SOM Assault Crewman"
