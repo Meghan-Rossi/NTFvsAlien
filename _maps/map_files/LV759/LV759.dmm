@@ -15345,6 +15345,7 @@
 "cQL" = (
 /obj/machinery/door/poddoor/shutters/urban/biohazard/white,
 /obj/structure/cable,
+/obj/machinery/door/poddoor/timed_late/containment/landing_zone,
 /turf/open/floor/officetiles,
 /area/lv759/indoors/nt_research_complex/xenobiology)
 "cQR" = (
@@ -15685,6 +15686,7 @@
 /area/lv759/indoors/hospital/outgoing)
 "cTP" = (
 /obj/machinery/door/poddoor/shutters/urban/biohazard/white,
+/obj/structure/window/framed/mainship/white,
 /turf/open/floor/plating,
 /area/lv759/indoors/nt_research_complex/xenoarcheology)
 "cTU" = (
@@ -34641,8 +34643,8 @@
 /turf/closed/shuttle/dropship4/glassthree,
 /area/lv759/indoors/spaceport/horizon_runner)
 "gpw" = (
-/turf/open/floor/plating,
-/area/lv759/indoors/nt_research_complex/hallwayeast)
+/turf/closed/wall/r_wall/white_research_wall/invincible,
+/area/lv759/indoors/nt_research_complex/xenobiology)
 "gpA" = (
 /obj/effect/landmark/weed_node,
 /turf/open/ground/sandrock,
@@ -56588,7 +56590,7 @@
 	light_on = 1;
 	light_range = 2
 	},
-/turf/closed/wall/r_wall/white_research_wall,
+/turf/closed/wall/r_wall/white_research_wall/invincible,
 /area/lv759/indoors/nt_research_complex/xenobiology)
 "kqQ" = (
 /obj/effect/urban/decal/dirt,
@@ -63232,12 +63234,6 @@
 /obj/structure/cable,
 /turf/open/engineership/engineer_floor1,
 /area/lv759/indoors/derelict_ship)
-"lDp" = (
-/obj/effect/turf_decal/warning_stripes/thin{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/lv759/indoors/nt_research_complex/hallwayeast)
 "lDr" = (
 /obj/structure/bed/stool{
 	buckling_y = 14;
@@ -70687,7 +70683,7 @@
 	light_power = 3;
 	light_range = 5
 	},
-/turf/closed/wall/r_wall/white_research_wall,
+/turf/closed/wall/r_wall/white_research_wall/invincible,
 /area/lv759/indoors/nt_research_complex/xenobiology)
 "mTq" = (
 /turf/open/floor/prison,
@@ -71540,7 +71536,7 @@
 	light_on = 1;
 	light_range = 2
 	},
-/turf/closed/wall/r_wall/white_research_wall,
+/turf/closed/wall/r_wall/white_research_wall/invincible,
 /area/lv759/indoors/nt_research_complex/xenobiology)
 "nay" = (
 /obj/structure/window/reinforced{
@@ -74163,8 +74159,9 @@
 /turf/open/floor/urban/carpet/carpetblack,
 /area/lv759/indoors/nt_office/floor)
 "nxy" = (
-/turf/open/floor/plating,
-/area/lv759/indoors/nt_research_complex/xenoarcheology)
+/obj/machinery/meter,
+/turf/closed/wall/r_wall/white_research_wall/invincible,
+/area/lv759/indoors/nt_research_complex/xenobiology)
 "nxz" = (
 /obj/structure/table/reinforced/prison{
 	color = "#6b675e"
@@ -76523,6 +76520,7 @@
 /obj/machinery/door/airlock/multi_tile/urban/personal_solid_white{
 	dir = 1
 	},
+/obj/machinery/door/poddoor/timed_late/containment/landing_zone,
 /turf/open/floor/officetiles,
 /area/lv759/indoors/nt_research_complex/xenobiology)
 "nTG" = (
@@ -84968,7 +84966,7 @@
 	light_on = 1;
 	light_range = 2
 	},
-/turf/closed/wall/r_wall/white_research_wall,
+/turf/closed/wall/r_wall/white_research_wall/invincible,
 /area/lv759/indoors/nt_research_complex/xenobiology)
 "pxO" = (
 /obj/effect/urban/decal/dirt,
@@ -102589,7 +102587,7 @@
 	light_on = 1;
 	light_range = 2
 	},
-/turf/closed/wall/r_wall/white_research_wall,
+/turf/closed/wall/r_wall/white_research_wall/invincible,
 /area/lv759/indoors/nt_research_complex/xenobiology)
 "sJm" = (
 /obj/structure/sign/safety/maintenance,
@@ -117296,7 +117294,7 @@
 	light_on = 1;
 	light_range = 2
 	},
-/turf/closed/wall/r_wall/white_research_wall,
+/turf/closed/wall/r_wall/white_research_wall/invincible,
 /area/lv759/indoors/nt_research_complex/xenobiology)
 "vlG" = (
 /obj/structure/cable,
@@ -120230,7 +120228,7 @@
 /obj/structure/prop/urban/misc/machinery/screens/wallegg_on{
 	dir = 8
 	},
-/turf/closed/wall/r_wall/white_research_wall,
+/turf/closed/wall/r_wall/white_research_wall/invincible,
 /area/lv759/indoors/nt_research_complex/xenobiology)
 "vMZ" = (
 /obj/structure/window/framed/urban/reinforced{
@@ -137564,7 +137562,7 @@ pvM
 rDc
 aqt
 cTP
-nxy
+cDW
 aqt
 jpa
 xvA
@@ -140382,22 +140380,22 @@ jDZ
 bPh
 obw
 dHl
-lsI
-lsI
+gpw
+gpw
 cQL
 nTy
-lsI
-lsI
-lsI
-lsI
-lsI
-lsI
-lsI
-lsI
-lsI
-lsI
-lsI
-lsI
+gpw
+gpw
+gpw
+gpw
+gpw
+gpw
+gpw
+gpw
+gpw
+gpw
+gpw
+gpw
 gzD
 gSw
 cjh
@@ -140600,7 +140598,7 @@ lsI
 caA
 vDq
 bor
-lsI
+gpw
 gzD
 gPv
 lWq
@@ -140803,7 +140801,7 @@ vSL
 ijH
 lrC
 ulH
-lsI
+gpw
 gzD
 cqI
 tfu
@@ -141006,7 +141004,7 @@ lsI
 mJj
 qrf
 rqk
-lsI
+gpw
 gzD
 rlP
 gqV
@@ -141194,7 +141192,7 @@ sss
 kHd
 esv
 dHl
-kYM
+nxy
 drF
 swI
 gkU
@@ -141209,7 +141207,7 @@ lsI
 kIf
 vTO
 lsI
-lsI
+gpw
 gzD
 baN
 veC
@@ -141412,7 +141410,7 @@ hkV
 fHP
 wld
 rks
-lsI
+gpw
 kFf
 mYW
 ecx
@@ -141615,7 +141613,7 @@ sAu
 yhg
 pSY
 qXS
-lsI
+gpw
 kJx
 rJS
 heR
@@ -141818,7 +141816,7 @@ vVV
 wld
 mrY
 eic
-lsI
+gpw
 iiB
 fCa
 hlK
@@ -142021,7 +142019,7 @@ eFY
 mqr
 iae
 wHy
-lsI
+gpw
 kJx
 uCl
 eTP
@@ -142224,7 +142222,7 @@ hOO
 wAJ
 hCe
 fLf
-lsI
+gpw
 gzD
 dSt
 mLw
@@ -142412,7 +142410,7 @@ uoi
 wLA
 gbH
 dHl
-lsI
+gpw
 jXD
 cDl
 cDl
@@ -142426,8 +142424,8 @@ vQu
 lsI
 lsI
 lsI
-lsI
-lsI
+gpw
+gpw
 gzD
 vfy
 cjh
@@ -142615,7 +142613,7 @@ sss
 wLA
 gPR
 dHl
-lsI
+gpw
 lsI
 lsI
 lsI
@@ -142629,7 +142627,7 @@ iNP
 dmp
 iNP
 uXs
-lsI
+gpw
 obT
 ovX
 tFI
@@ -142818,7 +142816,7 @@ uoi
 kHd
 rox
 dHl
-lsI
+gpw
 lsI
 dOR
 aGe
@@ -142832,7 +142830,7 @@ ehx
 ipn
 lkV
 lKr
-lsI
+gpw
 obT
 wDE
 qkV
@@ -143021,7 +143019,7 @@ uoi
 iEg
 dHl
 dHl
-lsI
+gpw
 lsI
 fuI
 qeL
@@ -143035,7 +143033,7 @@ ehx
 ktS
 lkV
 iZT
-lsI
+gpw
 obT
 pmv
 lCV
@@ -143224,7 +143222,7 @@ uoi
 kHd
 oYh
 dHl
-lsI
+gpw
 lsI
 bKW
 osM
@@ -143238,7 +143236,7 @@ ehx
 iZT
 lkV
 hpJ
-lsI
+gpw
 obT
 pIn
 wWe
@@ -143427,7 +143425,7 @@ uoi
 kHd
 bpW
 dHl
-lsI
+gpw
 lsI
 nfI
 kHX
@@ -143441,7 +143439,7 @@ ehx
 hcP
 lkV
 aaM
-lsI
+gpw
 uWH
 trd
 sQs
@@ -143630,7 +143628,7 @@ skY
 jSG
 vpq
 dHl
-lsI
+gpw
 lsI
 lsI
 lsI
@@ -143644,7 +143642,7 @@ aEU
 iNP
 dmp
 bwe
-lsI
+gpw
 bsy
 trd
 udG
@@ -143833,21 +143831,21 @@ etz
 rgJ
 xKu
 dHl
-lsI
-lsI
-lsI
-lsI
-lsI
-lsI
-lsI
-lsI
-lsI
-lsI
-lsI
-lsI
-lsI
-lsI
-lsI
+gpw
+gpw
+gpw
+gpw
+gpw
+gpw
+gpw
+gpw
+gpw
+gpw
+gpw
+gpw
+gpw
+gpw
+gpw
 obT
 gbZ
 mDH
@@ -144047,9 +144045,9 @@ sfu
 sfu
 sfu
 sfu
-gpw
-gpw
-gpw
+sfu
+sfu
+sfu
 sfu
 obT
 ebw
@@ -144251,7 +144249,7 @@ got
 gJD
 gJD
 mLr
-lDp
+nCI
 qpE
 yiN
 gVJ
