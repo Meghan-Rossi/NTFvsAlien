@@ -76,19 +76,13 @@
 	name = "Extended Event"
 	config_tag = "Extended Event"
 	silo_scaling = 1.5
+	factions = list(FACTION_XENO)
 	round_type_flags = MODE_INFESTATION|MODE_PSY_POINTS|MODE_XENO_RULER|MODE_PSY_POINTS|MODE_PSY_POINTS_ADVANCED|MODE_HIJACK_POSSIBLE|MODE_SILO_RESPAWN|MODE_SILOS_SPAWN_MINIONS|MODE_ALLOW_XENO_QUICKBUILD
 	shutters_drop_time = 3 MINUTES
 	xeno_abilities_flags = ABILITY_NUCLEARWAR|ABILITY_SOLMODE
 	whitelist_ship_maps = list(MAP_EAGLE)
 	valid_job_types = list(
-		/datum/job/som/command/staffofficer = 1, //platoon commander
-		/datum/job/som/silicon/synthetic = 1,
-		/datum/job/som/squad/engineer = 2,
-		/datum/job/som/squad/medic = 4,
-		/datum/job/som/squad/veteran = 4,
-		/datum/job/som/squad/leader = 2,
-		/datum/job/som/squad/standard = 8,
-		/datum/job/xenomorph = 0,
+		/datum/job/xenomorph = 500,
 		/datum/job/xenomorph/queen = 0 //im scared of bugs :(
 	)
 	enable_fun_tads = TRUE
@@ -96,8 +90,8 @@
 	time_between_round_group = 0
 	time_between_round_group_name = "GROUP_Extended"
 
-/datum/game_mode/extended/oscar/post_setup()
-	for(var/obj/effect/landmark/corpsespawner/corpse AS in GLOB.corpse_landmarks_list)
-		corpse.create_mob()
+///datum/game_mode/extended/oscar/post_setup()
+	///for(var/obj/effect/landmark/corpsespawner/corpse AS in GLOB.corpse_landmarks_list)
+		///corpse.create_mob()
 
 ///just to be safe so the serrver doesnt crash again!

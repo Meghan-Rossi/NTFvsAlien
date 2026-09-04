@@ -107,6 +107,9 @@
 	icon_state = "white_research_wall-0"
 	base_icon_state = "white_research_wall"
 
+/turf/closed/wall/r_wall/white_research_wall/invincible
+	resistance_flags = RESIST_ALL
+
 /turf/closed/wall/r_wall/urban
 	name = "reinforced metal walls"
 	desc = "A thick and chunky metal wall ribbed with reinforced steel. The surface is barren and imposing."
