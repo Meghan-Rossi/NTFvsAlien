@@ -2527,6 +2527,7 @@
 	dir = 4
 	},
 /obj/structure/cable,
+/obj/effect/turf_decal/siding/wood/corner,
 /turf/open/floor/wood,
 /area/antag_ship/clf_base/facade/entryway)
 "dhn" = (
@@ -4153,6 +4154,13 @@
 	icon = 'icons/turf/floors.dmi';
 	icon_state = "cuppafloor"
 	},
+/obj/item/reagent_containers/cup/glass/bottle/wine{
+	name = "Evolutionist's special vintage";
+	desc = "A vintage bottle of wine containing trace amounts of Aphrotoxin due to the grapes being grown in a Hivelord-tended vineyard. Sip carefully, lest you succumb to the yearning of a bigger sip.";
+	list_reagents = list(/datum/reagent/consumable/ethanol/wine = 90, /datum/reagent/toxin/xeno_aphrotoxin = 10);
+	pixel_x = 1;
+	pixel_y = 23
+	},
 /turf/open/floor/urban/tile/cuppajoesfloor{
 	barefootstep = "carpet";
 	name = "picnic blanket";
@@ -4333,6 +4341,9 @@
 /obj/item/stack/sheet/metal/large_stack,
 /obj/item/stack/sheet/plasteel/large_stack,
 /obj/item/stack/sheet/metal/large_stack,
+/obj/item/stack/sheet/mineral/plastic/large_stack,
+/obj/item/stack/sheet/cloth/large_stack,
+/obj/item/stack/sheet/glass/glass/large_stack,
 /turf/open/floor/kutjevo/colors/yellow/edge{
 	dir = 8
 	},
@@ -9674,6 +9685,7 @@
 /obj/item/storage/belt/utility/full,
 /obj/item/storage/belt/utility/full,
 /obj/item/tool/weldpack,
+/obj/item/lightreplacer,
 /turf/open/floor/kutjevo/colors/orange/edge{
 	dir = 8
 	},
@@ -16826,16 +16838,6 @@
 	dir = 1
 	},
 /area/antag_ship/clf_base/caves/underground)
-"wpI" = (
-/obj/item/reagent_containers/cup/glass/bottle/wine{
-	pixel_x = -31;
-	pixel_y = 52;
-	name = "Evolutionist's special vintage";
-	desc = "A vintage bottle of wine containing trace amounts of Aphrotoxin due to the grapes being grown in a Hivelord-tended vineyard. Sip carefully, lest you succumb to the yearning of a bigger sip.";
-	list_reagents = list(/datum/reagent/consumable/ethanol/wine = 90, /datum/reagent/toxin/xeno_aphrotoxin = 10)
-	},
-/turf/open/floor/grass,
-/area/antag_ship/clf_base/facade/parklot)
 "wpQ" = (
 /obj/machinery/light/mainship{
 	dir = 4
@@ -17266,14 +17268,10 @@
 /area/antag_ship/som/office/commander/field)
 "wVz" = (
 /obj/structure/table/urban/shiny_black,
-/obj/item/pda/large/purple{
-	pixel_x = 2;
-	pixel_y = 18
-	},
 /obj/structure/paper_bin{
 	pixel_x = -15;
 	pixel_y = 13;
-	layer = 2.8
+	layer = 2.9
 	},
 /turf/open/floor/kutjevo/colors/purple/edge{
 	dir = 1
@@ -43935,7 +43933,7 @@ oRF
 kjt
 fbt
 fbt
-wpI
+fbt
 fbt
 fbt
 fbt
