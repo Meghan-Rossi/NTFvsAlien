@@ -13,7 +13,7 @@
 /mob/living/carbon/xenomorph/proc/do_forced_devolution_for_not_enough_xenos()
 	if(is_ventcrawling || !isturf(loc))
 		force_devolution_if_not_enough_xenos() //can't do it now, try again in 10 seconds.
-		to_chat(span_xenouserdanger("Please stop ventcrawling so you can be devolved."))
+		to_chat(src, span_xenouserdanger("Please stop ventcrawling so you can be devolved."))
 		log_admin("[logdetails(src)] could not be automatically devolved because they were ventcrawling, trying again in 10 seconds.")
 		return
 	var/attempts = 0
@@ -26,11 +26,10 @@
 	var/mob/living/carbon/xenomorph/new_xeno = do_evolve(new_caste.type, regression = TRUE, forced = TRUE)
 	if(!istype(new_xeno))
 		force_devolution_if_not_enough_xenos() //can't do it now, try again in 10 seconds.
-		to_chat(span_xenouserdanger("Please eject any mobs you are carrying and do not ventcrawl."))
+		to_chat(src, span_xenouserdanger("Please eject any mobs you are carrying and do not ventcrawl."))
 		log_admin("[logdetails(src)] could not be automatically devolved.  eaten_mob = [logdetails(eaten_mob)]. Trying again in 10 seconds.")
 
 /mob/living/carbon/xenomorph/Initialize(mapload, do_not_set_as_ruler, _hivenumber)
 	. = ..()
-	log_world("registering ([logdetails(src)])")
 	RegisterSignal(SSdcs, COMSIG_GLOB_GAMESTATE_GROUNDSIDE, PROC_REF(force_devolution_if_not_enough_xenos))
 
