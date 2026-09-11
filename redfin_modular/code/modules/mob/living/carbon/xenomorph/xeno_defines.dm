@@ -7,7 +7,7 @@
 	if(num_xenos >= min_xenos)
 		return
 	balloon_alert(src, "forced deevolution!")
-	to_chat(src, span_xenouserdanger("Your hive has [num_xenos] of the minimum of [min_xenos] required to support your caste.  You will be automatically devolved in 10 seconds."))
+	to_chat(src, span_xenouserdanger("Your hive has [num_xenos] of the minimum of [min_xenos] xenos (including burrowed) required to support your caste.  You will be automatically devolved in 10 seconds."))
 	addtimer(CALLBACK(src, PROC_REF(do_forced_devolution_for_not_enough_xenos)), 10 SECONDS)
 
 /mob/living/carbon/xenomorph/proc/do_forced_devolution_for_not_enough_xenos()
